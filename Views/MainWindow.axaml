@@ -12,23 +12,26 @@
         Background="{DynamicResource ThemeBackgroundColor}">
     
     <Window.Styles>
+        
+        <Style Selector="Border.Card">
+            <Setter Property="CornerRadius" Value="12"/>
+        </Style>
+
         <Style Selector="TextBlock.Heading">
-            <Setter Property="MaxLines" Value="10"/>
+            <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="36"/>
             <Setter Property="FontWeight" Value="Black"/>
         </Style>
         
-        <Style Selector="Button.Primary">
-            <Setter 
-                Property="Width" 
-                Value="300"/>
-            <Setter Property="Margin" Value="0 10 0 0"/>
+        <Style Selector="TextBlock.Caption">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="TextAlignment" Value="Center"/>
         </Style>
-        
+
         <Style Selector="Border">
             <Setter Property="BoxShadow" Value="3 3 10 2 #BDBDBD"/>
-            <Setter Property="MinHeight" Value="300"/>
+            <Setter Property="MinHeight" Value="500"/>
             <Setter Property="MinWidth" Value="400"/>
             <Setter Property="Padding" Value="10"/>
         </Style>
@@ -41,68 +44,69 @@
     
     <Grid 
         HorizontalAlignment="Center"
-        RowDefinitions="*, *, *"
-        ColumnDefinitions="*, * ,* ,*">
+        RowDefinitions="Auto, Auto, Auto, *"
+        ColumnDefinitions="*, * ">
 
+		<!-- ROW 1 -->
         <Border
-            Margin="15"
+            Margin="25"
             Grid.Row="0"
             Grid.Column="0"
             Classes="Card">
-            <StackPanel HorizontalAlignment="Center">
-                <TextBlock Classes="Heading" 
-                           Text="Общие сведения" />
+            <StackPanel 
+                HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/question.svg"/>
+                <TextBlock 
+                    Classes="Heading" 
+                    Text="Общие сведения" />
                 <TextBlock 
                     Classes="Caption" 
                     Text="Подробнее..." />
-                <Button 
-                        VerticalAlignment="Bottom"
-                        Classes="Primary"
-                        Content="Primary button" />
             </StackPanel>
         </Border>
 
         <Border
-            Margin="15"
+            Margin="25"
             Grid.Row="0"
             Grid.Column="1"
             Classes="Card">
             <StackPanel HorizontalAlignment="Center">
-                    <TextBlock Classes="Heading" 
-                               Text="Руководство" />
+                
+                <Svg 
+                    Path="/Assets/user-group.svg"/>
+                <TextBlock Classes="Heading" 
+                           Text="Руководство" />
                     <TextBlock Classes="Caption" 
                                Text="Подробнее..." />
-                    <Button 
-                        VerticalAlignment="Bottom"
-                        Classes="Primary"
-                        Content="Primary button" />
             </StackPanel>
         </Border>
+		<!-- END ROW 1 -->
 
+		<!-- ROW 2 -->
         <Border
-            Margin="15"
-            Grid.Row="0"
-            Grid.Column="2"
-            Classes="Card">
-            <StackPanel HorizontalAlignment="Center">
-                <TextBlock Classes="Heading" 
-                           Text="Структура" />
-                <TextBlock Classes="Caption" 
-                           Text="Подробнее..." />
-                <Button 
-                    VerticalAlignment="Bottom"
-                    Classes="Primary"
-                    Content="Primary button" />
-            </StackPanel>
-        </Border>
-
-        
-        <Border
-            Margin="15"
+            Margin="25"
             Grid.Row="1"
             Grid.Column="0"
             Classes="Card">
             <StackPanel HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/home.svg"/>
+                <TextBlock Classes="Heading" 
+                           Text="Структура" />
+                <TextBlock Classes="Caption" 
+                           Text="Подробнее..." />
+            </StackPanel>
+        </Border>
+
+        <Border
+            Margin="25"
+            Grid.Row="1"
+            Grid.Column="1"
+            Classes="Card">
+            <StackPanel HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/phone.svg"/>
                 <TextBlock Classes="Heading" 
                            Margin="0"
                            Text="Контактная" />
@@ -112,18 +116,20 @@
                 <TextBlock 
                     Classes="Caption" 
                     Text="Подробнее..." />
-                <Button 
-                    Classes="Primary"
-                    Content="Primary button" />
+                
             </StackPanel>
         </Border>
+		<!-- END ROW 2 -->
 
+		<!-- ROW 3 -->
         <Border
-            Margin="15"
-            Grid.Row="1"
-            Grid.Column="1"
+            Margin="25"
+            Grid.Row="2"
+            Grid.Column="0"
             Classes="Card">
             <StackPanel HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/table.svg"/>
                 <TextBlock Classes="Heading" 
                            Margin="0"
                            Text="Электронное" />
@@ -132,28 +138,27 @@
                            Text="расписание" />
                 <TextBlock Classes="Caption" 
                            Text="Подробнее..." />
-                <Button 
-                    Classes="Primary"
-                    Content="Primary button" />
+              
             </StackPanel>
         </Border>
 
         <Border
-            Margin="15"
-            Grid.Row="1"
-            Grid.Column="2"
+            Margin="25"
+            Grid.Row="2"
+            Grid.Column="1"
             Classes="Card">
             <StackPanel HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/information.svg"/>
                 <TextBlock Classes="Heading" 
                            Text="Объявления" />
                 <TextBlock Classes="Caption" 
                            Text="Подробнее..." />
-                <Button 
-                    Classes="Primary"
-                    Content="Primary button" />
+               
             </StackPanel>
         </Border>
 
+		<!-- END ROW 3 -->
         
     </Grid>
    
