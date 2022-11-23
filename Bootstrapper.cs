@@ -10,6 +10,8 @@ public class Bootstrapper
     {
         // регистрация сервисов
         services.Register<IMenuService>(() => new MenuService());
+        services.Register<IChekingService>(() => new ChekingService());
+        
         // информация о приложении
         services.RegisterLazySingleton<IApplicationInfo>(() => new ApplicationInfo(Assembly.GetExecutingAssembly()));
         

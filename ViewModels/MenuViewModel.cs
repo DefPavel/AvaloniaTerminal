@@ -5,15 +5,19 @@ using ReactiveUI;
 using System.Reactive;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
+using Avalonia;
 using AvaloniaTerminal.Views;
 using Splat;
-using Avalonia.Controls;
+using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Threading;
 
 namespace AvaloniaTerminal.ViewModels;
 
 public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 {
     #region Свойства
+
+    private readonly DispatcherTimer _disTimer = new();
 
     private readonly IMenuService? _menuService;
     private readonly IApplicationInfo? _applicationInfo;
@@ -29,14 +33,30 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
     #region Логика
 
+    private async void DispatcherTimer_Tick(object? sender, EventArgs e)
+    {
+        await HostScreen.Router.Navigate.Execute(new CarouselViewModel(HostScreen));
+    }
+
     private async Task GetInformationView()
     {
-       CheckCodeViewModel viewModel = new();
-       CheckCodeView view = new() { DataContext = viewModel };
+        // Может быть есть и намного лучше способ,
+        // но у меня в данной структуре работает только такой
+        
+        // TODO: Когда пройдет еще время, найдите способ лучше передавать данные между Window и UseCotrol в (MVVM)
+        
+        CheckCodeViewModel viewModel = new();
+        CheckCodeView view = new() { DataContext = viewModel };
+        
+        var mainWindow = Application.Current?.ApplicationLifetime 
+            is IClassicDesktopStyleApplicationLifetime desktop 
+            ? desktop.MainWindow 
+            : null;
 
-       view.Show();
+        await view.ShowDialog(mainWindow);
 
-       await HostScreen.Router.Navigate.Execute(new CarouselViewModel(HostScreen));
+        if(viewModel.Status)
+            await HostScreen.Router.Navigate.Execute(new InfoViewModel(HostScreen));
     }
 
     #endregion
@@ -54,8 +74,11 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         GetInfoView = ReactiveCommand.CreateFromTask( async _ => await GetInformationView());
         
         GetInfoView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
-        
-        
+
+        _disTimer.Interval = TimeSpan.FromMinutes(1);
+        _disTimer.Tick += DispatcherTimer_Tick;
+        _disTimer.Start();
+
         this.WhenActivated((CompositeDisposable _) =>
         {
             // Added here just for testing

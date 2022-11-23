@@ -16,7 +16,7 @@
         <vm:CheckCodeViewModel/>
     </Design.DataContext>
     
-    <Grid RowDefinitions="60, 85, Auto">
+    <Grid RowDefinitions="60, 85, 30, Auto">
        <TextBlock 
 		   FontSize="36"
 		   Classes="Heading"
@@ -32,14 +32,21 @@
            Text="{Binding Code}"
 		   FontWeight="Black"
 		   Watermark="●●●●●●"
-           TextAlignment="Center" 
-           Grid.Row="1"/>
+		   Grid.Row="1"/>
+       
+       <ProgressBar
+	       Height="25"
+	       Name="ProgressBar"
+	       Grid.Row="2"
+	       IsIndeterminate="True"
+	       VerticalAlignment="Bottom"
+	       IsVisible="False"
+	       />
 		
        <StackPanel 
-		   Margin="10"
-		   HorizontalAlignment="Center"
+	       HorizontalAlignment="Center"
            Orientation="Horizontal"
-           Grid.Row="2">
+           Grid.Row="3">
            <Button 
 			   MinWidth="120"
 			   FontSize="25"

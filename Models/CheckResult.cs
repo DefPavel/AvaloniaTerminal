@@ -1,6 +1,10 @@
-﻿namespace AvaloniaTerminal.Models;
+﻿using System.Text.Json.Serialization;
+using ReactiveUI;
 
-public class CheckResult
+namespace AvaloniaTerminal.Models;
+
+public class CheckResult : ReactiveObject
 {
-    
+    [JsonPropertyName("subscribe")]
+    public bool Subscribe { get; set; }
 }
