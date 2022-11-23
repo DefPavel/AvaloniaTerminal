@@ -10,9 +10,9 @@
     
     <UserControl.Styles>
         
-        <Style Selector="Border.Card:pointerover">
+        <!--<Style Selector="Border.Card:pointerover">
             <Setter Property="Background" Value="{DynamicResource ThemeBackgroundColor}" />
-        </Style>
+        </Style>-->
         <Style Selector="Border.Card">
             <Setter Property="CornerRadius" Value="12"/>
         </Style>
@@ -56,6 +56,7 @@
             Classes="Card">
             <i:Interaction.Behaviors>
                 <ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #Info}">
+                    <ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />
                     <ia:InvokeCommandAction Command="{Binding GetInfoView}"/>
                 </ia:EventTriggerBehavior>
             </i:Interaction.Behaviors>
@@ -133,7 +134,7 @@
         <Border
             Margin="25"
             Grid.Row="2"
-            Grid.Column="1"
+            Grid.Column="0"
             Classes="Card">
             <StackPanel HorizontalAlignment="Center">
                 <Svg 

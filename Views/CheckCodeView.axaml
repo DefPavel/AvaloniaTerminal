@@ -2,8 +2,61 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AvaloniaTerminal.Views.CheckCodeView"
-        Title="CheckCodeView">
-    Welcome to Avalonia!
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="250"
+        Height="250"
+        Width="500"
+		SystemDecorations="None"
+		WindowStartupLocation="CenterScreen"
+        TabIndex="0"
+		Background="White"
+        xmlns:vm="using:AvaloniaTerminal.ViewModels"
+        x:Class="AvaloniaTerminal.Views.CheckCodeView">
+    
+    <Design.DataContext>
+        <vm:CheckCodeViewModel/>
+    </Design.DataContext>
+    
+    <Grid RowDefinitions="60, 85, Auto">
+       <TextBlock 
+		   FontSize="36"
+		   Classes="Heading"
+		   TextWrapping="Wrap"
+		   TextAlignment="Center"
+           Grid.Row="0" 
+           Text="Введите PIN"/>
+		
+       <TextBox 
+		   Margin="10 10 10 10"
+		   MaxLength="6"
+		   FontSize="30"
+           Text="{Binding Code}"
+		   FontWeight="Black"
+		   Watermark="●●●●●●"
+           TextAlignment="Center" 
+           Grid.Row="1"/>
+		
+       <StackPanel 
+		   Margin="10"
+		   HorizontalAlignment="Center"
+           Orientation="Horizontal"
+           Grid.Row="2">
+           <Button 
+			   MinWidth="120"
+			   FontSize="25"
+			   Command="{Binding Check}"
+			   CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
+               Margin="10 0 10 0"
+               Content="OK"
+               Classes="Primary"/>
+           <Button 
+			   
+			   MinWidth="120"
+			   FontSize="25"
+               Command="{Binding Close}"
+               CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
+               Margin="10 0 10 0"
+               Content="Выход"
+               Classes="Primary"/>
+       </StackPanel>
+   </Grid>
 </Window>

@@ -4,7 +4,10 @@ using AvaloniaTerminal.Services;
 using ReactiveUI;
 using System.Reactive;
 using System.Reactive.Linq;
+using System.Threading.Tasks;
+using AvaloniaTerminal.Views;
 using Splat;
+using Avalonia.Controls;
 
 namespace AvaloniaTerminal.ViewModels;
 
@@ -20,7 +23,22 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     #endregion
 
     #region Команды
-    public ReactiveCommand<Unit, IRoutableViewModel> GetInfoView { get; }
+    public ReactiveCommand<Unit, Unit> GetInfoView { get; }
+
+    #endregion
+
+    #region Логика
+
+    private async Task GetInformationView()
+    {
+       CheckCodeViewModel viewModel = new();
+       CheckCodeView view = new() { DataContext = viewModel };
+
+       view.Show();
+
+       await HostScreen.Router.Navigate.Execute(new CarouselViewModel(HostScreen));
+    }
+
     #endregion
 
     public MenuViewModel(IScreen screen) :
@@ -33,11 +51,12 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         _menuService = menuService;
         _applicationInfo = applicationInfo;
         
-        GetInfoView = ReactiveCommand.CreateFromTask( async _ => await HostScreen.Router.Navigate.Execute(new CarouselViewModel(HostScreen)));
+        GetInfoView = ReactiveCommand.CreateFromTask( async _ => await GetInformationView());
+        
         GetInfoView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
         
         
-        this.WhenActivated((CompositeDisposable disposables) =>
+        this.WhenActivated((CompositeDisposable _) =>
         {
             // Added here just for testing
             GC.Collect();

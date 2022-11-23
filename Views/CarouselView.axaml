@@ -14,7 +14,6 @@
     </Design.DataContext>
     
     <Carousel 
-        
         Padding="10"
         Name="ItemsCarousel">
         <i:Interaction.Behaviors>
@@ -23,7 +22,7 @@
             </ia:EventTriggerBehavior>
         </i:Interaction.Behaviors>
         <Carousel.PageTransition>
-                <PageSlide Duration="0.25" Orientation="Vertical" />
+                <PageSlide Duration="0.35" Orientation="Vertical" />
             </Carousel.PageTransition>
             <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/600fb31e2dd1a.jpg"/>
             <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/629461e13ec37.jpg"/>
