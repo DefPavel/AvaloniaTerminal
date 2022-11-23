@@ -1,0 +1,33 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:AvaloniaTerminal.ViewModels"
+             xmlns:i="using:Avalonia.Xaml.Interactivity"
+             xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
+             x:Class="AvaloniaTerminal.Views.CarouselView">
+    
+    <Design.DataContext>
+        <vm:CarouselViewModel/>
+    </Design.DataContext>
+    
+    <Carousel 
+        
+        Padding="10"
+        Name="ItemsCarousel">
+        <i:Interaction.Behaviors>
+            <ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #ItemsCarousel}">
+                <ia:InvokeCommandAction Command="{Binding GetMenuView}"/>
+            </ia:EventTriggerBehavior>
+        </i:Interaction.Behaviors>
+        <Carousel.PageTransition>
+                <PageSlide Duration="0.25" Orientation="Vertical" />
+            </Carousel.PageTransition>
+            <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/600fb31e2dd1a.jpg"/>
+            <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/629461e13ec37.jpg"/>
+            <Image asyncImageLoader:ImageLoader.Source=" https://i2.wp.com/starpri.ru/wp-content/uploads/2019/04/kto-takoj-glad-valakas.jpg"/>
+    </Carousel>
+
+</UserControl>

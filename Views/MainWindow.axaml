@@ -3,6 +3,9 @@
         xmlns:vm="using:AvaloniaTerminal.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:reactiveUi="http://reactiveui.net"
+        xmlns:helpers="using:AvaloniaTerminal.Helpers"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaTerminal.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -10,157 +13,21 @@
         SystemDecorations="None"
         TabIndex="0"
         Background="{DynamicResource ThemeBackgroundColor}">
-    
-    <Window.Styles>
-        
-        <Style Selector="Border.Card">
-            <Setter Property="CornerRadius" Value="12"/>
-        </Style>
-
-        <Style Selector="TextBlock.Heading">
-            <Setter Property="TextAlignment" Value="Center"/>
-            <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="FontSize" Value="36"/>
-            <Setter Property="FontWeight" Value="Black"/>
-        </Style>
-        
-        <Style Selector="TextBlock.Caption">
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="TextAlignment" Value="Center"/>
-        </Style>
-
-        <Style Selector="Border">
-            <Setter Property="BoxShadow" Value="3 3 10 2 #BDBDBD"/>
-            <Setter Property="MinHeight" Value="500"/>
-            <Setter Property="MinWidth" Value="400"/>
-            <Setter Property="Padding" Value="10"/>
-        </Style>
-        
-    </Window.Styles>
-
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
+    <reactiveUi:RoutedViewHost Router="{Binding Path=Router}" PageTransition="{x:Static helpers:Transitions.Fade}">
+        <rxui:RoutedViewHost.DefaultContent>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <!--
+				<TextBlock Classes="h1" Text="Personnel Application"/>-->
+                <TextBlock FontSize="32" Classes="Header" Text="Идет загрузка..." HorizontalAlignment="Center" TextAlignment="Center"/>
+                <ProgressBar IsIndeterminate="True"/>
+            </StackPanel>
+        </rxui:RoutedViewHost.DefaultContent>
+    </reactiveUi:RoutedViewHost>
     
-    <Grid 
-        HorizontalAlignment="Center"
-        RowDefinitions="Auto, Auto, Auto, *"
-        ColumnDefinitions="*, * ">
-
-		<!-- ROW 1 -->
-        <Border
-            Margin="25"
-            Grid.Row="0"
-            Grid.Column="0"
-            Classes="Card">
-            <StackPanel 
-                HorizontalAlignment="Center">
-                <Svg 
-                    Path="/Assets/question.svg"/>
-                <TextBlock 
-                    Classes="Heading" 
-                    Text="Общие сведения" />
-                <TextBlock 
-                    Classes="Caption" 
-                    Text="Подробнее..." />
-            </StackPanel>
-        </Border>
-
-        <Border
-            Margin="25"
-            Grid.Row="0"
-            Grid.Column="1"
-            Classes="Card">
-            <StackPanel HorizontalAlignment="Center">
-                
-                <Svg 
-                    Path="/Assets/user-group.svg"/>
-                <TextBlock Classes="Heading" 
-                           Text="Руководство" />
-                    <TextBlock Classes="Caption" 
-                               Text="Подробнее..." />
-            </StackPanel>
-        </Border>
-		<!-- END ROW 1 -->
-
-		<!-- ROW 2 -->
-        <Border
-            Margin="25"
-            Grid.Row="1"
-            Grid.Column="0"
-            Classes="Card">
-            <StackPanel HorizontalAlignment="Center">
-                <Svg 
-                    Path="/Assets/home.svg"/>
-                <TextBlock Classes="Heading" 
-                           Text="Структура" />
-                <TextBlock Classes="Caption" 
-                           Text="Подробнее..." />
-            </StackPanel>
-        </Border>
-
-        <Border
-            Margin="25"
-            Grid.Row="1"
-            Grid.Column="1"
-            Classes="Card">
-            <StackPanel HorizontalAlignment="Center">
-                <Svg 
-                    Path="/Assets/phone.svg"/>
-                <TextBlock Classes="Heading" 
-                           Margin="0"
-                           Text="Контактная" />
-                <TextBlock Classes="Heading" 
-                           Margin="0"
-                           Text="информация" />
-                <TextBlock 
-                    Classes="Caption" 
-                    Text="Подробнее..." />
-                
-            </StackPanel>
-        </Border>
-		<!-- END ROW 2 -->
-
-		<!-- ROW 3 -->
-        <Border
-            Margin="25"
-            Grid.Row="2"
-            Grid.Column="0"
-            Classes="Card">
-            <StackPanel HorizontalAlignment="Center">
-                <Svg 
-                    Path="/Assets/table.svg"/>
-                <TextBlock Classes="Heading" 
-                           Margin="0"
-                           Text="Электронное" />
-                <TextBlock Classes="Heading" 
-                           Margin="0"
-                           Text="расписание" />
-                <TextBlock Classes="Caption" 
-                           Text="Подробнее..." />
-              
-            </StackPanel>
-        </Border>
-
-        <Border
-            Margin="25"
-            Grid.Row="2"
-            Grid.Column="1"
-            Classes="Card">
-            <StackPanel HorizontalAlignment="Center">
-                <Svg 
-                    Path="/Assets/information.svg"/>
-                <TextBlock Classes="Heading" 
-                           Text="Объявления" />
-                <TextBlock Classes="Caption" 
-                           Text="Подробнее..." />
-               
-            </StackPanel>
-        </Border>
-
-		<!-- END ROW 3 -->
-        
-    </Grid>
+   
    
 
 </Window>

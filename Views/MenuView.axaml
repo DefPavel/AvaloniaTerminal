@@ -1,0 +1,174 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:AvaloniaTerminal.ViewModels"
+             xmlns:i="using:Avalonia.Xaml.Interactivity"
+             xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTerminal.Views.MenuView">
+    
+    <UserControl.Styles>
+        
+        <Style Selector="Border.Card:pointerover">
+            <Setter Property="Background" Value="{DynamicResource ThemeBackgroundColor}" />
+        </Style>
+        <Style Selector="Border.Card">
+            <Setter Property="CornerRadius" Value="12"/>
+        </Style>
+
+        <Style Selector="TextBlock.Heading">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="FontWeight" Value="Black"/>
+        </Style>
+        
+        <Style Selector="TextBlock.Caption">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+
+        <Style Selector="Border">
+            <Setter Property="BoxShadow" Value="3 3 10 2 #BDBDBD"/>
+            <Setter Property="MinHeight" Value="500"/>
+            <Setter Property="MinWidth" Value="400"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+        
+    </UserControl.Styles>
+    
+    <Design.DataContext>
+        <vm:MenuViewModel/>
+    </Design.DataContext>
+    
+     <Grid 
+        HorizontalAlignment="Center"
+        RowDefinitions="Auto, Auto, Auto, *"
+        ColumnDefinitions="*, * ">
+
+		<!-- ROW 1 -->
+        <Border
+            Name="Info"
+            Margin="25"
+            Grid.Row="0"
+            Grid.Column="0"
+            Classes="Card">
+            <i:Interaction.Behaviors>
+                <ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #Info}">
+                    <ia:InvokeCommandAction Command="{Binding GetInfoView}"/>
+                </ia:EventTriggerBehavior>
+            </i:Interaction.Behaviors>
+            <StackPanel 
+                HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/question.svg"/>
+                <TextBlock 
+                    Classes="Heading" 
+                    Text="Общие сведения" />
+                <TextBlock 
+                    Classes="Caption" 
+                    Text="Подробнее..." />
+            </StackPanel>
+        </Border>
+
+        <Border
+            Margin="25"
+            Grid.Row="0"
+            Grid.Column="1"
+            Classes="Card">
+            <StackPanel HorizontalAlignment="Center">
+                
+                <Svg 
+                    Path="/Assets/user-group.svg"/>
+                <TextBlock Classes="Heading" 
+                           Text="Руководство" />
+                    <TextBlock Classes="Caption" 
+                               Text="Подробнее..." />
+            </StackPanel>
+        </Border>
+		<!-- END ROW 1 -->
+
+		<!-- ROW 2 -->
+        <Border
+            Margin="25"
+            Grid.Row="1"
+            Grid.Column="0"
+            Classes="Card">
+            <StackPanel HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/home.svg"/>
+                <TextBlock Classes="Heading" 
+                           Text="Структура" />
+                <TextBlock Classes="Caption" 
+                           Text="Подробнее..." />
+            </StackPanel>
+        </Border>
+
+        <Border
+            Margin="25"
+            Grid.Row="1"
+            Grid.Column="1"
+            Classes="Card">
+            <StackPanel HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/table.svg"/>
+                <TextBlock Classes="Heading" 
+                           Margin="0"
+                           Text="Электронное" />
+                <TextBlock Classes="Heading" 
+                           Margin="0"
+                           Text="расписание" />
+                <TextBlock Classes="Caption" 
+                           Text="Подробнее..." />
+              
+            </StackPanel>
+        </Border>
+        
+		<!-- END ROW 2 -->
+
+		<!-- ROW 3 -->
+
+
+        <Border
+            Margin="25"
+            Grid.Row="2"
+            Grid.Column="1"
+            Classes="Card">
+            <StackPanel HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/phone.svg"/>
+                <TextBlock Classes="Heading" 
+                           Margin="0"
+                           Text="Контактная" />
+                <TextBlock Classes="Heading" 
+                           Margin="0"
+                           Text="информация" />
+                <TextBlock 
+                    Classes="Caption" 
+                    Text="Подробнее..." />
+                
+            </StackPanel>
+        </Border>
+        
+        <Border
+            Margin="25"
+            Grid.Row="2"
+            Grid.Column="1"
+            Classes="Card">
+            <StackPanel HorizontalAlignment="Center">
+                <Svg 
+                    Path="/Assets/information.svg"/>
+                <TextBlock Classes="Heading" 
+                           Text="Объявления" />
+                <TextBlock Classes="Caption" 
+                           Text="Подробнее..." />
+               
+            </StackPanel>
+        </Border>
+
+		<!-- END ROW 3 -->
+        
+    </Grid>
+    
+</UserControl>

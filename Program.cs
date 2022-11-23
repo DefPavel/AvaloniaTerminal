@@ -2,33 +2,22 @@
 using Avalonia.ReactiveUI;
 using System;
 using Avalonia.Dialogs;
+using Avalonia.Svg;
 
 namespace AvaloniaTerminal
 {
     internal static class Program
     {
-        // Initialization code. Don't use any Avalonia, third-party APIs or any
-        // SynchronizationContext-reliant code before AppMain is called: things aren't initialized
-        // yet and stuff might break.
         [STAThread]
         public static void Main(string[] args) => BuildAvaloniaApp()
             .StartWithClassicDesktopLifetime(args);
-
-        // Avalonia configuration, don't remove; also used by visual designer.
-        private static AppBuilder BuildAvaloniaApp()
-        {
-            //GC.KeepAlive(typeof(SvgImageExtension).Assembly);
-            //GC.KeepAlive(typeof(Avalonia.Svg.Skia.Svg).Assembly);
-            
-            return AppBuilder.Configure<App>()
+        private static AppBuilder BuildAvaloniaApp() =>
+            AppBuilder.Configure<App>()
                 .UsePlatformDetect()
                 .With(new X11PlatformOptions {EnableMultiTouch = true, UseDBusMenu = true})
                 .With(new Win32PlatformOptions {EnableMultitouch = true, AllowEglInitialization = true})
                 .UseSkia()
                 .UseReactiveUI()
                 .UseManagedSystemDialogs();
-        }
-
-        
     }
 }
