@@ -68,8 +68,8 @@
 	       <Button Classes="Primary" Grid.Row="2" Grid.Column="1" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="2">2</Button>
 	       <Button Classes="Primary" Grid.Row="2" Grid.Column="2" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="3">3</Button>
 	       
-	       <Button Classes="Primary" Grid.Row="3" Grid.Column="0" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="0">0</Button>
-	       <Button Classes="Primary" Grid.Row="3" Grid.Column="1" Margin="5" Command="{Binding Path=ClearCommand}">C</Button>
+	       <Button Classes="Primary" Grid.Row="3" Grid.Column="1" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="0">0</Button>
+	       <Button Classes="Primary" Grid.Row="3" Grid.Column="0" Margin="5" Command="{Binding Path=ClearCommand}">C</Button>
 	       
 	       <Button Classes="Primary" Grid.Row="3" Grid.Column="2" Margin="5" Command="{Binding Check}"
 	               CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">OK</Button>

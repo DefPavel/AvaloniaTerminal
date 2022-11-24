@@ -26,7 +26,7 @@
             </Carousel.PageTransition>
             <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/600fb31e2dd1a.jpg"/>
             <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/629461e13ec37.jpg"/>
-            <Image asyncImageLoader:ImageLoader.Source=" https://i2.wp.com/starpri.ru/wp-content/uploads/2019/04/kto-takoj-glad-valakas.jpg"/>
+            <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/5f1fd226cb242.jpg"/>
     </Carousel>
 
 </UserControl>
