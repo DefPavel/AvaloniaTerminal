@@ -3,8 +3,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="250"
-        Height="250"
-        Width="500"
+        Height="480"
+        Width="400"
 		SystemDecorations="None"
 		WindowStartupLocation="CenterScreen"
         TabIndex="0"
@@ -18,7 +18,7 @@
         <vm:CheckCodeViewModel/>
     </Design.DataContext>
     
-    <Grid RowDefinitions="60, 85, 30, Auto">
+    <Grid RowDefinitions="55, 80, 20, Auto">
        <TextBlock 
 		   FontSize="36"
 		   Classes="Heading"
@@ -29,7 +29,7 @@
 		
        <TextBox
 	       Name="TextCode"
-	       Margin="10 10 10 10"
+	       Margin="10 10 10 0"
 		   MaxLength="6"
 		   FontSize="30"
            Text="{Binding Code}"
@@ -42,7 +42,7 @@
        </TextBox>
        
        <ProgressBar
-	       Height="25"
+	       Height="20"
 	       Name="ProgressBar"
 	       Grid.Row="2"
 	       IsIndeterminate="True"
@@ -50,10 +50,39 @@
 	       IsVisible="False"
 	       />
 		
-       <StackPanel 
+       <Grid 
+	       HorizontalAlignment="Center"
+	       Margin="10 0 10 0"
+	       RowDefinitions="*,*,*,*,*,*"
+	       ColumnDefinitions="110,110,110"
+	       Grid.Row="3">
+	       <Button Classes="Primary" Grid.Row="0" Grid.Column="0" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="7">7</Button>
+	       <Button Classes="Primary" Grid.Row="0" Grid.Column="1" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="8">8</Button>
+	       <Button Classes="Primary" Grid.Row="0" Grid.Column="2" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="9">9</Button>
+	       
+	       <Button Classes="Primary" Grid.Row="1" Grid.Column="0" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="4">4</Button>
+	       <Button Classes="Primary" Grid.Row="1" Grid.Column="1" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="5">5</Button>
+	       <Button Classes="Primary" Grid.Row="1" Grid.Column="2" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="6">6</Button>
+	       
+	       <Button Classes="Primary" Grid.Row="2" Grid.Column="0" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="1">1</Button>
+	       <Button Classes="Primary" Grid.Row="2" Grid.Column="1" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="2">2</Button>
+	       <Button Classes="Primary" Grid.Row="2" Grid.Column="2" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="3">3</Button>
+	       
+	       <Button Classes="Primary" Grid.Row="3" Grid.Column="0" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="0">0</Button>
+	       <Button Classes="Primary" Grid.Row="3" Grid.Column="1" Margin="5" Command="{Binding Path=ClearCommand}">C</Button>
+	       
+	       <Button Classes="Primary" Grid.Row="3" Grid.Column="2" Margin="5" Command="{Binding Check}"
+	               CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">OK</Button>
+	       
+	       <Button Grid.Column="0" Classes="Primary" Grid.Row="4" Grid.ColumnSpan="3" Margin="5" Command="{Binding Close}"
+	               CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">ВЫХОД</Button>
+	       
+	       
+       </Grid>
+       <!--<StackPanel 
 	       HorizontalAlignment="Center"
            Orientation="Horizontal"
-           Grid.Row="3">
+           Grid.Row="4">
            <Button 
 			   MinWidth="120"
 			   FontSize="25"
@@ -64,13 +93,12 @@
                Classes="Primary"/>
            <Button 
 			   
-			   MinWidth="120"
-			   FontSize="25"
-               Command="{Binding Close}"
+			   MinWidth="100"
+			   Command="{Binding Close}"
                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
                Margin="10 0 10 0"
                Content="Выход"
                Classes="Primary"/>
-       </StackPanel>
+       </StackPanel>-->
    </Grid>
 </Window>

@@ -36,12 +36,27 @@ public sealed class CheckCodeViewModel : ViewModelBase
 
     #region Команды
     
+    public ReactiveCommand<string, Unit> AddNumberCommand { get; }
+    public ReactiveCommand<Unit, Unit> ClearCommand { get; }
     public ReactiveCommand<object, Unit> Check { get; }
     public ReactiveCommand<object, Unit> Close { get; }
     
     #endregion
 
     #region Логика
+
+
+    private void Clear()
+    {
+        Code = string.Empty;
+    }
+    
+    private void AddNumber(string value)
+    {
+        if (Code is "Неверный пин" or "Неверные данные") Code = string.Empty;
+        
+        if (Code?.Length != 6) Code += value;
+    }
 
     private async Task Checking(object win)
     {
@@ -78,6 +93,9 @@ public sealed class CheckCodeViewModel : ViewModelBase
         _chekingService = chekingService;
         // Закрыть окно
         Close = ReactiveCommand.Create<object>(Exit);
+
+        AddNumberCommand = ReactiveCommand.Create<string>(AddNumber);
+        ClearCommand = ReactiveCommand.Create(Clear);
         // Проверять только если код не пустой
         var canCheck = this.WhenAnyValue(x => x.Code,
             (code) => !string.IsNullOrWhiteSpace(code));
