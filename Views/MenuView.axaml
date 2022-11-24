@@ -125,7 +125,14 @@
                 Margin="15 0 15 15"
                 Grid.Row="1"
                 Grid.Column="1"
+                Name="Table"
                 Classes="Card">
+                <i:Interaction.Behaviors>
+                    <ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #Table}">
+                        <!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
+                        <ia:InvokeCommandAction Command="{Binding GetTimeTableView}"/>
+                    </ia:EventTriggerBehavior>
+                </i:Interaction.Behaviors>
                 <StackPanel HorizontalAlignment="Center">
                     <Svg 
                         Path="/Assets/table.svg"/>

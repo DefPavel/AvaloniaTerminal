@@ -30,6 +30,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
     #region Команды
     public ReactiveCommand<Unit, Unit> GetInfoView { get; }
+    
+    public ReactiveCommand<Unit, Unit> GetTimeTableView { get; }
 
     #endregion
 
@@ -46,6 +48,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         // но у меня в данной структуре работает только такой
         
         // TODO: Когда пройдет еще время, найдите способ лучше передавать данные между Window и UseCotrol в (MVVM)
+       
+        _ = Span.Add(TimeSpan.FromSeconds(40));
         
         CheckCodeViewModel viewModel = new();
         CheckCodeView view = new() { DataContext = viewModel };
@@ -60,7 +64,24 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         if(viewModel.Status)
             await HostScreen.Router.Navigate.Execute(new InfoViewModel(HostScreen));
 
+    }
+
+    private async Task GetTimeTable()
+    {
         _ = Span.Add(TimeSpan.FromSeconds(40));
+        
+        CheckCodeViewModel viewModel = new();
+        CheckCodeView view = new() { DataContext = viewModel };
+        
+        var mainWindow = Application.Current?.ApplicationLifetime 
+            is IClassicDesktopStyleApplicationLifetime desktop 
+            ? desktop.MainWindow 
+            : null;
+
+        await view.ShowDialog(mainWindow);
+
+        if(viewModel.Status)
+            await HostScreen.Router.Navigate.Execute(new TimetableViewModel(HostScreen));
     }
 
     #endregion
@@ -78,6 +99,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         GetInfoView = ReactiveCommand.CreateFromTask( async _ => await GetInformationView());
         
         GetInfoView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
+
+        GetTimeTableView = ReactiveCommand.CreateFromTask(async _ => await GetTimeTable());
 
         _disTimer.Interval = Span;
         _disTimer.Tick += DispatcherTimer_Tick;

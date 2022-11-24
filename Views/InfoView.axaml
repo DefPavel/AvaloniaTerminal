@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:AvaloniaTerminal.ViewModels"
+             xmlns:webViewControl="clr-namespace:WebViewControl;assembly=WebViewControl.Avalonia"
              mc:Ignorable="d" d:DesignWidth="2000" d:DesignHeight="3050"
              x:Class="AvaloniaTerminal.Views.InfoView">
 
@@ -13,12 +14,18 @@
         <Style Selector="TextBlock">
             <Setter Property="FontSize" Value="28" />
         </Style>
+	    <Style Selector="Svg">
+		    <Setter Property="Height" Value="30"/>
+		    <Setter Property="Width" Value="30"/>
+	    </Style>
     </UserControl.Styles>
+	
+	
 
 	<ScrollViewer>
 		<Grid RowDefinitions="65 , Auto">
 			<Button
-				Margin="5"
+				Margin="10"
 				HorizontalAlignment="Left"
 				MinWidth="65"
 				Command="{Binding GetBack}"
@@ -35,7 +42,6 @@
 					Source="/Assets/favicon.png"
 					HorizontalAlignment="Center"
                 />
-				
 				<TextBlock 
 					HorizontalAlignment="Center"
 					Classes="Heading"
