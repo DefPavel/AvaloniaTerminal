@@ -1,3 +1,4 @@
+
 using System.Reactive.Disposables;
 using Avalonia.Controls;
 using Avalonia.ReactiveUI;
@@ -19,4 +20,11 @@ public partial class CheckCodeView : ReactiveWindow<CheckCodeViewModel>
                 .DisposeWith(disposables);
         });
     }
+
+   /* private void InputElement_OnGotFocus(object? sender, GotFocusEventArgs e)
+    {
+        if (!Osklib.OnScreenKeyboard.IsOpened())
+            Osklib.OnScreenKeyboard.Show();
+    }
+    */
 }

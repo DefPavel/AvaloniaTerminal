@@ -9,6 +9,8 @@
 		WindowStartupLocation="CenterScreen"
         TabIndex="0"
 		Background="White"
+        xmlns:i="using:Avalonia.Xaml.Interactivity"
+        xmlns:custom="using:AvaloniaTerminal.Helpers"
         xmlns:vm="using:AvaloniaTerminal.ViewModels"
         x:Class="AvaloniaTerminal.Views.CheckCodeView">
     
@@ -25,14 +27,19 @@
            Grid.Row="0" 
            Text="Введите PIN"/>
 		
-       <TextBox 
-		   Margin="10 10 10 10"
+       <TextBox
+	       Name="TextCode"
+	       Margin="10 10 10 10"
 		   MaxLength="6"
 		   FontSize="30"
            Text="{Binding Code}"
-		   FontWeight="Black"
 		   Watermark="●●●●●●"
-		   Grid.Row="1"/>
+		   TabIndex="0"
+		   Grid.Row="1">
+	       <i:Interaction.Behaviors>
+		       <custom:FocusOnPropertyChangedBehavior />
+	       </i:Interaction.Behaviors>
+       </TextBox>
        
        <ProgressBar
 	       Height="25"

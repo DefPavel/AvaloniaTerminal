@@ -5,7 +5,7 @@
              xmlns:vm="using:AvaloniaTerminal.ViewModels"
              xmlns:i="using:Avalonia.Xaml.Interactivity"
              xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="3000" d:DesignHeight="4000"
              x:Class="AvaloniaTerminal.Views.MenuView">
     
     <UserControl.Styles>
@@ -13,6 +13,12 @@
         <!--<Style Selector="Border.Card:pointerover">
             <Setter Property="Background" Value="{DynamicResource ThemeBackgroundColor}" />
         </Style>-->
+       
+        <Style Selector="Svg">
+            <Setter Property="Height" Value="500"/>
+            <Setter Property="Width" Value="600"/>
+        </Style>
+        
         <Style Selector="Border.Card">
             <Setter Property="CornerRadius" Value="12"/>
         </Style>
@@ -20,18 +26,18 @@
         <Style Selector="TextBlock.Heading">
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="FontSize" Value="42"/>
             <Setter Property="FontWeight" Value="Black"/>
         </Style>
         
         <Style Selector="TextBlock.Caption">
-            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontSize" Value="24"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
 
         <Style Selector="Border">
             <Setter Property="BoxShadow" Value="3 3 10 2 #BDBDBD"/>
-            <Setter Property="MinHeight" Value="500"/>
+            <Setter Property="MinHeight" Value="400"/>
             <Setter Property="MinWidth" Value="400"/>
             <Setter Property="Padding" Value="10"/>
         </Style>
@@ -50,7 +56,8 @@
                     FontWeight="Black"
                     FontSize="23" />
             </TabItem.Header>
-            <Grid 
+            <ScrollViewer>
+              <Grid 
             HorizontalAlignment="Center"
             RowDefinitions="Auto, Auto, Auto, *"
             ColumnDefinitions="*, * ">
@@ -58,7 +65,7 @@
 		    <!-- ROW 1 -->
             <Border
                 Name="Info"
-                Margin="25"
+                Margin=" 15 10 15 15"
                 Grid.Row="0"
                 Grid.Column="0"
                 Classes="Card">
@@ -82,7 +89,7 @@
             </Border>
 
             <Border
-                Margin="25"
+                Margin="15 15 15 15"
                 Grid.Row="0"
                 Grid.Column="1"
                 Classes="Card">
@@ -100,7 +107,7 @@
 
 		    <!-- ROW 2 -->
             <Border
-                Margin="25"
+                Margin="15 0 15 15"
                 Grid.Row="1"
                 Grid.Column="0"
                 Classes="Card">
@@ -115,7 +122,7 @@
             </Border>
 
             <Border
-                Margin="25"
+                Margin="15 0 15 15"
                 Grid.Row="1"
                 Grid.Column="1"
                 Classes="Card">
@@ -140,7 +147,7 @@
 
 
             <Border
-                Margin="25"
+                Margin="15 0 15 15"
                 Grid.Row="2"
                 Grid.Column="0"
                 Classes="Card">
@@ -161,7 +168,7 @@
             </Border>
             
             <Border
-                Margin="25"
+                Margin="15 0 15 15"
                 Grid.Row="2"
                 Grid.Column="1"
                 Classes="Card">
@@ -178,7 +185,9 @@
 
 		    <!-- END ROW 3 -->
             
-        </Grid> 
+        </Grid>       
+            </ScrollViewer>
+          
         </TabItem>
         <TabItem IsEnabled="False" >
             <TabItem.Header>

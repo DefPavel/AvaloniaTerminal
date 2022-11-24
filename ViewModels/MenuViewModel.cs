@@ -22,7 +22,9 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     private readonly IMenuService? _menuService;
     private readonly IApplicationInfo? _applicationInfo;
     public string UrlPathSegment => nameof(MenuViewModel);
-    public IScreen HostScreen { get; } 
+    public IScreen HostScreen { get; }
+
+    private static TimeSpan Span => TimeSpan.FromMinutes(2);
 
     #endregion
 
@@ -57,6 +59,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
         if(viewModel.Status)
             await HostScreen.Router.Navigate.Execute(new InfoViewModel(HostScreen));
+
+        _ = Span.Add(TimeSpan.FromSeconds(40));
     }
 
     #endregion
@@ -75,7 +79,7 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         
         GetInfoView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
 
-        _disTimer.Interval = TimeSpan.FromMinutes(1);
+        _disTimer.Interval = Span;
         _disTimer.Tick += DispatcherTimer_Tick;
         _disTimer.Start();
 
