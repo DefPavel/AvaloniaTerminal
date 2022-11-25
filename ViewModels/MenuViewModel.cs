@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Reactive.Disposables;
 using AvaloniaTerminal.Services;
 using ReactiveUI;
@@ -10,6 +11,7 @@ using AvaloniaTerminal.Views;
 using Splat;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Threading;
+using AvaloniaTerminal.ViewModels.Faculty;
 
 namespace AvaloniaTerminal.ViewModels;
 
@@ -17,6 +19,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 {
     #region Свойства
 
+    
+    private static readonly string? NumberFaculty = ConfigurationManager.AppSettings["numberFaculty"];
     private readonly DispatcherTimer _disTimer = new();
 
     private readonly IMenuService? _menuService;
@@ -24,7 +28,7 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     public string UrlPathSegment => nameof(MenuViewModel);
     public IScreen HostScreen { get; }
 
-    private static TimeSpan Span => TimeSpan.FromMinutes(2);
+    private static TimeSpan Span => TimeSpan.FromMinutes(1);
 
     #endregion
 
@@ -61,9 +65,16 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
         await view.ShowDialog(mainWindow);
 
-        if(viewModel.Status)
-            await HostScreen.Router.Navigate.Execute(new InfoViewModel(HostScreen));
-
+        if (viewModel.Status)
+        {
+            switch (NumberFaculty)
+            {
+                case "1" : await HostScreen.Router.NavigateAndReset.Execute(new IPRViewModel(HostScreen));
+                    break;
+            }
+            _disTimer.Stop();
+        }
+       
     }
 
     private async Task GetTimeTable()
@@ -81,7 +92,11 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         await view.ShowDialog(mainWindow);
 
         if(viewModel.Status)
-            await HostScreen.Router.Navigate.Execute(new TimetableViewModel(HostScreen));
+        {
+            _disTimer.Stop();
+            await HostScreen.Router.NavigateAndReset.Execute(new TimetableViewModel(HostScreen));
+        }
+
     }
 
     #endregion
@@ -102,12 +117,18 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
         GetTimeTableView = ReactiveCommand.CreateFromTask(async _ => await GetTimeTable());
 
-        _disTimer.Interval = Span;
-        _disTimer.Tick += DispatcherTimer_Tick;
-        _disTimer.Start();
+        
 
-        this.WhenActivated((CompositeDisposable _) =>
+        this.WhenActivated((CompositeDisposable disposables) =>
         {
+            Disposable.Create(() => {
+
+                _disTimer.Interval = Span;
+                _disTimer.Tick += DispatcherTimer_Tick;
+                _disTimer.Start();
+
+            });
+            
             // Added here just for testing
             GC.Collect();
         });

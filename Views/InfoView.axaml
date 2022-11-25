@@ -36,12 +36,12 @@
 			<StackPanel 
 				Margin="10"
 				Grid.Row="1">
-				<Image
+				<!--<Image
 					Height="200"
 					Width="200"
 					Source="/Assets/favicon.png"
 					HorizontalAlignment="Center"
-                />
+                />-->
 				<TextBlock 
 					HorizontalAlignment="Center"
 					Classes="Heading"
@@ -50,7 +50,7 @@
 					FontWeight="Black"
 					/>
 
-				<TextBlock
+				<!--<TextBlock
 					Padding="20 20 20 0"
 					HorizontalAlignment="Center"
 					Classes="Caption"
@@ -88,8 +88,8 @@
 
 На основании Приказа Министерства образования и науки Луганской Народной Республики от 13 января 2015 г. № 9 ГУ «Луганский национальный университет имени Тараса Шевченко» был переименован в ГУ «Луганский университет имени Тараса Шевченко».
 
-
-				</TextBlock>
+				</TextBlock>-->
+				
 
 			</StackPanel>
 		</Grid>	

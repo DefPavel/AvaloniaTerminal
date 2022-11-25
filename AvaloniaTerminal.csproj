@@ -35,4 +35,7 @@
         <PackageReference Include="WebViewControl-Avalonia" Version="2.91.29" />
         <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4" />
     </ItemGroup>
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\Faculty\IprView.axaml" />
+    </ItemGroup>
 </Project>

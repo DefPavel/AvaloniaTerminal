@@ -29,7 +29,7 @@ public sealed class CheckCodeViewModel : ViewModelBase
     public bool Status
     {
         get => _status;
-        private set =>  this.RaiseAndSetIfChanged(ref _status, value);
+        private set => this.RaiseAndSetIfChanged(ref _status, value);
     }  
 
     #endregion

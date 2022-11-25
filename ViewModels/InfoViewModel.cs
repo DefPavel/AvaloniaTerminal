@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Reactive;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
@@ -15,6 +16,7 @@ public sealed class InfoViewModel : ViewModelBase, IRoutableViewModel
     public ReactiveCommand<Unit, IRoutableViewModel> GetBack { get; }
 
     #endregion
+    
     public InfoViewModel(IScreen screen)
     {
         HostScreen = screen;

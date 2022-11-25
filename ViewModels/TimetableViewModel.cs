@@ -18,18 +18,18 @@ public class TimetableViewModel : ViewModelBase, IRoutableViewModel
        get => _currentAdres;
        set =>  this.RaiseAndSetIfChanged(ref _currentAdres, value);
    }
-   
-   
+     
    #region Команды
    public ReactiveCommand<Unit, IRoutableViewModel> GetBack { get; }
 
    #endregion
+
    public TimetableViewModel(IScreen screen)
    {
        HostScreen = screen;
 
        GetBack = ReactiveCommand.CreateFromTask(async _ =>
-           await HostScreen.Router.NavigateAndReset.Execute(new MenuViewModel(HostScreen)));
+           await HostScreen.Router.Navigate.Execute(new MenuViewModel(HostScreen)));
         
        this.WhenActivated((CompositeDisposable disposables) =>
        {

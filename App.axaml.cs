@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using AvaloniaTerminal.ViewModels;
+using AvaloniaTerminal.ViewModels.Faculty;
 using AvaloniaTerminal.Views;
 using ReactiveUI;
 using Splat;
@@ -24,6 +25,8 @@ namespace AvaloniaTerminal
                 Locator.CurrentMutable.Register<IViewFor<TimetableViewModel>>(() => new TimetableView());
                 Locator.CurrentMutable.Register<IViewFor<CarouselViewModel>>(() => new CarouselView());
 
+                Locator.CurrentMutable.Register<IViewFor<IPRViewModel>>(() => new IprView());
+                
                 Bootstrapper.Register(Locator.CurrentMutable, Locator.Current);
 
                 desktop.MainWindow = new MainWindow
