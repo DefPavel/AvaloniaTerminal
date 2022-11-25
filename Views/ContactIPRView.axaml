@@ -1,0 +1,67 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTerminal.Views.ContactIPRView">
+	<UserControl.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="FontSize" Value="25" />
+		</Style>
+	</UserControl.Styles>
+	<Grid RowDefinitions="65,*">
+		<Button
+			   Margin="10"
+			   HorizontalAlignment="Left"
+			   MinWidth="65"
+			   Command="{Binding GetBack}"
+			   Classes="Primary"
+			   Grid.Row="0">
+			<Svg Path="/Assets/arrow-back.svg"/>
+		</Button>
+		<TextBlock
+				Grid.Row="0"
+				HorizontalAlignment="Center"
+				Classes="Heading"
+				Text="Контакты"
+				FontSize="42"/>
+		<ScrollViewer Grid.Row="1"
+					  >
+			<StackPanel>
+				<TextBlock
+					Classes="Caption"
+					Padding="20 20 0 20"
+					HorizontalAlignment="Stretch"
+					TextWrapping="WrapWithOverflow"
+					>
+Адрес:
+г. Луганск, ул. Оборонная, 2, корпус № 3, 2 этаж, кабинет 2-05
+Контактные телефоны:
++ 38 (0642) 58-45-40
+Сайт:http://ipr.lgpu.org
+Электронная почта:
+ipr@lgpu.org
+Контакты подразделений:
+Центр  последипломного образования, повышения квалификации и профессиональной переподготовки:
+Каб. 2-03 (3 корпус, 2 этаж)
+Тел.: +38 (0642) 58 45 40; +38 (072) 141 95 94
+Cайт:http://ipr.lgpu.org
+VK:https://vk.com/cpopkpp
+Почта: podo@lgpu.org
+Центр дополнительного образования:
+Каб. 5-21 (3 корпус, 5 этаж)
+Тел.: +38 (072) 115 49 53
+VK:https://vk.com/cdo_lg
+Cайт:http://ipr.lgpu.org
+Отдел электронного обучения и дистанционных образовательных технологий:
+Каб.: 2-10 (3 корпус, 2 этаж)
+Почта: dit_obuch@lgpu.org
+Cайт:http://ipr.lgpu.org
+Центр подготовки и лицензирования специалистов физической культуры и спорта:
+Каб. 2-06 (3 корпус, 2 этаж)
+Тел.: +38 (072) 105 23 16
+				</TextBlock>
+			</StackPanel>
+		</ScrollViewer>
+</Grid>
+</UserControl>
