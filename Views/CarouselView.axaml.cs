@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reactive.Disposables;
 using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
 using Avalonia.ReactiveUI;
 using Avalonia.Threading;
@@ -30,17 +31,15 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
         InitializeComponent();
         
         _carousel = this.Get<Carousel>("ItemsCarousel");
-        _carousel.IsVirtualized = true;
-        
+
         this.WhenActivated(disposables =>
         {
-            Disposable.Create(() => { }).DisposeWith(disposables);
+            _disTimer.Interval = TimeSpan.FromSeconds(5);
+            _disTimer.Tick += DispatcherTimer_Tick;
+            _disTimer.Start();
+
+            Disposable.Create(() => { _disTimer.Stop(); }).DisposeWith(disposables);
         });
-        
-        _disTimer.Interval = TimeSpan.FromSeconds(5);
-        _disTimer.Tick += DispatcherTimer_Tick;
-        _disTimer.Start();
-        
         
         /*carousel.Items = new ObservableCollection<Image>
         {
@@ -49,5 +48,9 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
         };
         */
 
+    }
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 }

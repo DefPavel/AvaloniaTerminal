@@ -31,7 +31,7 @@
 				Command="{Binding GetBack}"
 				Classes="Primary"
 				Grid.Row="0">
-				<Svg Path="/Assets/arrow-back.svg"/>
+				<!--<Svg Path="/Assets/arrow-back.svg"/>-->
 			</Button>
 			<StackPanel 
 				Margin="10"

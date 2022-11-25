@@ -1,4 +1,5 @@
 ﻿using System.Reactive.Disposables;
+using Avalonia.Markup.Xaml;
 using Avalonia.ReactiveUI;
 using AvaloniaTerminal.ViewModels;
 using ReactiveUI;
@@ -14,5 +15,10 @@ public partial class MenuView :  ReactiveUserControl<MenuViewModel>
         {
             Disposable.Create(() => { }).DisposeWith(disposables);
         });
+        
+    }
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 }

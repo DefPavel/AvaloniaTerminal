@@ -24,9 +24,15 @@
         <Carousel.PageTransition>
                 <PageSlide Duration="0.35" Orientation="Vertical" />
             </Carousel.PageTransition>
-            <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/600fb31e2dd1a.jpg"/>
+		<!--
+		<Image asyncImageLoader:ImageLoader.Source="https://vk.com/doc311443994_652322147?hash=9uqR8LKRWrX0kjg9VKLpJIhcinQN6hisNKb7ifkomac&dl=JmVqXMLE8CIbvsCRm08azuAu8xIgBu2UqsFfC7pQsuz"/>
             <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/629461e13ec37.jpg"/>
             <Image asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/sliders/5f1fd226cb242.jpg"/>
+		-->
+		<Image Source="/Assets/afisha/afisha.jpg"/>
+		<Image Source="/Assets/afisha/ikb2Y3iv79s.jpg"/>
+		<Image Source="/Assets/afisha/URaHRTrMTUw.jpg"/>
+		
     </Carousel>
 
 </UserControl>

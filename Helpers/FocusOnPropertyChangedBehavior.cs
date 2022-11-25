@@ -18,6 +18,6 @@ public class FocusOnPropertyChangedBehavior : Behavior<Control>
     }
     private void FocuseControl(object sender, AvaloniaPropertyChangedEventArgs e)
     {
-        if (!AssociatedObject.IsFocused) AssociatedObject.Focus();
+        if (AssociatedObject is { IsFocused: false }) AssociatedObject.Focus();
     }
 }

@@ -91,8 +91,15 @@
             <Border
                 Margin="15 15 15 15"
                 Grid.Row="0"
+				Name="Director"
                 Grid.Column="1"
                 Classes="Card">
+				<i:Interaction.Behaviors>
+					<ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #Director}">
+						<!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
+						<ia:InvokeCommandAction Command="{Binding GetDirectorsView}"/>
+					</ia:EventTriggerBehavior>
+				</i:Interaction.Behaviors>
                 <StackPanel HorizontalAlignment="Center">
                     
                     <Svg 
@@ -107,10 +114,17 @@
 
 		    <!-- ROW 2 -->
             <Border
+				Name="Home"
                 Margin="15 0 15 15"
                 Grid.Row="1"
                 Grid.Column="0"
                 Classes="Card">
+				<i:Interaction.Behaviors>
+					<ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #Home}">
+						<!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
+						<ia:InvokeCommandAction Command="{Binding GetStructuralView}"/>
+					</ia:EventTriggerBehavior>
+				</i:Interaction.Behaviors>
                 <StackPanel HorizontalAlignment="Center">
                     <Svg 
                         Path="/Assets/home.svg"/>
@@ -154,10 +168,17 @@
 
 
             <Border
+                Name="Phone"
                 Margin="15 0 15 15"
                 Grid.Row="2"
                 Grid.Column="0"
                 Classes="Card">
+                <i:Interaction.Behaviors>
+                    <ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #Phone}">
+                        <!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
+                        <ia:InvokeCommandAction Command="{Binding GetContactView}"/>
+                    </ia:EventTriggerBehavior>
+                </i:Interaction.Behaviors>
                 <StackPanel HorizontalAlignment="Center">
                     <Svg 
                         Path="/Assets/phone.svg"/>

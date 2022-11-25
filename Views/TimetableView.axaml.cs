@@ -15,4 +15,9 @@ public partial class TimetableView : ReactiveUserControl<TimetableViewModel>
         
         this.WhenActivated(disposables => { });
     }
+    
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
+    }
 }

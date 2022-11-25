@@ -24,7 +24,11 @@ namespace AvaloniaTerminal
                 Locator.CurrentMutable.Register<IViewFor<InfoViewModel>>(() => new InfoView());
                 Locator.CurrentMutable.Register<IViewFor<TimetableViewModel>>(() => new TimetableView());
                 Locator.CurrentMutable.Register<IViewFor<CarouselViewModel>>(() => new CarouselView());
+                Locator.CurrentMutable.Register<IViewFor<DirectorsIPRViewModel>>(() => new DirectorsIPRView());
+                Locator.CurrentMutable.Register<IViewFor<StructuraIPRViewModel>>(() => new StructuraIPRView());
 
+                Locator.CurrentMutable.Register<IViewFor<ContactIPRViewModel>>(() => new ContactIPRView());
+                
                 Locator.CurrentMutable.Register<IViewFor<IPRViewModel>>(() => new IprView());
                 
                 Bootstrapper.Register(Locator.CurrentMutable, Locator.Current);

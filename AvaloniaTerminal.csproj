@@ -12,6 +12,9 @@
         <Folder Include="Models\" />
         <AvaloniaResource Include="Assets\**" />
         <None Remove=".gitignore" />
+        <None Remove="Assets\afisha\afisha.jpg" />
+        <None Remove="Assets\afisha\ikb2Y3iv79s.jpg" />
+        <None Remove="Assets\afisha\URaHRTrMTUw.jpg" />
     </ItemGroup>
     <ItemGroup>
         <!--This helps with theme dll-s trimming.
@@ -34,8 +37,5 @@
         <PackageReference Include="ThingLing.Avalonia.Controls.MessageBox" Version="2.0.0" />
         <PackageReference Include="WebViewControl-Avalonia" Version="2.91.29" />
         <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4" />
-    </ItemGroup>
-    <ItemGroup>
-      <UpToDateCheckInput Remove="Views\Faculty\IprView.axaml" />
     </ItemGroup>
 </Project>

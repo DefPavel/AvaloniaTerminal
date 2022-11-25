@@ -1,6 +1,7 @@
 
 using System.Reactive.Disposables;
 using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
 using Avalonia.ReactiveUI;
 using AvaloniaTerminal.ViewModels;
 using ReactiveUI;
@@ -19,6 +20,10 @@ public partial class CheckCodeView : ReactiveWindow<CheckCodeViewModel>
                 .BindTo(this, x => x.CheckProgress.IsVisible)
                 .DisposeWith(disposables);
         });
+    }
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 
    /* private void InputElement_OnGotFocus(object? sender, GotFocusEventArgs e)
