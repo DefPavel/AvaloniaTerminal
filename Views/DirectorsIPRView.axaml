@@ -9,6 +9,10 @@
 		<Style Selector="TextBlock">
 			<Setter Property="FontSize" Value="25" />
 		</Style>
+		<Style Selector="Svg">
+			<Setter Property="Height" Value="30"/>
+			<Setter Property="Width" Value="30"/>
+		</Style>
 	</UserControl.Styles>
 	<Grid RowDefinitions="65,*">
 		<Button

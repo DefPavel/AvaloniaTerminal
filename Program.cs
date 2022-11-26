@@ -14,8 +14,15 @@ namespace AvaloniaTerminal
         private static AppBuilder BuildAvaloniaApp() =>
             AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .With(new X11PlatformOptions {EnableMultiTouch = true, UseDBusMenu = true})
-                .With(new Win32PlatformOptions {EnableMultitouch = true, AllowEglInitialization = true})
+                .With(
+                new X11PlatformOptions
+                {
+                    EnableMultiTouch = true,
+                })
+                .With(new Win32PlatformOptions
+                {
+                    EnableMultitouch = true,
+                })
                 .UseSkia()
                 .UseReactiveUI()
                 .UseManagedSystemDialogs();

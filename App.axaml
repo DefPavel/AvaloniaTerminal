@@ -10,6 +10,7 @@
         <FluentTheme Mode="Light"/>
     </Application.Styles>-->
     <Application.Styles>
+        <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Default.xaml"/>
         <!-- The line below is the only thing you need to get started.
          Tested with Avalonia 0.9.0 only, although not with all controls. -->
         <StyleInclude Source="avares://Citrus.Avalonia/Citrus.xaml"/>

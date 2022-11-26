@@ -13,8 +13,16 @@ public sealed class CheckCodeViewModel : ViewModelBase
 {
 
     #region Свойства
-
+    
     private readonly IChekingService _chekingService;
+
+    private TimeSpan _timeSpan;
+
+    public TimeSpan TimeSpans
+    {
+        get => _timeSpan;
+        set =>  this.RaiseAndSetIfChanged(ref _timeSpan, value);
+    }
     
     private string? _code;
 
@@ -22,8 +30,7 @@ public sealed class CheckCodeViewModel : ViewModelBase
     {
         get => _code;
         set =>  this.RaiseAndSetIfChanged(ref _code, value);
-    }  
-    
+    }
     private bool _status;
 
     public bool Status
@@ -84,12 +91,15 @@ public sealed class CheckCodeViewModel : ViewModelBase
 
     #endregion
     
+    public CheckCodeViewModel(TimeSpan span) :
+        this(
+            Locator.Current.GetService<IChekingService>(),
+            span
+        ){ }
     
-    public CheckCodeViewModel() :
-        this(Locator.Current.GetService<IChekingService>()){ }
-    
-    public CheckCodeViewModel(IChekingService chekingService)
+    public CheckCodeViewModel(IChekingService chekingService , TimeSpan timeSpan)
     {
+        TimeSpans = timeSpan - TimeSpan.FromSeconds(5);
         _chekingService = chekingService;
         // Закрыть окно
         Close = ReactiveCommand.Create<object>(Exit);
@@ -103,10 +113,15 @@ public sealed class CheckCodeViewModel : ViewModelBase
         Check = ReactiveCommand.CreateFromTask<object>(Checking, canCheck);
         Check.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
         
-        this.WhenActivated((CompositeDisposable disposables) =>
+      
+        
+        this.WhenActivated(disposables =>
         {
+
+            Disposable.Create(() => { }).DisposeWith(disposables);
             GC.Collect();
         });
        
     }
+
 }

@@ -9,7 +9,7 @@ using Splat;
 
 namespace AvaloniaTerminal
 {
-    public partial class App : Application
+    public class App : Application
     {
         public override void Initialize()
         {
@@ -27,9 +27,17 @@ namespace AvaloniaTerminal
                 Locator.CurrentMutable.Register<IViewFor<DirectorsIPRViewModel>>(() => new DirectorsIPRView());
                 Locator.CurrentMutable.Register<IViewFor<StructuraIPRViewModel>>(() => new StructuraIPRView());
 
+                Locator.CurrentMutable.Register<IViewFor<NoticeViewModel>>(() => new NoticeView());
+                
+                Locator.CurrentMutable.Register<IViewFor<SturcurFizViewModel>>(() => new StructurFizView());
+                Locator.CurrentMutable.Register<IViewFor<DirectorsFizViewModel>>(() => new DirectorsFizView());
+                
+                Locator.CurrentMutable.Register<IViewFor<NewTimeTableViewModel>>(() => new NewTimeTableView());
+                
                 Locator.CurrentMutable.Register<IViewFor<ContactIPRViewModel>>(() => new ContactIPRView());
                 
                 Locator.CurrentMutable.Register<IViewFor<IPRViewModel>>(() => new IprView());
+                Locator.CurrentMutable.Register<IViewFor<FizVospViewModel>>(() => new FizVospView());
                 
                 Bootstrapper.Register(Locator.CurrentMutable, Locator.Current);
 

@@ -51,6 +51,7 @@
 						Text="ИНСТИТУТ ПРОФЕССИОНАЛЬНОГО РАЗВИТИЯ"
 						FontSize="42"/>
 					<StackPanel
+						HorizontalAlignment="Center"
 						Margin=" 0 15 0 0"
 						Orientation="Horizontal">
 						<Image

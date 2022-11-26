@@ -1,0 +1,230 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTerminal.Views.FizVospView">
+	<UserControl.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="26" />
+        </Style>
+		<Style Selector="Svg">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="30"/>
+        </Style>
+    </UserControl.Styles>
+    <Grid
+	    Margin="0 0 0 50"
+	    RowDefinitions="65,*">
+	    <Button
+		    Margin="10"
+		    HorizontalAlignment="Left"
+		    MinWidth="65"
+		    Command="{Binding GetBack}"
+		    Classes="Primary"
+		    Grid.Row="0">
+		    <Svg Path="/Assets/arrow-back.svg"/>
+	    </Button>
+	    <TextBlock
+		    Grid.Row="0"
+		    HorizontalAlignment="Center"
+		    Classes="Heading"
+		    Text="Общие сведения"
+		    FontSize="42"/>
+	    
+	    <ScrollViewer Grid.Row="1">
+		    <StackPanel>
+		    
+			    <StackPanel
+	                Margin=" 0 15 0 0"
+                    Orientation="Horizontal">
+                    <Image
+	                    
+						MaxHeight="300"
+							MaxWidth="300"
+                        Margin="20 0 0 0"
+                        Stretch="Fill"
+                        asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486412577/b-s-barabanom_thumb.jpg"
+                        HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+                       />
+					<TextBlock 
+						Classes="Caption"
+                        Padding="20 0 20 0"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow">
+Визитной карточкой нашего университета является
+Институт физического воспитания и спорта, студенты 
+и выпускники которого завоевали 12 золотых,
+9 серебряных и 14 бронзовых медалей 
+на самом престижном спортивном
+форуме современности – Олимпийских играх,
+а также более 150 медалей различного
+достоинства на чемпионатах мира, Европы, СНГ.
+Студенты Института физического
+воспитания и спорта представляют 
+не только Луганскую Народную Республику, но и весь
+Донбасс на республиканских, европейских
+и мировых спортивных форумах.
+					</TextBlock>
+                </StackPanel>
+                
+<TextBlock
+    Padding="20 0 20 0"
+    HorizontalAlignment="Stretch"
+    TextWrapping="WrapWithOverflow"
+    Classes="Caption"
+    >
+В структуру института входят: кафедра теории и методики физического воспитания;
+кафедра олимпийского и профессионального спорта; кафедра адаптивной физической
+культуры и физической реабилитации; кафедра спортивных дисциплин; кафедра
+физического воспитания, военная кафедра.
+
+Профессорско-преподавательский состав института физического воспитания и спорта
+укомплектован высококвалифицированными научно-педагогическими кадрами: 3 доктора наук,
+профессора, 18 кандидатов наук, доценты, 1 заслуженный тренер, 4 мастера спорта
+международного класса, 10 мастеров спорта, 2 председателя федераций Луганской
+Народной Республики – по каратэ и прыжкам на батуте «Прыжки на акробатической
+дорожке» и спортивной акробатики.
+                </TextBlock>
+                <StackPanel 
+	                HorizontalAlignment="Center"
+	                Orientation="Horizontal">
+	                <Image
+		                MaxHeight="300"
+		                MaxWidth="300"
+		                Margin="20 0 20 20"
+		                Stretch="Fill"
+		                asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486412577/00000000-00_thumb.jpg"
+		                HorizontalAlignment="Left"/>
+	                <Image
+		                MaxHeight="300"
+		                MaxWidth="300"
+		                Margin="10 0 20 20"
+		                Stretch="Fill"
+		                asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486412577/1010101001001_thumb.jpg"
+		                HorizontalAlignment="Left"/>
+                </StackPanel>
+			<TextBlock
+				Classes="Caption"
+			Padding="20 5 20 0"
+			HorizontalAlignment="Stretch"
+			TextWrapping="WrapWithOverflow"
+			>
+	Институт физического воспитания и спорта осуществляет набор на очную и заочную
+формы обучения по следующим направлениям подготовки: 49.03.01 «Физическая
+культура», 49.03.04 «Спорт», 49.03.02 «Физическая культура лиц с отклонениями в
+состоянии здоровья (адаптивная физическая культура)».
+</TextBlock>
+			    <StackPanel 
+				    HorizontalAlignment="Center"
+				    Orientation="Horizontal">
+				    <Image
+					    MaxHeight="300"
+					    MaxWidth="300"
+					    Margin="20 0 20 20"
+					    Stretch="Fill"
+					    asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486412577/2214_thumb.jpg"
+					    HorizontalAlignment="Left"/>
+				    <Image
+					    MaxHeight="300"
+					    MaxWidth="300"
+					    Margin="10 0 20 20"
+					    Stretch="Fill"
+					    asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486412577/66_thumb.jpg"
+					    HorizontalAlignment="Left"/>
+			    </StackPanel>
+			    
+					<TextBlock
+						Classes="Caption"
+    HorizontalAlignment="Stretch"
+    TextWrapping="WrapWithOverflow"
+    Padding="20 5 20 0">
+	Престижность нашей профессии определяется широкими возможностями
+трудоустройства. Так, по направлению подготовки «Физическая культура» выпускники
+могут работать учителем физической культуры начальной, средней и основной школы
+общего образования; преподавателем физического воспитания (руководителем
+физического воспитания) в системе среднего профессионального образования;
+руководителем (инструктором) по физической культуре и спорту в организациях
+дополнительного образования; инструктором-методистом физкультурно-спортивных
+организаций; фитнес-инструктором в фитнес-клубах любых форм собственности;
+инструктором по физической культуре в дошкольных образовательных учреждениях всех
+типов.
+</TextBlock>
+
+    <StackPanel 
+	    HorizontalAlignment="Center"
+	    Orientation="Horizontal">
+	    <Image
+		    MaxHeight="300"
+		    MaxWidth="300"
+		    Margin="20 0 20 20"
+		    Stretch="Fill"
+		    asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486412577/0011-000000-00_thumb.jpg"
+		    HorizontalAlignment="Left"/>
+	    <Image
+		    MaxHeight="300"
+		    MaxWidth="300"
+		    Margin="10 0 20 20"
+		    Stretch="Fill"
+		    asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486412577/77777777_thumb.jpg"
+		    HorizontalAlignment="Left"/>
+    </StackPanel>
+<TextBlock
+	Classes="Caption"
+	Margin="0 15 0 0"
+	Padding="20 5 20 0"
+	HorizontalAlignment="Stretch"
+	TextWrapping="WrapWithOverflow">
+По направлению подготовки «Спорт» готовят тренера специальных детско-
+юношеских спортивных школ олимпийского резерва, школ высшего спортивного
+мастерства, высших училищ физической культуры, спортивных секций и клубов; тренера
+по общей физической и функциональной подготовке; инструктора-методиста
+физкультурно-спортивных организаций, ДЮСШ, фитнес-клубов; инструктор по фитнесу,
+восточным единоборствам, бодибилдингу, оздоровительным видам двигательной
+активности.
+</TextBlock>
+			    <StackPanel 
+				    HorizontalAlignment="Center"
+				    Orientation="Horizontal">
+				    <Image
+					    MaxHeight="300"
+					    MaxWidth="300"
+					    Margin="20 0 20 20"
+					    Stretch="Fill"
+					    asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486412577/22200_thumb.jpg"
+					    HorizontalAlignment="Left"/>
+				    <Image
+					    MaxHeight="300"
+					    MaxWidth="300"
+					    Margin="10 0 20 20"
+					    Stretch="Fill"
+					    asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486412577/55_thumb.jpg"
+					    HorizontalAlignment="Left"/>
+			    </StackPanel>
+	<TextBlock
+		Classes="Caption"
+	HorizontalAlignment="Stretch"
+    TextWrapping="WrapWithOverflow"
+    Padding="20 5 20 0"
+						>
+По направлению подготовки «Физическая культура лиц с отклонениями в
+состоянии здоровья (адаптивная физическая культура)» выпускники могут
+трудоустроиться педагогом по адаптивной физической культуре в учреждениях
+дополнительного образования для детей и взрослых, профессионального обучения,
+профессионального образования, в специальных (коррекционных) образовательных
+организациях; специалистом по реабилитационной работе в социальной среде;
+инструктором-методистом по адаптивной физической культуре в организациях,
+занимающихся оздоровительной работой с детьми и взрослыми, имеющими отклонения в
+состоянии здоровья; в сфере управления деятельностью физкультурно-спортивных
+организаций людей с инвалидностью; тренером-преподавателем по адаптивной
+физической культуре и спорту.
+
+					</TextBlock>
+				
+				</StackPanel>
+	    </ScrollViewer>
+	    
+    </Grid>
+</UserControl>

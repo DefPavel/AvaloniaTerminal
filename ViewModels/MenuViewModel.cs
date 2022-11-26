@@ -28,14 +28,6 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     public string UrlPathSegment => nameof(MenuViewModel);
     public IScreen HostScreen { get; }
 
-    private TimeSpan _span = TimeSpan.FromSeconds(30);
-
-    public TimeSpan SpanTimeSpan
-    {
-        get => _span;
-        set => this.RaiseAndSetIfChanged(ref _span, value);
-    }
-
     #endregion
 
     #region Команды
@@ -44,6 +36,7 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     public ReactiveCommand<Unit, Unit> GetDirectorsView { get; }
     public ReactiveCommand<Unit, Unit> GetStructuralView { get; }
     
+    public ReactiveCommand<Unit, Unit> GetNoticeView { get; }
     public ReactiveCommand<Unit, Unit> GetContactView { get; }
 
     #endregion
@@ -63,8 +56,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         // TODO: Когда пройдет еще время, найдите способ лучше передавать данные между Window и UseCotrol в (MVVM)
 
         var timeSpan = _disTimer.Interval.Add(TimeSpan.FromSeconds(40));
-
-        CheckCodeViewModel viewModel = new();
+        _disTimer.Interval = timeSpan;
+        CheckCodeViewModel viewModel = new(timeSpan);
         CheckCodeView view = new() { DataContext = viewModel };
 
         var mainWindow = Application.Current?.ApplicationLifetime
@@ -81,6 +74,9 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
                 case "1":
                     await HostScreen.Router.NavigateAndReset.Execute(new StructuraIPRViewModel(HostScreen));
                     break;
+                case "2":
+                    await HostScreen.Router.NavigateAndReset.Execute(new SturcurFizViewModel(HostScreen));
+                    break;
             }
             // _disTimer.Stop();
         }
@@ -96,7 +92,9 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
         var timeSpan = _disTimer.Interval.Add(TimeSpan.FromSeconds(40));
 
-        CheckCodeViewModel viewModel = new();
+        _disTimer.Interval = timeSpan;
+        
+        CheckCodeViewModel viewModel = new(timeSpan);
         CheckCodeView view = new() { DataContext = viewModel };
         
         var mainWindow = Application.Current?.ApplicationLifetime 
@@ -112,6 +110,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
             {
                 case "1" : await HostScreen.Router.NavigateAndReset.Execute(new IPRViewModel(HostScreen));
                     break;
+                case "2" : await HostScreen.Router.NavigateAndReset.Execute(new FizVospViewModel(HostScreen));
+                    break;
             }
            // _disTimer.Stop();
         }
@@ -122,7 +122,9 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     {
         var timeSpan = _disTimer.Interval.Add(TimeSpan.FromSeconds(40));
 
-        CheckCodeViewModel viewModel = new();
+        _disTimer.Interval = timeSpan;
+        
+        CheckCodeViewModel viewModel = new(timeSpan);
         CheckCodeView view = new() { DataContext = viewModel };
 
         var mainWindow = Application.Current?.ApplicationLifetime
@@ -139,6 +141,9 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
                 case "1":
                     await HostScreen.Router.NavigateAndReset.Execute(new DirectorsIPRViewModel(HostScreen));
                     break;
+                case "2":
+                    await HostScreen.Router.NavigateAndReset.Execute(new DirectorsFizViewModel(HostScreen));
+                    break;
             }
         }
        
@@ -148,7 +153,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     {
         var timeSpan = _disTimer.Interval.Add(TimeSpan.FromSeconds(40));
 
-        CheckCodeViewModel viewModel = new();
+        _disTimer.Interval = timeSpan;
+        CheckCodeViewModel viewModel = new(timeSpan);
         CheckCodeView view = new() { DataContext = viewModel };
 
         var mainWindow = Application.Current?.ApplicationLifetime
@@ -174,7 +180,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     {
         var timeSpan = _disTimer.Interval.Add(TimeSpan.FromSeconds(40));
 
-        CheckCodeViewModel viewModel = new();
+        _disTimer.Interval = timeSpan;
+        CheckCodeViewModel viewModel = new(timeSpan);
         CheckCodeView view = new() { DataContext = viewModel };
         
         var mainWindow = Application.Current?.ApplicationLifetime 
@@ -187,7 +194,29 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         if(viewModel.Status)
         {
            // _disTimer.Stop();
-            await HostScreen.Router.NavigateAndReset.Execute(new TimetableViewModel(HostScreen));
+            await HostScreen.Router.NavigateAndReset.Execute(new NewTimeTableViewModel(HostScreen));
+        }
+
+    }
+    private async Task GetNotice()
+    {
+        var timeSpan = _disTimer.Interval.Add(TimeSpan.FromSeconds(40));
+
+        _disTimer.Interval = timeSpan;
+        CheckCodeViewModel viewModel = new(timeSpan);
+        CheckCodeView view = new() { DataContext = viewModel };
+        
+        var mainWindow = Application.Current?.ApplicationLifetime 
+            is IClassicDesktopStyleApplicationLifetime desktop 
+            ? desktop.MainWindow 
+            : null;
+
+        await view.ShowDialog(mainWindow);
+
+        if(viewModel.Status)
+        {
+            // _disTimer.Stop();
+            await HostScreen.Router.NavigateAndReset.Execute(new NoticeViewModel(HostScreen));
         }
 
     }
@@ -224,10 +253,13 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
         GetContactView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
 
-        this.WhenActivated((CompositeDisposable disposables) =>
+        GetNoticeView = ReactiveCommand.CreateFromTask(async _ => await GetNotice());
+        GetNoticeView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
+
+        this.WhenActivated(disposables =>
         {
             // this.WhenAnyValue(e => e.SpanTimeSpan).Subscribe(span => _disTimer.Interval = span);
-            _disTimer.Interval = TimeSpan.FromSeconds(30);
+            _disTimer.Interval = TimeSpan.FromSeconds(60);
             _disTimer.Tick += DispatcherTimer_Tick;
             _disTimer.Start();
 

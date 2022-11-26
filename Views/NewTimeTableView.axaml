@@ -1,0 +1,59 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:i="using:Avalonia.Xaml.Interactivity"
+             xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
+             x:Class="AvaloniaTerminal.Views.NewTimeTableView">
+    <UserControl.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+        <Style Selector="Svg">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="30"/>
+        </Style>
+    </UserControl.Styles>
+    <Grid RowDefinitions="65,*">
+        <Button
+            Margin="10"
+            HorizontalAlignment="Left"
+            MinWidth="65"
+            Command="{Binding GetBack}"
+            Classes="Primary"
+            Grid.Row="0">
+            <Svg Path="/Assets/arrow-back.svg"/>
+        </Button>
+        <TextBlock
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            Classes="Heading"
+            Text="Расписание"
+            FontSize="42"/>
+        
+        <DataGrid 
+            Name="GridFile"
+            AlternatingRowBackground="White"
+            Margin="20"
+            IsReadOnly="True"
+            AutoGenerateColumns="False"
+            SelectedItem="{Binding SelectedPdf}"
+            Items="{Binding PdfFiles}"
+            Grid.Row="1">
+            <i:Interaction.Behaviors>
+                <ia:EventTriggerBehavior EventName="DoubleTapped" SourceObject="{Binding #GridFile}">
+                    <!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
+                    <ia:InvokeCommandAction Command="{Binding OpenFile}"/>
+                </ia:EventTriggerBehavior>
+            </i:Interaction.Behaviors>
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Документ"
+                    Binding="{Binding Name }"
+                    />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

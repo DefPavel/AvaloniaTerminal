@@ -3,22 +3,36 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="250"
-        Height="480"
-        Width="400"
-		SystemDecorations="None"
-		WindowStartupLocation="CenterScreen"
-        TabIndex="0"
-		Background="White"
+        SystemDecorations="None"
+		WindowState="Maximized"
+        TransparencyLevelHint="Transparent"
+        ExtendClientAreaToDecorationsHint="True"
         xmlns:i="using:Avalonia.Xaml.Interactivity"
+        xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
         xmlns:custom="using:AvaloniaTerminal.Helpers"
         xmlns:vm="using:AvaloniaTerminal.ViewModels"
         x:Class="AvaloniaTerminal.Views.CheckCodeView">
-    
-    <Design.DataContext>
+	<Window.Background>
+		<SolidColorBrush Color="Black" Opacity="0.85"/>
+	</Window.Background>
+	<Design.DataContext>
         <vm:CheckCodeViewModel/>
     </Design.DataContext>
-    
-    <Grid RowDefinitions="55, 80, 20, Auto">
+	<Grid 
+		Name="CustomGrid">
+		<!--<i:Interaction.Behaviors>
+			<ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #CustomGrid}">
+				<ia:InvokeCommandAction Command="{Binding Close}"
+				                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
+			</ia:EventTriggerBehavior>
+		</i:Interaction.Behaviors>-->
+		
+		<Border
+	    Background="White"
+	    CornerRadius="12"
+	    MaxHeight="480"
+	    MaxWidth="400">
+	 <Grid RowDefinitions="55, 80, 20, Auto">
        <TextBlock 
 		   FontSize="36"
 		   Classes="Heading"
@@ -76,29 +90,12 @@
 	       
 	       <Button Grid.Column="0" Classes="Primary" Grid.Row="4" Grid.ColumnSpan="3" Margin="5" Command="{Binding Close}"
 	               CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">ВЫХОД</Button>
-	       
-	       
        </Grid>
-       <!--<StackPanel 
-	       HorizontalAlignment="Center"
-           Orientation="Horizontal"
-           Grid.Row="4">
-           <Button 
-			   MinWidth="120"
-			   FontSize="25"
-			   Command="{Binding Check}"
-			   CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
-               Margin="10 0 10 0"
-               Content="OK"
-               Classes="Primary"/>
-           <Button 
-			   
-			   MinWidth="100"
-			   Command="{Binding Close}"
-               CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
-               Margin="10 0 10 0"
-               Content="Выход"
-               Classes="Primary"/>
-       </StackPanel>-->
-   </Grid>
+	 </Grid>  
+	</Border>	
+		
+	</Grid>
+	
+    
+   
 </Window>

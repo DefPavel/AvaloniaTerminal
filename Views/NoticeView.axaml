@@ -1,0 +1,64 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTerminal.Views.NoticeView">
+    <UserControl.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+        <Style Selector="Svg">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="30"/>
+        </Style>
+    </UserControl.Styles>
+    <Grid RowDefinitions="65,*">
+        <Button
+            Margin="10"
+            HorizontalAlignment="Left"
+            MinWidth="65"
+            Command="{Binding GetBack}"
+            Classes="Primary"
+            Grid.Row="0">
+            <Svg Path="/Assets/arrow-back.svg"/>
+        </Button>
+        <TextBlock
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            Classes="Heading"
+            Text="Объявления"
+            FontSize="42"/>
+        <ScrollViewer 
+            Padding="10"
+            Grid.Row="1">
+            <ItemsControl
+                Items="{Binding Images}" Margin="16,0,0,0">
+               <ItemsControl.ItemTemplate>
+                   <DataTemplate>
+                       <ContentControl Content="{Binding}">
+                           <ContentControl.ContentTemplate>
+                               <DataTemplate>
+                                   <Image Source="{Binding }"/>
+                               </DataTemplate>
+                           </ContentControl.ContentTemplate>
+                           </ContentControl>
+                               
+                       <!--<ContentControl>
+                           <Image 
+                               Height="300"
+                               Width="300"
+                               Source="{Binding }"/>
+                       </ContentControl>-->
+                      
+                       <!--<TextBlock Text="{Binding OriginalName}"/>-->
+                       <!--<Image 
+                           Source="{Binding }"/>-->
+                   </DataTemplate>
+               </ItemsControl.ItemTemplate>
+           </ItemsControl>
+
+            
+        </ScrollViewer>
+        </Grid>
+</UserControl>

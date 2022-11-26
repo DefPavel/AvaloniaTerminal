@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Reactive.Disposables;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using Avalonia.ReactiveUI;
 using Avalonia.Threading;
 using AvaloniaTerminal.ViewModels;
@@ -26,6 +29,9 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
             _carousel.SelectedIndex = 0;
     }
     
+    
+    
+    
     public CarouselView()
     {
         InitializeComponent();
@@ -37,16 +43,39 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
             _disTimer.Interval = TimeSpan.FromSeconds(5);
             _disTimer.Tick += DispatcherTimer_Tick;
             _disTimer.Start();
+            
+            var files = Directory.GetFiles("C:\\data-avalonia\\afisha", "*.jpg");
+            var images = new ObservableCollection<Image>();
+            foreach (var item in files)
+            {
+               images.Add(new Image { Source = new Bitmap(item) });
+            }
+
+            _carousel.Items = images;
 
             Disposable.Create(() => { _disTimer.Stop(); }).DisposeWith(disposables);
         });
-        
-        /*carousel.Items = new ObservableCollection<Image>
+
+        /*this.WhenValueChanged(x => x.ViewModel!.PdfFiles)
+            .Subscribe(items =>
+            {
+                var convertImg = new ObservableCollection<Image>();
+
+                foreach (var item in items)
+                {
+                    convertImg.Add(new Image { Source = new Bitmap(item.OriginalName) });
+                }
+
+            });
+        */
+            
+        /*_carousel.Items = new ObservableCollection<Image>
         {
-            new(){ Source = new Bitmap("https://lgpu.org/data/sliders/600fb31e2dd1a.jpg") },
+            new(){ Source = new Bitmap("C:\\data-avalonia\\afisha\\afk.jpg") },
             new(){ Source = new Bitmap("/Assets/slide2.jpg")}
         };
         */
+
 
     }
     private void InitializeComponent()
