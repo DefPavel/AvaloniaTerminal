@@ -18,21 +18,13 @@
 	<Design.DataContext>
         <vm:CheckCodeViewModel/>
     </Design.DataContext>
-	<Grid 
-		Name="CustomGrid">
-		<!--<i:Interaction.Behaviors>
-			<ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #CustomGrid}">
-				<ia:InvokeCommandAction Command="{Binding Close}"
-				                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
-			</ia:EventTriggerBehavior>
-		</i:Interaction.Behaviors>-->
-		
+	<Grid Name="CustomGrid">
 		<Border
 	    Background="White"
 	    CornerRadius="12"
 	    MaxHeight="480"
 	    MaxWidth="400">
-	 <Grid RowDefinitions="55, 80, 20, Auto">
+	 <Grid RowDefinitions="55, 80, 45, Auto">
        <TextBlock 
 		   FontSize="36"
 		   Classes="Heading"
@@ -54,7 +46,16 @@
 		       <custom:FocusOnPropertyChangedBehavior />
 	       </i:Interaction.Behaviors>
        </TextBox>
-       
+       <TextBlock 
+	       FontSize="16"
+	       Margin="10 0 10 0"
+	       Classes="Caption"
+	       TextWrapping="Wrap"
+	       TextAlignment="Center"
+	       Grid.Row="2">
+Получить пин-код можно 
+у нашего телеграмм бота - @LGPU_BOT
+       </TextBlock>
        <ProgressBar
 	       Height="20"
 	       Name="ProgressBar"
