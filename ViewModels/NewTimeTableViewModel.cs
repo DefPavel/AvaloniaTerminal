@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Reactive;
@@ -17,7 +18,9 @@ public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
 {
     public string? UrlPathSegment => nameof(TimetableViewModel);
     public IScreen HostScreen { get; }
-    
+
+    /*private const string PathPdf =
+    @"C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe";*/
     /*private string? _currentAdres = "http://jmu.api.lgpu.org/storage/eios/educationalPrograms/15/Учебный план_ПП_ЛОМО 2021-2022_2022-08-11.pdf";
 
     public string? CurrentAddress
@@ -26,8 +29,10 @@ public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
         set =>  this.RaiseAndSetIfChanged(ref _currentAdres, value);
     }
     */
-    private const string PathPdf =
-        @"C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe";
+    private static readonly string? PathPdf = ConfigurationManager.AppSettings["pathPDF"];
+    
+    private static readonly string? NumberFaculty = ConfigurationManager.AppSettings["numberFaculty"];
+
     private ObservableCollection<ListFiles>? _pdfFile = new();
 
     public ObservableCollection<ListFiles>? PdfFiles
@@ -73,7 +78,7 @@ public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
 
         this.WhenActivated((CompositeDisposable _) =>
         {
-            var files = Directory.GetFiles("C:\\data-avalonia\\pdfFiles", "*.pdf");
+            var files = Directory.GetFiles("C:\\data-avalonia\\pdfFiles\\" + NumberFaculty, "*.pdf");
 
             foreach (var item in files)
             {

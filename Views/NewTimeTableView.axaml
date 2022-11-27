@@ -49,6 +49,7 @@
             </i:Interaction.Behaviors>
             <DataGrid.Columns>
                 <DataGridTextColumn
+                    Width="*"
                     Header="Документ"
                     Binding="{Binding Name }"
                     />
