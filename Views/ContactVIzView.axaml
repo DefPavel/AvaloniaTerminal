@@ -1,0 +1,162 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTerminal.Views.ContactVIzView">
+   	<UserControl.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="FontSize" Value="25" />
+		</Style>
+		<Style Selector="Svg">
+			<Setter Property="Height" Value="30"/>
+			<Setter Property="Width" Value="30"/>
+		</Style>
+	</UserControl.Styles>
+	<Grid RowDefinitions="65,*">
+		<Button
+			   Margin="10"
+			   HorizontalAlignment="Left"
+			   MinWidth="65"
+			   Command="{Binding GetBack}"
+			   Classes="Primary"
+			   Grid.Row="0">
+			<Svg Path="/Assets/arrow-back.svg"/>
+		</Button>
+		<TextBlock
+				Grid.Row="0"
+				HorizontalAlignment="Center"
+				Classes="Heading"
+				Text="Контакты"
+				FontSize="42"/>
+		<ScrollViewer Grid.Row="1">
+			<StackPanel>
+				
+				<Expander 
+					Margin="20 20 20 0"
+					Header="ВОЕННАЯ КАФЕДРА">
+					<TextBlock
+						Classes="Caption"
+						Padding="20 20 0 20"
+						HorizontalAlignment="Stretch"
+						TextWrapping="WrapWithOverflow"
+					>
+Адрес:
+г. Луганск, ул. Херсонская, 2, корпус 4, каб. 22, 22а
+					</TextBlock>
+				</Expander> 
+				
+			<Expander 
+				Margin="20 20 20 0"
+				Header="КАФЕДРА АДАПТИВНОЙ ФИЗИЧЕСКОЙ КУЛЬТУРЫ И ФИЗИЧЕСКОЙ РЕАБИЛИТАЦИИ">
+				<TextBlock
+					Classes="Caption"
+					Padding="20 20 0 20"
+					HorizontalAlignment="Stretch"
+					TextWrapping="WrapWithOverflow"
+				>
+Адрес:
+г. Луганск, ул. Оборонная, 2, учебный корпус № 3, 3 этаж, ауд.3-24.
+				</TextBlock>
+			</Expander> 
+				
+		<Expander 
+			Margin="20 20 20 0"
+			Header="КАФЕДРА СПОРТИВНЫХ ДИСЦИПЛИН">
+			<TextBlock
+				Classes="Caption"
+				Padding="20 20 0 20"
+				HorizontalAlignment="Stretch"
+				TextWrapping="WrapWithOverflow"
+			>
+Адрес:
+г. Луганск, ул. Оборонная, 2, учебный корпус № 3, 3 этаж, кабинет 3-07
+
+Контактные телефоны:
++38 (0642) 53-55-15
+
+Электронная почта:
+kaf_sd@mail.ua
+
+Официальный сайт:
+http://ifvs.ltsu.ru/
+			</TextBlock>
+		</Expander> 
+				
+				<Expander 
+					Margin="20 20 20 0"
+					Header="КАФЕДРА ФИЗИЧЕСКОГО ВОСПИТАНИЯ">
+					<TextBlock
+						Classes="Caption"
+						Padding="20 20 0 20"
+						HorizontalAlignment="Stretch"
+						TextWrapping="WrapWithOverflow"
+					>
+Адрес:
+г. Луганск, ул. Оборонная 2, корпус 1, 2 этаж, каб. 213, 214, 215
+
+Контактные телефоны:
++ 38 (0642) 53-55-15
+
+Сайт:
+http://ifvs.ltsu.ru/
+
+Электронная почта:
+sport2016@lgpu.org
+					</TextBlock>
+				</Expander> 
+				
+				<Expander 
+					Margin="20 20 20 0"
+					Header="КАФЕДРА ОЛИМПИЙСКОГО И ПРОФЕССИОНАЛЬНОГО СПОРТА">
+					<TextBlock
+						Classes="Caption"
+						Padding="20 20 0 20"
+						HorizontalAlignment="Stretch"
+						TextWrapping="WrapWithOverflow"
+					>
+Адрес:
+г. Луганск, ул. Оборонная, 2, корпус № 3,
+3 этаж, кабинеты 3-14, 3-15.
+
+Контактные телефоны:
++38 (072)-203-13-50
+
+Сайт:
+http://ifvis.ru//
+
+Электронная почта:
+kaf_olimp_sport@lgpu.org
+					</TextBlock>
+				</Expander> 
+				
+				<Expander 
+					Margin="20 20 20 0"
+					Header="КАФЕДРА ТЕОРИИ И МЕТОДИКИ ФИЗИЧЕСКОГО ВОСПИТАНИЯ">
+					<TextBlock
+						Classes="Caption"
+						Padding="20 20 0 20"
+						HorizontalAlignment="Stretch"
+						TextWrapping="WrapWithOverflow"
+					>
+Адрес:
+г. Луганск, ул. Оборонная 2, корпус 3, 3 этаж, каб. 3-29
+
+Контактные телефоны:
++ 38 (0642) 53-55-15
+
+Сайт:
+http://ifvs.lgpu.org/kaf_tmfv/index.htm
+
+Электронная почта:
+sport2016@lgpu.org
+
+Социальные группы:
+ВКонтакте: https://vk.com/physicaleducationandsport
+					</TextBlock>
+				</Expander> 
+				
+			</StackPanel>
+</ScrollViewer>
+</Grid>
+</UserControl>

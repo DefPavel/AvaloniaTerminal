@@ -33,7 +33,7 @@
             Padding="10"
             Grid.Row="1">
             <ItemsControl
-                Items="{Binding Images}" Margin="16,0,0,0">
+                Items="{Binding Images}" Margin="20,0,20,0">
                <ItemsControl.ItemTemplate>
                    <DataTemplate>
                        <ContentControl Content="{Binding}">

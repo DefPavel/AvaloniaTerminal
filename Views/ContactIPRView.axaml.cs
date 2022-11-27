@@ -6,9 +6,9 @@ using ReactiveUI;
 
 namespace AvaloniaTerminal.Views
 {
-    public partial class ContactIPRView : ReactiveUserControl<ContactIPRViewModel>
+    public partial class ContactIprView : ReactiveUserControl<ContactIPRViewModel>
     {
-        public ContactIPRView()
+        public ContactIprView()
         {
             this.WhenActivated(disposables =>
             {

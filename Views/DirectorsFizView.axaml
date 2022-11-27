@@ -302,6 +302,7 @@
                                        HorizontalAlignment="Left"/>
 
                                    <TextBlock
+	                                   Classes="Caption"
                                        Padding="20 0 20 0"
                                        HorizontalAlignment="Right"
                                        TextWrapping="WrapWithOverflow">
@@ -326,6 +327,7 @@
                    								   HorizontalAlignment="Left"/>
 
                    							   <TextBlock
+	                                               Classes="Caption"
                    								   Padding="20 0 20 0"
                    								   HorizontalAlignment="Right"
                    								   TextWrapping="WrapWithOverflow">
@@ -334,21 +336,24 @@
 Ученая степень и звание:
 кандидат педагогических наук, профессор
 Профессиональный путь:
-В 1970 году закончил  
-факультет физвоспитания Ворошиловградского 
-педагогического института  им. Т.Г. Шевченко.
-В 1986 году  окончил аспирантуру  
-по специальности «физвоспитание» Киевского 
-государственного института физической культуры.
+
                    							   </TextBlock>
                    						    </StackPanel>
                    						    <TextBlock
+	                                            Classes="Caption"
 												Padding="20 0 20 0"
 												HorizontalAlignment="Stretch"
 												TextWrapping="WrapWithOverflow"
 												>
+В 1970 году закончил   факультет 
+физвоспитания Ворошиловградского 
+педагогического института  им. Т.Г. Шевченко.
+В 1986 году  окончил аспирантуру  
+по специальности «физвоспитание» Киевского 
+государственного института физической культуры.
 Научная деятельность:
-Активно занимается научной деятельностью. Направление исследования: здоровый образ жизни.
+Активно занимается научной деятельностью.
+Направление исследования: здоровый образ жизни.
 Автор свыше 60 трудов по актуальным вопросам теории и методики спортивной тренировки,
 совершенствования физических качеств в процессе учебных занятий, 
 адаптации студенческой молодежи к учебных нагрузкам, 
@@ -392,6 +397,7 @@
 											   HorizontalAlignment="Left"/>
 
 										   <TextBlock
+											   Classes="Caption"
 											   Padding="20 0 20 0"
 											   HorizontalAlignment="Right"
 											   TextWrapping="WrapWithOverflow">
@@ -407,7 +413,7 @@
 Стаж работы – 15 лет
 										   </TextBlock>
 										</StackPanel>
-										<TextBlock
+										<TextBlock  Classes="Caption"
 											Padding="20 0 20 0"
 											HorizontalAlignment="Stretch"
 											TextWrapping="WrapWithOverflow"
@@ -451,7 +457,7 @@
 											   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467950/zyuzyukov.jpg"
 											   HorizontalAlignment="Left"/>
 
-										   <TextBlock
+										   <TextBlock  Classes="Caption"
 											   Padding="20 0 20 0"
 											   HorizontalAlignment="Right"
 											   TextWrapping="WrapWithOverflow">
@@ -463,18 +469,18 @@
 Ученая степень и звание:
 кандидат педагогических наук, доцент
 
+										   </TextBlock>
+										</StackPanel>
+										<TextBlock  Classes="Caption"
+											Padding="20 0 20 0"
+											HorizontalAlignment="Stretch"
+											TextWrapping="WrapWithOverflow"
+											>
 Профессиональный путь:
 Направление подготовки или специальности –
 «Физическое культура».
 Является членом федерации легкой атлетики ЛНР.
 Стаж работы – 40 лет.
-										   </TextBlock>
-										</StackPanel>
-										<TextBlock
-											Padding="20 0 20 0"
-											HorizontalAlignment="Stretch"
-											TextWrapping="WrapWithOverflow"
-											>
 Научная деятельность:
 Сфера научных интересов – «Проблемы интегральной подготовки в спорте высших достижений».
 Автор свыше 70 трудов по актуальным вопросам теории и методике спортивной тренировки.
@@ -503,7 +509,7 @@
 									   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1490696828/.jpg"
 									   HorizontalAlignment="Left"/>
 
-								   <TextBlock
+								   <TextBlock  Classes="Caption"
 									   Padding="20 0 20 0"
 									   HorizontalAlignment="Right"
 									   TextWrapping="WrapWithOverflow">
@@ -515,18 +521,17 @@
 Мастер спорта СССР по спортивной гимнастике. Президент 
 ОО «Федерация прыжков на батуте (прыжки на акробатической дорожке)
 и спортивной акробатики г. Луганска»
-
-Профессиональный путь:
-В 1995 окончила с отличием Донецкий факультет Украинского 
-Государственного университета физического воспитания 
-и спорта по специальности «Физическая культура и спорт».
 								   </TextBlock>
 								</StackPanel>
-								<TextBlock
+								<TextBlock  Classes="Caption"
 									Padding="20 0 20 0"
 									HorizontalAlignment="Stretch"
 									TextWrapping="WrapWithOverflow"
 									>
+Профессиональный путь:
+В 1995 окончила с отличием Донецкий факультет Украинского 
+Государственного университета физического воспитания 
+и спорта по специальности «Физическая культура и спорт».
 В 2007 году окончила с отличием магистратуру 
 Луганского государственного педагогического университета 
 имени Тараса Шевченко по специальности «физическое воспитание»
@@ -560,7 +565,7 @@
 					                   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/abakumenko.jpg"
 					                   HorizontalAlignment="Left"/>
 
-				                   <TextBlock
+				                   <TextBlock  Classes="Caption"
 					                   Padding="20 0 20 0"
 					                   HorizontalAlignment="Right"
 					                   TextWrapping="WrapWithOverflow">
@@ -569,7 +574,14 @@
 
 Ученая степень и звание: мастер спорта ЛНР международного класса 
 по традиционному каратэ
-
+				                   </TextBlock>
+			                   </StackPanel>
+			                   <TextBlock  Classes="Caption"
+				                   Padding="20 0 20 0"
+				                   HorizontalAlignment="Stretch"
+				                   TextWrapping="WrapWithOverflow"
+			                   >
+				                   
 Профессиональный путь:
 В 2020 году закончила с отличием магистратуру 
 Луганского национального университета имени Тараса Шевченко.
@@ -578,13 +590,6 @@
 Преподавательская деятельность:
 С 2015 года тренер – преподаватель Лутугинской ДЮСШ 
 отделения «Традиционное каратэ – до».
-				                   </TextBlock>
-			                   </StackPanel>
-			                   <TextBlock
-				                   Padding="20 0 20 0"
-				                   HorizontalAlignment="Stretch"
-				                   TextWrapping="WrapWithOverflow"
-			                   >
 С 2020 года работает на кафедре «Олимпийского 
 и профессионального спорта» 
 Института физического воспитания и спорта.
@@ -614,7 +619,7 @@
 									   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1538388243/yeremenko.jpg"
 									   HorizontalAlignment="Left"/>
 
-								   <TextBlock
+								   <TextBlock  Classes="Caption"
 									   Padding="20 0 20 0"
 									   HorizontalAlignment="Right"
 									   TextWrapping="WrapWithOverflow">
@@ -625,15 +630,16 @@
 Профессиональный путь:
 В 2013 году закончилмагистратуру Луганского национального университета
 имени Тараса Шевченко по специальности «Олимпийский и профессиональный спорт».
-С 2016 года работает на кафедре «Олимпийского 
-и профессионального спорта» Института физического воспитания и спорта.
+
 								   </TextBlock>
 								</StackPanel>
-								<TextBlock
+								<TextBlock  Classes="Caption"
 									Padding="20 0 20 0"
 									HorizontalAlignment="Stretch"
 									TextWrapping="WrapWithOverflow"
 									>
+С 2016 года работает на кафедре «Олимпийского 
+и профессионального спорта» Института физического воспитания и спорта.
 Научная деятельность:
 Активно занимается научно-методической и научно-исследовательской деятельностью.
 Направление исследования: совершенствование уровня различных сторон
@@ -671,7 +677,7 @@
 									   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1571829348/dlya-sayta.jpg"
 									   HorizontalAlignment="Left"/>
 
-								   <TextBlock
+								   <TextBlock  Classes="Caption"
 									   Padding="20 0 20 0"
 									   HorizontalAlignment="Right"
 									   TextWrapping="WrapWithOverflow">
@@ -681,18 +687,19 @@
 
 Профессиональный путь:
 В 2018 году закончил магистратуру Луганского 
-национального университета имени Тараса Шевченко по специальности «Спорт».
-С 2016 года работает в ГУ ЛНР КДЮСШ «Юность»,
-тренером-преподавателем по прыжкам на батуте (акробатической дорожке).
-С 2018 года работает на кафедре «Олимпийского 
-и профессионального спорта» Института физического воспитания и спорта.
+национального университета 
+имени Тараса Шевченко по специальности «Спорт».
 								   </TextBlock>
 								</StackPanel>
-								<TextBlock
+								<TextBlock  Classes="Caption"
 									Padding="20 0 20 0"
 									HorizontalAlignment="Stretch"
 									TextWrapping="WrapWithOverflow"
 									>
+С 2016 года работает в ГУ ЛНР КДЮСШ «Юность»,
+тренером-преподавателем по прыжкам на батуте (акробатической дорожке).
+С 2018 года работает на кафедре «Олимпийского 
+и профессионального спорта» Института физического воспитания и спорта.
 Научная деятельность:
 Активно занимается научно-методической 
 и научно-исследовательской деятельностью.
@@ -722,6 +729,7 @@
 		                   <StackPanel>
 			                   <StackPanel Orientation="Horizontal">
 				                   <Image
+					                   VerticalAlignment="Top"
 					                   MaxHeight="200"
 					                   MaxWidth="200"
 					                   Margin="20 20 0 0"
@@ -729,7 +737,8 @@
 					                   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/slukina.jpg"
 					                   HorizontalAlignment="Left"/>
 
-				                   <TextBlock
+				                   <TextBlock  
+					                   Classes="Caption"
 					                   Padding="20 0 20 0"
 					                   HorizontalAlignment="Right"
 					                   TextWrapping="WrapWithOverflow">
@@ -742,18 +751,17 @@
 Луганского национального университета имени Тараса Шевченко.
 Получила квалификацию магистра 
 по направлению подготовки 49.04.03 Спорт.
-
-Преподавательская деятельность:
-С 2018 года работает на кафедре «Олимпийского
-и профессионального спорта» института
-физического воспитания и спорта.
 				                   </TextBlock>
 			                   </StackPanel>
-			                   <TextBlock
+			                   <TextBlock  Classes="Caption"
 				                   Padding="20 0 20 0"
 				                   HorizontalAlignment="Stretch"
 				                   TextWrapping="WrapWithOverflow"
 			                   >
+				                   Преподавательская деятельность:
+С 2018 года работает на кафедре «Олимпийского
+и профессионального спорта» института
+физического воспитания и спорта.
 Общий стаж работы: 7 лет.
 
 Научная деятельность:
@@ -777,7 +785,7 @@
 									   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/111-rudnickiy-v-p-foto.jpg"
 									   HorizontalAlignment="Left"/>
 
-								   <TextBlock
+								   <TextBlock  Classes="Caption"
 									   Padding="20 0 20 0"
 									   HorizontalAlignment="Right"
 									   TextWrapping="WrapWithOverflow">
@@ -788,6 +796,13 @@
 Квалификация:
 мастер спорта СССР по футболу
 
+								   </TextBlock>
+								</StackPanel>
+								<TextBlock  Classes="Caption"
+									Padding="20 0 20 0"
+									HorizontalAlignment="Stretch"
+									TextWrapping="WrapWithOverflow"
+									>
 Профессиональный путь:
 В 1990 году закончил Смоленский 
 институт физической культуры по специальности «Физическое воспитание».
@@ -796,13 +811,6 @@
 Преподавательская деятельность:
 С 2002 г. по 2004 г. работал преподавателем
 кафедры спорта Тернопольской академии народного хозяйства.
-								   </TextBlock>
-								</StackPanel>
-								<TextBlock
-									Padding="20 0 20 0"
-									HorizontalAlignment="Stretch"
-									TextWrapping="WrapWithOverflow"
-									>
 С 2006 г. по 2010 г. работал тренером – преподавателем по футболу
 в Луганской областной Специализированной детско – юношеской спортивной 
 школе олимпийского резерва по футболу «Юность».
@@ -837,7 +845,7 @@
 									   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/111-fefelov-s-n.jpg"
 									   HorizontalAlignment="Left"/>
 
-								   <TextBlock
+								   <TextBlock  Classes="Caption"
 									   Padding="20 0 20 0"
 									   HorizontalAlignment="Right"
 									   TextWrapping="WrapWithOverflow">
@@ -848,18 +856,19 @@
 Профессиональный путь:
 В 1987 году Ворошиловградский педагогический 
 институт по специальности физическое воспитание.
+
+								   </TextBlock>
+								</StackPanel>
+								<TextBlock  Classes="Caption"
+									Padding="20 0 20 0"
+									HorizontalAlignment="Stretch"
+									TextWrapping="WrapWithOverflow"
+									>
 В 2018 году проходил аттестацию, 
 по итогам которой присвоена первая
 квалификационная категория по лёгкой атлетике.
 
 Общий стаж работы: 46 лет.
-								   </TextBlock>
-								</StackPanel>
-								<TextBlock
-									Padding="20 0 20 0"
-									HorizontalAlignment="Stretch"
-									TextWrapping="WrapWithOverflow"
-									>
 Преподавательская деятельность:
 С 1984 года работает тренером-преподавателем в СДЮШОР 
 по лёгкой атлетике. С 2001 по 2010 год работал завучем СДЮШОР «Динамо» по лёгкой атлетике.
@@ -892,7 +901,7 @@
 					                   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/111-kakapich-a-z-foto.jpg"
 					                   HorizontalAlignment="Left"/>
 
-				                   <TextBlock
+				                   <TextBlock  Classes="Caption"
 					                   Padding="20 0 20 0"
 					                   HorizontalAlignment="Right"
 					                   TextWrapping="WrapWithOverflow">
@@ -900,6 +909,13 @@
 преподаватель кафедры олимпийского 
 и профессионального спорта
 
+				                   </TextBlock>
+			                   </StackPanel>
+			                   <TextBlock  Classes="Caption"
+				                   Padding="20 0 20 0"
+				                   HorizontalAlignment="Stretch"
+				                   TextWrapping="WrapWithOverflow"
+			                   >
 Профессиональный путь:
 В 1984 году окончил Днепропетровский
 государственный институт физической культуры.
@@ -909,13 +925,6 @@
 Преподавательская деятельность:
 С 2021года работает на кафедре олимпийского
 и профессионального спорта Института физического воспитания и спорта.
-				                   </TextBlock>
-			                   </StackPanel>
-			                   <TextBlock
-				                   Padding="20 0 20 0"
-				                   HorizontalAlignment="Stretch"
-				                   TextWrapping="WrapWithOverflow"
-			                   >
 Общественная деятельность:
 Член судейской коллегии Федерации волейбола ЛНР.
 Награждения: грамота Главы Администрации города Луганска
@@ -935,6 +944,7 @@
 		                   <StackPanel>
 			                   <StackPanel Orientation="Horizontal">
 				                   <Image
+					                   VerticalAlignment="Top"
 					                   MaxHeight="200"
 					                   MaxWidth="200"
 					                   Margin="20 20 0 0"
@@ -942,7 +952,7 @@
 					                   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/111-ivanova-r-s-foto.jpg"
 					                   HorizontalAlignment="Left"/>
 
-				                   <TextBlock
+				                   <TextBlock  Classes="Caption"
 					                   Padding="20 0 20 0"
 					                   HorizontalAlignment="Right"
 					                   TextWrapping="WrapWithOverflow">
@@ -952,17 +962,19 @@
 
 Профессиональный путь:
 В 2021 году окончила ГОУ ВО ЛНР «Луганский
-государственный педагогический университет» по направлению подготовки «История»,
+государственный педагогический университет» 
+по направлению подготовки «История»,
 получила квалификацию «бакалавр».
-В настоящее время магистрант Луганского государственного педагогического университета
-по направлению подготовки «История».
+
 				                   </TextBlock>
 			                   </StackPanel>
-			                   <TextBlock
+			                   <TextBlock  Classes="Caption"
 				                   Padding="20 0 20 0"
 				                   HorizontalAlignment="Stretch"
 				                   TextWrapping="WrapWithOverflow"
 			                   >
+В настоящее время магистрант Луганского государственного педагогического университета
+по направлению подготовки «История».
 С 2021 года работает старшим лаборантом на кафедре олимпийского 
 и профессионального спорта Института физического воспитания и спорта.
 			                   </TextBlock>
@@ -992,7 +1004,7 @@
 								   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/01-chornoshtan-artur-grigor-evich.jpg"
 								   HorizontalAlignment="Left"/>
 
-							   <TextBlock
+							   <TextBlock  Classes="Caption"
 								   Padding="20 0 20 0"
 								   HorizontalAlignment="Right"
 								   TextWrapping="WrapWithOverflow">
@@ -1004,7 +1016,7 @@
 кандидат педагогических наук, доцент
 							   </TextBlock>
 						   </StackPanel>
-						   <TextBlock
+						   <TextBlock  Classes="Caption"
 							   Padding="20 0 20 0"
 							   HorizontalAlignment="Stretch"
 							   TextWrapping="WrapWithOverflow"
@@ -1049,7 +1061,7 @@
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1571744469/matveev-anatoliy-petrovich.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -1062,19 +1074,11 @@
 доктор педагогических наук, профессор
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
 					   >
-Должность:
-профессор кафедры теории 
-и методики физического воспитания 
-института физического воспитания и спорта
-
-Ученая степень и звание:
-доктор педагогических наук, профессор
-
 Профессиональный путь:
 Окончил в 1974 году Государственный центральный ордена Ленина
 институт физической культуры и в настоящее время является одним из ведущих
@@ -1140,7 +1144,7 @@
 					   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/goroshchuk.jpg"
 					   HorizontalAlignment="Left"/>
 
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Right"
 					   TextWrapping="WrapWithOverflow">
@@ -1150,17 +1154,16 @@
 
 Ученая степень и звание:
 доктор педагогических наук, профессор
-
-Научная деятельность:
-Направление исследования: формирование культуры здоровья детей,
-учащихся, молодежи и взрослого населения (методология, теория и практика).
 				   </TextBlock>
 			   </StackPanel>
-			   <TextBlock
+			   <TextBlock  Classes="Caption"
 				   Padding="20 0 20 0"
 				   HorizontalAlignment="Stretch"
 				   TextWrapping="WrapWithOverflow"
 				   >
+Научная деятельность:
+Направление исследования: формирование культуры здоровья детей,
+учащихся, молодежи и взрослого населения (методология, теория и практика).
 Преподавательская деятельность:
 Подготовка специалистов физического воспитания, спорта, здоровья человека.
 
@@ -1187,6 +1190,7 @@
 					<StackPanel>
 				   <StackPanel Orientation="Horizontal">
 					   <Image
+						   VerticalAlignment="Top"
 						   MaxHeight="200"
 						   MaxWidth="200"
 						   Margin="20 20 0 0"
@@ -1194,17 +1198,26 @@
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/zxvsdp8qv5u.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
 Должность:
-врио проректора по научно-педагогической работе,
-профессор кафедры теории и методики физического воспитания
-
+врио проректора по 
+научно-педагогической работе,
+профессор кафедры теории
+и методики физического воспитания
+					   </TextBlock>
+				   </StackPanel>
+				   <TextBlock  Classes="Caption"
+					   Padding="20 0 20 0"
+					   HorizontalAlignment="Stretch"
+					   TextWrapping="WrapWithOverflow"
+					   >
 Ученая степень и звание:
 доктор педагогических наук, профессор,
-академик Международной академии наук педагогического образования
+академик Международной 
+академии наук педагогического образования
 
 Профессиональный путь:
 C 2003 года заведует кафедрой теории
@@ -1212,31 +1225,27 @@ C 2003 года заведует кафедрой теории
 Доктор педагогических наук по специальности
 «Общая педагогика и история педагогики»,
 профессор кафедры теории и методики физического воспитания.
-					   </TextBlock>
-				   </StackPanel>
-				   <TextBlock
-					   Padding="20 0 20 0"
-					   HorizontalAlignment="Stretch"
-					   TextWrapping="WrapWithOverflow"
-					   >
 Научная деятельность:
 Сфера научных интересов касается теории и методики формирования
 физической культуры личности во взаимодействии физического и эстетического воспитания.
 Напечатано: более 120 научных трудов, подготовлено и защищено 
 22 кандидатских диссертаций, подготовлено 14 победителей
 и призеров Всеукраинских студенческих олимпиад по теории 
-и методике физического воспитания и 12 победителей и призеров Всеукраинских конкурсов студенческих научных работ.
+и методике физического воспитания и 12 победителей 
+и призеров Всеукраинских конкурсов студенческих научных работ.
 
 Преподавательская деятельность:
 Основные преподаваемые дисциплины относятся к
-циклу профессиональной подготовки: «Теория и методика физического воспитания»,
+циклу профессиональной подготовки: «Теория 
+и методика физического воспитания»,
 «Теория и методика педагогических исследований
 в физическом воспитании», «Основы научных исследований».
 
 Общественная деятельность:
 Член диссертационного совета Д 001.006.01 на базе Государственного
 образовательного учреждения высшего образования 
-Луганской Народной Республики «Луганский государственный педагогический университет».
+Луганской Народной Республики 
+«Луганский государственный педагогический университет».
 						   </TextBlock>
 					   </StackPanel>
 				   </Expander>
@@ -1255,7 +1264,7 @@ C 2003 года заведует кафедрой теории
 							   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467351/zavadich.jpg"
 							   HorizontalAlignment="Left"/>
 
-						   <TextBlock
+						   <TextBlock  Classes="Caption"
 							   Padding="20 0 20 0"
 							   HorizontalAlignment="Right"
 							   TextWrapping="WrapWithOverflow">
@@ -1266,6 +1275,13 @@ C 2003 года заведует кафедрой теории
 Ученая степень и звание:
 кандидат педагогических наук, доцент
 
+						   </TextBlock>
+					   </StackPanel>
+					   <TextBlock  Classes="Caption"
+						   Padding="20 0 20 0"
+						   HorizontalAlignment="Stretch"
+						   TextWrapping="WrapWithOverflow"
+						   >
 Научная деятельность:
 Сфера научных интересов: «Формирование культуры 
 движений средствами физического воспитания».
@@ -1273,16 +1289,10 @@ C 2003 года заведует кафедрой теории
 4 научно-методических пособий, коллективных монографий.
 Руководит написанием магистерских диссертаций, курсовых 
 и выпускных квалификационных работ студентов.
-						   </TextBlock>
-					   </StackPanel>
-					   <TextBlock
-						   Padding="20 0 20 0"
-						   HorizontalAlignment="Stretch"
-						   TextWrapping="WrapWithOverflow"
-						   >
 Преподавательская деятельность:
 Осуществляет подготовку специалистов 
-по направлению подготовки 49.03.01 Физическая культура (профиль «Физкультурное образование») и
+по направлению подготовки 49.03.01 Физическая культура 
+(профиль «Физкультурное образование») и
 49.04.01 Физическая культура (профиль «Теория физической культуры 
 и технологии физического воспитания»).
 Преподает дисциплины: «Гимнастика с методикой преподавания»,
@@ -1292,7 +1302,8 @@ C 2003 года заведует кафедрой теории
 практику студентов по кафедре теории и методики физического воспитания.
 
 Общественная деятельность:
-Куратор академической группы, ответственная по кафедре за технику безопасности.
+Куратор академической группы, ответственная
+по кафедре за технику безопасности.
 							   </TextBlock>
 						   </StackPanel>
 					   </Expander>
@@ -1311,7 +1322,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467351/androsova.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -1322,6 +1333,13 @@ C 2003 года заведует кафедрой теории
 Ученая степень и звание:
 кандидат педагогических наук, доцент
 
+						           </TextBlock>
+					           </StackPanel>
+					           <TextBlock  Classes="Caption"
+						           Padding="20 0 20 0"
+						           HorizontalAlignment="Stretch"
+						           TextWrapping="WrapWithOverflow"
+					           >
 Научная деятельность:
 Сферы научных интересов: профильное обучение
 по спортивному направлению.
@@ -1330,13 +1348,6 @@ C 2003 года заведует кафедрой теории
 Принимала участие более чем в 15 Международных,
 Всеукраинских, научно-практических конференциях.
 Руководит выполнением магистерских и курсовых работ.
-						           </TextBlock>
-					           </StackPanel>
-					           <TextBlock
-						           Padding="20 0 20 0"
-						           HorizontalAlignment="Stretch"
-						           TextWrapping="WrapWithOverflow"
-					           >
 Преподавательская деятельность:
 Осуществляет подготовку специалистов
 по направлению физической культуры и физического воспитания.
@@ -1363,7 +1374,7 @@ C 2003 года заведует кафедрой теории
 									   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/bogdanova-a-s2.jpg"
 									   HorizontalAlignment="Left"/>
 
-								   <TextBlock
+								   <TextBlock  Classes="Caption"
 									   Padding="20 0 20 0"
 									   HorizontalAlignment="Right"
 									   TextWrapping="WrapWithOverflow">
@@ -1375,6 +1386,13 @@ C 2003 года заведует кафедрой теории
 Ученая степень и звание:
 кандидат педагогических наук, доцент
 
+								   </TextBlock>
+							   </StackPanel>
+							   <TextBlock  Classes="Caption"
+								   Padding="20 0 20 0"
+								   HorizontalAlignment="Stretch"
+								   TextWrapping="WrapWithOverflow"
+								   >
 Научная деятельность:
 Направление исследования: проблемы развития профессиональной 
 компетентности будущих учителей физической культуры.
@@ -1382,13 +1400,6 @@ C 2003 года заведует кафедрой теории
 принимала участие более чем в 20 Международных научно-практических конференциях.
 Руководит написанием магистерских диссертаций 
 и выпускных квалификационных работ студентов.
-								   </TextBlock>
-							   </StackPanel>
-							   <TextBlock
-								   Padding="20 0 20 0"
-								   HorizontalAlignment="Stretch"
-								   TextWrapping="WrapWithOverflow"
-								   >
 Преподавательская деятельность:
 Осуществляет подготовку специалистов 
 по направлению подготовки 49.03.01 Физическая культура (профиль «Физкультурное образование»)
@@ -1418,7 +1429,7 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/dragnev2.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -1429,19 +1440,19 @@ C 2003 года заведует кафедрой теории
 Ученая степень и звание:
 кандидат педагогических наук, доцент
 
+					   </TextBlock>
+				   </StackPanel>
+				   <TextBlock  Classes="Caption"
+					   Padding="20 0 20 0"
+					   HorizontalAlignment="Stretch"
+					   TextWrapping="WrapWithOverflow"
+					   >
 Научная деятельность:
 Автор более 200 научных и учебно-методических трудов.
 Автор-разработчик новой фундаментальной науки 
 для православно-ориентированной системы наук 
 «Православная педагогика физической культуры 
 в информационном обществе (На основе православной святоотеческой традиции».
-					   </TextBlock>
-				   </StackPanel>
-				   <TextBlock
-					   Padding="20 0 20 0"
-					   HorizontalAlignment="Stretch"
-					   TextWrapping="WrapWithOverflow"
-					   >
 Преподавательская деятельность:
 Осуществляет подготовку студентов на разных квалификационных уровнях:
 Бакалавриат: направление подготовки 49.03.01
@@ -1479,7 +1490,7 @@ C 2003 года заведует кафедрой теории
 							   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1571746177/na-sayt.jpg"
 							   HorizontalAlignment="Left"/>
 
-						   <TextBlock
+						   <TextBlock  Classes="Caption"
 							   Padding="20 0 20 0"
 							   HorizontalAlignment="Right"
 							   TextWrapping="WrapWithOverflow">
@@ -1493,7 +1504,7 @@ C 2003 года заведует кафедрой теории
 кандидат педагогических наук
 						   </TextBlock>
 					   </StackPanel>
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Stretch"
 						   TextWrapping="WrapWithOverflow"
@@ -1552,7 +1563,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/zyuzyukov2.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -1563,19 +1574,19 @@ C 2003 года заведует кафедрой теории
 Ученая степень и звание:
 кандидат педагогических наук, доцент
 
+						           </TextBlock>
+					           </StackPanel>
+					           <TextBlock  Classes="Caption"
+						           Padding="20 0 20 0"
+						           HorizontalAlignment="Stretch"
+						           TextWrapping="WrapWithOverflow"
+					           >
 Профессиональный путь:
 Направление подготовки 
 или специальности – «Физическое культура».
 Является членом федерации легкой атлетики ЛНР.
 
 Стаж работы: 40 лет.
-						           </TextBlock>
-					           </StackPanel>
-					           <TextBlock
-						           Padding="20 0 20 0"
-						           HorizontalAlignment="Stretch"
-						           TextWrapping="WrapWithOverflow"
-					           >
 Научная деятельность:
 Сфера научных интересов – 
 «Проблемы интегральной подготовки в спорте высших достижений».
@@ -1606,32 +1617,30 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/shkurin2.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
 Должность:
 и.о. заведующего кафедрой
 спортивных дисциплин
-
 Учёная степень:
 кандидат педагогических наук
-
 Учёное звание: доцент.
 
+						           </TextBlock>
+					           </StackPanel>
+					           <TextBlock  Classes="Caption"
+						           Padding="20 0 20 0"
+						           HorizontalAlignment="Stretch"
+						           TextWrapping="WrapWithOverflow"
+					           >
 Квалификация и стаж работы:
 35 лет, мастер спорта СССР по плаванию,
 чемпион СССР (1986), рекордсмен СССР
 в эстафете 4х200 в/стиль,
 победитель Кубка Европы (1984), 
 чемпион Европы среди ветеранов (2007), (2011).
-						           </TextBlock>
-					           </StackPanel>
-					           <TextBlock
-						           Padding="20 0 20 0"
-						           HorizontalAlignment="Stretch"
-						           TextWrapping="WrapWithOverflow"
-					           >
 Преподаваемые дисциплины:
 «Плавание с методикой преподавания»,
 «Инновационные процессы в образовании»,
@@ -1657,38 +1666,41 @@ C 2003 года заведует кафедрой теории
 								   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1580387085/kraynyuk.jpg"
 								   HorizontalAlignment="Left"/>
 
-							   <TextBlock
+							   <TextBlock  Classes="Caption"
 								   Padding="20 0 20 0"
 								   HorizontalAlignment="Right"
 								   TextWrapping="WrapWithOverflow">
 Должность:
 доцент кафедры спортивных дисциплин
-
 Ученая степень и звание:
 кандидат педагогических наук, 2016г.,
+							   </TextBlock>
+						   </StackPanel>
+						   <TextBlock  Classes="Caption"
+							   Padding="20 0 20 0"
+							   HorizontalAlignment="Stretch"
+							   TextWrapping="WrapWithOverflow"
+							   >
 «Формирование морально-волевых качеств студентов 
 политехнических колледжей в процессе физического воспитания»
 Спортивная специализация и звание: мастер спорта СССР
 по пулевой стрельбе; тренерская практика:
 огневая подготовка; волейбол; теннис; плавание.
-							   </TextBlock>
-						   </StackPanel>
-						   <TextBlock
-							   Padding="20 0 20 0"
-							   HorizontalAlignment="Stretch"
-							   TextWrapping="WrapWithOverflow"
-							   >
 Профессиональный путь:
 Родилась в 1954 г. в г. Самарканде, УзССР. В 1967 г.
-Переехала в г. Луганск, УССР, где в 1971 г., где окончила среднюю школу. В 1972 г поступила во:
-Львовский государственный институт физической культуры и спорта, который окончила в 1976 г.
+Переехала в г. Луганск, УССР, где в 1971 г.,
+где окончила среднюю школу. В 1972 г поступила во:
+Львовский государственный институт физической культуры 
+и спорта, который окончила в 1976 г.
 Далее продолжила образование: Луганский национальный 
 педагогический университет, магистратура 2006;
 Луганский национальный университет 2011г.,
-аспирантура по специальности 13.00.04 – «Теория и методика профессионального образования»,
+аспирантура по специальности 13.00.04 –
+«Теория и методика профессионального образования»,
 специальность – тренер-преподаватель физического воспитания и спорта.
 Сертификат тренера современных оздоровительных технологий: 
-степ-аэробики, стретчинга, пилатеса, калланетики, бодифлексу, супер-стронгу, фитболу.
+степ-аэробики, стретчинга, пилатеса, калланетики, бодифлексу,
+супер-стронгу, фитболу.
 Свидетельство инструктора по ЛФК и основам массажа.
 
 Педагогический стаж: 41 лет, в высшей школе 17 лет.
@@ -1710,7 +1722,7 @@ C 2003 года заведует кафедрой теории
 							   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/meshcheryakov2.jpg"
 							   HorizontalAlignment="Left"/>
 
-						   <TextBlock
+						   <TextBlock  Classes="Caption"
 							   Padding="20 0 20 0"
 							   HorizontalAlignment="Right"
 							   TextWrapping="WrapWithOverflow">
@@ -1719,7 +1731,7 @@ C 2003 года заведует кафедрой теории
 и методики физического воспитания
 						   </TextBlock>
 					   </StackPanel>
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Stretch"
 						   TextWrapping="WrapWithOverflow"
@@ -1783,22 +1795,27 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1554730744/bergina2.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
 Должность:
 преподаватель кафедры теории
 и методики физического воспитания
-
+						           </TextBlock>
+					           </StackPanel>
+<TextBlock
+Padding="20 0 20 0"
+HorizontalAlignment="Stretch"
+TextWrapping="WrapWithOverflow"
+>
 Преподаваемые дисциплины:
 «Физическая культура»
 
 Общий стаж работы: 34 года
 
 Стаж работы по специальности: 33 года
-						           </TextBlock>
-					           </StackPanel>
+</TextBlock>
 				           </StackPanel>
 			           </Expander>
 			           
@@ -1816,7 +1833,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1571741219/.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -1825,7 +1842,7 @@ C 2003 года заведует кафедрой теории
 и методики физического воспитания
 						           </TextBlock>
 					           </StackPanel>
-					           <TextBlock
+					           <TextBlock  Classes="Caption"
 						           Padding="20 0 20 0"
 						           HorizontalAlignment="Stretch"
 						           TextWrapping="WrapWithOverflow"
@@ -1867,7 +1884,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1571741635/.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -1875,19 +1892,19 @@ C 2003 года заведует кафедрой теории
 преподаватель кафедры теории 
 и методики физического воспитания
 
+						           </TextBlock>
+					           </StackPanel>
+					           <TextBlock  Classes="Caption"
+						           Padding="20 0 20 0"
+						           HorizontalAlignment="Stretch"
+						           TextWrapping="WrapWithOverflow"
+					           >
 Профессиональный путь:
 Окончил Ворошиловградский 
 государственный педагогический институт 
 имени Т.Г. Шевченко, в 1974 г.
 С 1974 по 1981 год - учитель физической 
 культуры в общеобразовательных школах.
-						           </TextBlock>
-					           </StackPanel>
-					           <TextBlock
-						           Padding="20 0 20 0"
-						           HorizontalAlignment="Stretch"
-						           TextWrapping="WrapWithOverflow"
-					           >
 С 1981 по настоящее время руководитель 
 физического воспитания Луганского отделения
 медицинского колледжа ГУ ЛНР «ЛГМУ имени Святителя Луки».
@@ -1922,48 +1939,32 @@ C 2003 года заведует кафедрой теории
 							   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/111-popova-111-shablon-210230.jpg"
 							   HorizontalAlignment="Left"/>
 
-						   <TextBlock
+						   <TextBlock  Classes="Caption"
 							   Padding="20 0 20 0"
 							   HorizontalAlignment="Right"
 							   TextWrapping="WrapWithOverflow">
-Должность:
-преподаватель кафедры теории 
+Должность: преподаватель кафедры теории 
 и методики физического воспитания
+Научная деятельность:
+Направление исследования:
+«Методика проведения занятий физической культурой со
+студентами специальных медицинских групп».
 
-Профессиональный путь:
-Окончил Ворошиловградский государственный
-педагогический институт имени Т.Г. Шевченко, в 1974 г.
-С 1974 по 1981 год - учитель физической 
-культуры в общеобразовательных школах.
-С 1981 по настоящее время руководитель 
-физического воспитания Луганского отделения 
-медицинского колледжа ГУ ЛНР «ЛГМУ имени Святителя Луки».
-Преподаватель-совместитель кафедры теории
-и методики физического воспитания с 2016 г.
-
-Педагогический стаж: 44 года.
 						   </TextBlock>
 					   </StackPanel>
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Stretch"
 						   TextWrapping="WrapWithOverflow"
 						   >
-Должность:
-преподаватель кафедры теории
-и методики физического воспитания
-
-Научная деятельность:
-Направление исследования:
-«Методика проведения занятий физической культурой со студентами специальных медицинских групп».
-
 Преподавательская деятельность:
 Преподает следующие дисциплины: 
-«Естественнонаучные основы физического воспитания»,
-«Физиологические основы физического воспитания и спорта»,
-«Физическое воспитание с учащимися специальных медицинских групп»,
-«Практика по получению первичных профессиональных умений и навыков».
-
+«Естественнонаучные основы физического
+воспитания», «Физиологические основы 
+физического воспитания и спорта»,
+«Физическое воспитание с учащимися специальных медицинских групп», 
+«Практика по получению первичных 
+профессиональных умений и навыков».
 Общественная деятельность: Куратор академической группы.
 							   </TextBlock>
 						   </StackPanel>
@@ -1991,7 +1992,7 @@ C 2003 года заведует кафедрой теории
 							   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/aa.jpg"
 							   HorizontalAlignment="Left"/>
 
-						   <TextBlock
+						   <TextBlock  Classes="Caption"
 							   Padding="20 0 20 0"
 							   HorizontalAlignment="Right"
 							   TextWrapping="WrapWithOverflow">
@@ -2003,7 +2004,7 @@ C 2003 года заведует кафедрой теории
 кандидат медицинских наук, доцент
 						   </TextBlock>
 					   </StackPanel>
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Stretch"
 						   TextWrapping="WrapWithOverflow"
@@ -2046,7 +2047,7 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/larisa-nikolaevna.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -2058,7 +2059,7 @@ C 2003 года заведует кафедрой теории
 доктор медицинских наук, профессор
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2112,7 +2113,7 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1571642090/.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -2124,7 +2125,7 @@ C 2003 года заведует кафедрой теории
 кандидат медицинских наук, доцент
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2208,7 +2209,7 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1571642090/.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -2220,7 +2221,7 @@ C 2003 года заведует кафедрой теории
 кандидат медицинских наук, доцент
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2275,7 +2276,7 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/larisa-alekseevna.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -2286,7 +2287,7 @@ C 2003 года заведует кафедрой теории
                     кандидат медицинских наук, доцент
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2327,7 +2328,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/mariya-yurevna.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -2356,7 +2357,7 @@ C 2003 года заведует кафедрой теории
 				   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/1-plyakina.jpg"
 				   HorizontalAlignment="Left"/>
 
-			   <TextBlock
+			   <TextBlock  Classes="Caption"
 				   Padding="20 0 20 0"
 				   HorizontalAlignment="Right"
 				   TextWrapping="WrapWithOverflow">
@@ -2366,7 +2367,7 @@ C 2003 года заведует кафедрой теории
 культуры и физической реабилитации
 			   </TextBlock>
 		   </StackPanel>
-		   <TextBlock
+		   <TextBlock  Classes="Caption"
 			   Padding="20 0 20 0"
 			   HorizontalAlignment="Stretch"
 			   TextWrapping="WrapWithOverflow"
@@ -2445,16 +2446,17 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/6121637815fb24dfed4ec10.23766764.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
-					Должность:
-					старший преподаватель 
-					кафедры адаптивной физической культуры и физической реабилитации
+Должность:
+старший преподаватель 
+кафедры адаптивной физической 
+культуры и физической реабилитации
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2465,8 +2467,10 @@ C 2003 года заведует кафедрой теории
 получила базовое высшее образование и квалификацию бакалавра по направлению подготовки 
 49.03.02 Физическая культура для лиц с отклонениями в состоянии здоровья (адаптивная физическая культура).
 В этом же году с отличием окончила ФГБОУ ВО «Кабардино-Балкарский государственный университет 
-имени Х.М. Бербекова», получила базовое высшее образование и квалификацию бакалавра по направлению подготовки 49.03.01. Физическая культура.
-В 2020 г. с отличием окончила Государственное учреждение «Луганский национальный университет имени Тараса Шевченко»,
+имени Х.М. Бербекова», получила базовое высшее образование 
+и квалификацию бакалавра по направлению подготовки 49.03.01. Физическая культура.
+В 2020 г. с отличием окончила Государственное учреждение 
+«Луганский национальный университет имени Тараса Шевченко»,
 получила полное высшее образование и квалификацию магистра по направлению подготовки 
 49.03.02 Физическая культура для лиц с отклонениями в состоянии здоровья (адаптивная физическая культура).
 С 2016 г. работает инструктором по адаптивной физической культуре 
@@ -2540,26 +2544,28 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/6859069685fb24e39b4f932.51533190.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
-					Должность:
-					ассистент кафедры адаптивной физической культуры и физической реабилитации
+Должность:
+ассистент кафедры адаптивной
+физической культуры и физической реабилитации
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
 					   >
 Профессиональный путь
 В 2018 г. окончила Государственное учреждение «Луганский национальный университет 
-имени Тараса Шевченко» получила высшее базовое образование и квалификацию бакалавра по направлению
+имени Тараса Шевченко» получила высшее базовое образование 
+и квалификацию бакалавра по направлению
 подготовки «Физическая культура для лиц с отклонениями в состоянии здоровья (адаптивная физическая культура)».
 В 2020 г. окончила магистратуру, получив, полное высшее образование
-и квалификацию магистра по направлению подготовки «Физическая культура для лиц с отклонениями в состоянии
-здоровья (адаптивная физическая культура)».
+и квалификацию магистра по направлению подготовки «Физическая культура 
+для лиц с отклонениями в состоянии здоровья (адаптивная физическая культура)».
 В 2020 г. поступила в аспирантуру по направлению подготовки «Образование и педагогические науки»,
 профиль подготовки «Теория и методика профессионального образования».
 Научный руководитель - профессор кафедры адаптивной физической культуры и физической реабилитации,
@@ -2616,15 +2622,17 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/a-a.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
-					Должность:
-					ассистент кафедры адаптивной физической культуры и физической реабилитации
+Должность:
+ассистент кафедры адаптивной 
+физической культуры 
+и физической реабилитации
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2636,8 +2644,10 @@ C 2003 года заведует кафедрой теории
 направлению подготовки 49.03.02 «Физическая культура 
 для лиц с отклонениями в состоянии здоровья (адаптивная физическая культура)».
 В 2022 году с отличием окончила Государственное образовательное учреждение 
-«Луганский государственный педагогический университет»,получила полное высшее образование и квалификацию магистра
-по направлению подготовки 49.04.02 «Физическая культура для лиц с отклонениями в состоянии здоровья (адаптивная физическая культура)».
+«Луганский государственный педагогический университет»,получила 
+полное высшее образование и квалификацию магистра
+по направлению подготовки 49.04.02 «Физическая культура для лиц 
+с отклонениями в состоянии здоровья (адаптивная физическая культура)».
 В 2022 г. поступила в аспирантуру по направлению подготовки «Образование и педагогические науки»,
 профиль подготовки «Теория и методика профессионального образования».
 Научный руководитель – профессор кафедры Клименко И.В.
@@ -2672,7 +2682,7 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1631180125/210230.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -2681,7 +2691,7 @@ C 2003 года заведует кафедрой теории
 физической культуры и физической реабилитации
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2723,12 +2733,12 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/valentina-nikolaevna.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
-							           Должность:
-							           ассистент
+Должность:
+ассистент
 						           </TextBlock>
 					           </StackPanel>
 				           </StackPanel>
@@ -2747,7 +2757,7 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/tatyana-anatolevna.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -2759,7 +2769,7 @@ C 2003 года заведует кафедрой теории
 врач высшей категории
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2804,12 +2814,12 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/nataliya-vladimirovna.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
-							           Должность:
-							           Ассистент
+Должность:
+Ассистент
 						           </TextBlock>
 					           </StackPanel>
 				           </StackPanel>
@@ -2828,16 +2838,16 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/viktoriya-yurevna.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
-					Должность:
-					ассистент кафедры адаптивной физической
-					культуры и физической реабилитации
+Должность:
+ассистент кафедры адаптивной физической
+культуры и физической реабилитации
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2860,11 +2870,13 @@ C 2003 года заведует кафедрой теории
 
 Научная деятельность:
 Активно занимается научно-методической 
-и научно-исследовательской деятельностью – работает над диссертационным исследованием. 
+и научно-исследовательской деятельностью – 
+работает над диссертационным исследованием. 
 Научный руководитель – Клименко И.В.
 Выступление на конференциях, составление алгоритмов,
-санитарно-просветительные работы (беседы с больными, индивидуальные и групповые), составление памятки с комплексом
-физических упражнений, с внедрением новых методик лечебной физкультуры. 
+санитарно-просветительные работы (беседы с больными, индивидуальные и групповые),
+составление памятки с комплексом физических упражнений,
+с внедрением новых методик лечебной физкультуры. 
 Привлечение детей к занятиям оздоровительной физической культурой  и спортом.
 Результаты научных исследований представлены на 10 международных конференциях. Автор 6 научных статей.
 				   </TextBlock>
@@ -2884,16 +2896,16 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1490688754/yeremenko.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
-					Должность:
-					ассистент кафедры адаптивной
-					физической культуры и физической реабилитации
+Должность:
+ассистент кафедры адаптивной
+физической культуры и физической реабилитации
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -2937,12 +2949,12 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/darya-alekseevna.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
-							           Должность:
-							           Старший лаборант
+Должность:
+Старший лаборант
 						           </TextBlock>
 					           </StackPanel>
 				           </StackPanel>
@@ -2971,13 +2983,21 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/sleptsov.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
 Должность:
-заведующий кафедрой физического воспитания
+заведующий кафедрой
+физического воспитания
 
+					   </TextBlock>
+				   </StackPanel>
+				   <TextBlock  Classes="Caption"
+					   Padding="20 0 20 0"
+					   HorizontalAlignment="Stretch"
+					   TextWrapping="WrapWithOverflow"
+					   >
 Научная степень, звание, квалификация:
 профессор, Заслуженный тренер Украины,
 МС СССР МК по волейболу,
@@ -2991,13 +3011,6 @@ C 2003 года заведует кафедрой теории
 Общий стаж работы – 46 лет
 
 Научно-педагогический стаж работы – 43 года
-					   </TextBlock>
-				   </StackPanel>
-				   <TextBlock
-					   Padding="20 0 20 0"
-					   HorizontalAlignment="Stretch"
-					   TextWrapping="WrapWithOverflow"
-					   >
 Повышение квалификации:
 ФБГОУ ВО «Донской государственный технический университет», с 29.09. по 01.10.2022
 
@@ -3007,7 +3020,8 @@ C 2003 года заведует кафедрой теории
 Сфера научных интересов: история и развитие волейбола на Луганщине.
 
 Основные публикации:
-1. Слепцов В.Н. Козлов В.И. «Спортивная направленность педагогического процесса физической культуры в не физкультурных вузах».
+1. Слепцов В.Н. Козлов В.И. «Спортивная направленность 
+педагогического процесса физической культуры в не физкультурных вузах».
 Сборник статей XIII международной конференции 25-26 апреля 2017 года,
 Белгородский государственный технологический университет имени В.Г. Шухова, г. Белгород. – С. 180-184.
 2. Слепцов В.Н., Рубин М.А. «Как усилить командные взаимодействия в футболе».
@@ -3033,7 +3047,7 @@ C 2003 года заведует кафедрой теории
 					   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/maksimova.jpg"
 					   HorizontalAlignment="Left"/>
 
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Right"
 					   TextWrapping="WrapWithOverflow">
@@ -3054,7 +3068,7 @@ C 2003 года заведует кафедрой теории
 Научно-педагогический стаж работы – 33 года
 				   </TextBlock>
 			   </StackPanel>
-			   <TextBlock
+			   <TextBlock  Classes="Caption"
 				   Padding="20 0 20 0"
 				   HorizontalAlignment="Stretch"
 				   TextWrapping="WrapWithOverflow"
@@ -3095,7 +3109,7 @@ C 2003 года заведует кафедрой теории
 				   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/nikolayeva.jpg"
 				   HorizontalAlignment="Left"/>
 
-			   <TextBlock
+			   <TextBlock  Classes="Caption"
 				   Padding="20 0 20 0"
 				   HorizontalAlignment="Right"
 				   TextWrapping="WrapWithOverflow">
@@ -3105,6 +3119,13 @@ C 2003 года заведует кафедрой теории
 Научная степень, звание, квалификация:
 магистр по физическому воспитанию
 
+			   </TextBlock>
+		   </StackPanel>
+		   <TextBlock  Classes="Caption"
+			   Padding="20 0 20 0"
+			   HorizontalAlignment="Stretch"
+			   TextWrapping="WrapWithOverflow"
+			   >
 Преподавательская деятельность
 Преподаваемые дисциплины: «Физическая культура»,
 «Элективные дисциплины по физической культуре 
@@ -3115,13 +3136,6 @@ C 2003 года заведует кафедрой теории
 Общий стаж работы – 38 лет
 
 Научно-педагогический стаж работы – 31 год
-			   </TextBlock>
-		   </StackPanel>
-		   <TextBlock
-			   Padding="20 0 20 0"
-			   HorizontalAlignment="Stretch"
-			   TextWrapping="WrapWithOverflow"
-			   >
 Повышение квалификации:
 ФБГОУ ВО «Донской государственный технический университет», с 19.09. по 21.09.2022
 
@@ -3131,8 +3145,10 @@ C 2003 года заведует кафедрой теории
 и практика научно-методический журнал. / гл. ред. Е.Н. Трегубенко;
 вып. ред. Н.В. Вострякова; отв. секр. О.В. Шкуран. – Луганск: Книта, 2019. - №2 (9). – С. 42-46.
 2. Николаева Е.А., Васецкая Н.В. «Спорт как важный социальный феномен»
-Олимпийский спорт, физическая культура, здоровье нации в современных условиях : материалы XVI Междунар. научно-практ.конф.
-(Луганск, 17-18 апреля 2019 года) // редкол.: М.С. Скляр (гл. ред.), А.И. Федоров (отв. ред.) [и др.] – Луганск: Книта, 2019.  – С. 70-76.
+Олимпийский спорт, физическая культура, здоровье нации в современных условиях :
+материалы XVI Междунар. научно-практ.конф.
+(Луганск, 17-18 апреля 2019 года) // редкол.: М.С. Скляр (гл. ред.), 
+А.И. Федоров (отв. ред.) [и др.] – Луганск: Книта, 2019.  – С. 70-76.
 3. Николаева Е.А., Васецкая Н.В. «Социально-психологический феномен лидерства в игровых видах спорта»
 Современные проблемы теории, методики физической культуры и спорта. материа-лы I междунар. науч-практ.
 конф. (г. Алчевск, 28 февраля 2019 г.) / под ред. д.ф.н. Патерыкиной В.В.; ДонГТУ. – Алчевск, 2019. – С. 12-20.
@@ -3146,7 +3162,7 @@ C 2003 года заведует кафедрой теории
 	   </StackPanel>
    </Expander>
 			           
-			           <Expander
+		<Expander
 	   Margin="20 20 20 0"
 	   Header="ВАСЕЦКАЯ НАТАЛИЯ ВАЛЕРЬЕВНА">
 		<StackPanel>
@@ -3160,7 +3176,7 @@ C 2003 года заведует кафедрой теории
 			   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/vasetskaya.jpg"
 			   HorizontalAlignment="Left"/>
 
-		   <TextBlock
+		   <TextBlock  Classes="Caption"
 			   Padding="20 0 20 0"
 			   HorizontalAlignment="Right"
 			   TextWrapping="WrapWithOverflow">
@@ -3170,6 +3186,13 @@ C 2003 года заведует кафедрой теории
 Научная степень, звание, квалификация:
 магистр по физическому воспитанию
 
+		   </TextBlock>
+	   </StackPanel>
+	   <TextBlock  Classes="Caption"
+		   Padding="20 0 20 0"
+		   HorizontalAlignment="Stretch"
+		   TextWrapping="WrapWithOverflow"
+		   >
 Преподавательская деятельность
 Преподаваемые дисциплины: «Физическая культура»,
 «Элективные дисциплины по физической культуре 
@@ -3179,26 +3202,21 @@ C 2003 года заведует кафедрой теории
 на факультете музыкально-художественного
 образования имени Джульетты Якубович.
 
-        Общий стаж работы – 30 лет
+Общий стаж работы – 30 лет
 
-        Научно-педагогический стаж работы – 25 лет
-		   </TextBlock>
-	   </StackPanel>
-	   <TextBlock
-		   Padding="20 0 20 0"
-		   HorizontalAlignment="Stretch"
-		   TextWrapping="WrapWithOverflow"
-		   >
+Научно-педагогический стаж работы – 25 лет
 Повышение квалификации: ФГБОУ ВО «Кабардино-Балкарский 
 государственный университет им. Х.М. Бербекова», с 08.12 2021 по 23.12.2021
 
 Основные публикации:
 1. Васецкая Н.В., Николаева Е.А., Кострыкин В.Я. 
-«Обучение броска мяча в прыжке одной рукой в баскетболе» Образование Луганщины: теория и практика научно-методический
+«Обучение броска мяча в прыжке одной рукой в баскетболе» 
+Образование Луганщины: теория и практика научно-методический
 журнал. / гл. ред. Е.Н. Трегубенко; вып. Ред. Н.В. Вострякова;
 отв. Секр. О.В. Шкуран. – Луганск: Книта, 2019. - №2 (9). – С. 42-46.
 2. Васецкая Н.В., Кострыкин В.Я., Хвостиков И.П.
-«Комбинированный подход в процессе физической культуры студентов специальных медицинских групп» Вестник
+«Комбинированный подход в процессе физической 
+культуры студентов специальных медицинских групп» Вестник
 Луганского национального университета имени 
 Тараса Шевченко: сб. науч. тр. / гл. ред. Е.Н. Трегубенко; вып. ред. Н.В. Вострякова; ред. сер. Н.А. Павлова. – Луганск:
 Книта, 2018. – № 2(22): Серия 2, Физическое воспитание и спорт. – С. 87-92.
@@ -3224,6 +3242,7 @@ C 2003 года заведует кафедрой теории
 		<StackPanel>
 	   <StackPanel Orientation="Horizontal">
 		   <Image
+			   VerticalAlignment="Top"
 			   MaxHeight="200"
 			   MaxWidth="200"
 			   Margin="20 20 0 0"
@@ -3231,7 +3250,7 @@ C 2003 года заведует кафедрой теории
 			   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/limonchenko.jpg"
 			   HorizontalAlignment="Left"/>
 
-		   <TextBlock
+		   <TextBlock  Classes="Caption"
 			   Padding="20 0 20 0"
 			   HorizontalAlignment="Right"
 			   TextWrapping="WrapWithOverflow">
@@ -3243,6 +3262,13 @@ C 2003 года заведует кафедрой теории
 магистр по физической реабилитации, 
 МС по волейболу
 
+		   </TextBlock>
+	   </StackPanel>
+	   <TextBlock  Classes="Caption"
+		   Padding="20 0 20 0"
+		   HorizontalAlignment="Stretch"
+		   TextWrapping="WrapWithOverflow"
+		   >
 Преподавательская деятельность
 Преподаваемые дисциплины:
 «Физическая культура», 
@@ -3252,15 +3278,9 @@ C 2003 года заведует кафедрой теории
 Общий стаж работы – 24 года
 
 Научно-педагогический стаж работы – 17 лет
-		   </TextBlock>
-	   </StackPanel>
-	   <TextBlock
-		   Padding="20 0 20 0"
-		   HorizontalAlignment="Stretch"
-		   TextWrapping="WrapWithOverflow"
-		   >
 Повышение квалификации:
-ФБГОУ ВО «Донской государственный технический университет», с 19.09. по 21.09.2022
+ФБГОУ ВО «Донской государственный технический университет»,
+с 19.09. по 21.09.2022
 
 Основные публикации:
 1. Лимонченко А.С., Асташова Е.Н. «Физическая подготовленность футболистов 
@@ -3303,7 +3323,7 @@ C 2003 года заведует кафедрой теории
 			   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/astashova.jpg"
 			   HorizontalAlignment="Left"/>
 
-		   <TextBlock
+		   <TextBlock  Classes="Caption"
 			   Padding="20 0 20 0"
 			   HorizontalAlignment="Right"
 			   TextWrapping="WrapWithOverflow">
@@ -3314,6 +3334,13 @@ C 2003 года заведует кафедрой теории
 магистр по физическому воспитанию,
 магистр по физической реабилитации, КМС по волейболу
 
+		   </TextBlock>
+	   </StackPanel>
+	   <TextBlock  Classes="Caption"
+		   Padding="20 0 20 0"
+		   HorizontalAlignment="Stretch"
+		   TextWrapping="WrapWithOverflow"
+		   >
 Преподавательская деятельность
 Преподаваемые дисциплины: «Физическая культура»,
 «Элективные дисциплины по физической культуре и спорту» в Институте истории,
@@ -3325,13 +3352,6 @@ C 2003 года заведует кафедрой теории
 Общий стаж работы – 27 лет
 
 Научно-педагогический стаж работы – 14 лет
-		   </TextBlock>
-	   </StackPanel>
-	   <TextBlock
-		   Padding="20 0 20 0"
-		   HorizontalAlignment="Stretch"
-		   TextWrapping="WrapWithOverflow"
-		   >
 Повышение квалификации:
 ФБГОУ ВО «Донской государственный технический университет», с 19.09. по 21.09.2022
 
@@ -3370,16 +3390,22 @@ C 2003 года заведует кафедрой теории
 			   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/khvostikov.jpg"
 			   HorizontalAlignment="Left"/>
 
-		   <TextBlock
+		   <TextBlock  Classes="Caption"
 			   Padding="20 0 20 0"
 			   HorizontalAlignment="Right"
 			   TextWrapping="WrapWithOverflow">
 Должность:
 старший преподаватель
-
 Научная степень, звание, квалификация:
 магистр по физическому воспитанию
 
+		   </TextBlock>
+	   </StackPanel>
+	   <TextBlock  Classes="Caption"
+		   Padding="20 0 20 0"
+		   HorizontalAlignment="Stretch"
+		   TextWrapping="WrapWithOverflow"
+		   >
 Преподавательская деятельность
 Преподаваемые дисциплины: 
 «Физическая культура»,
@@ -3391,15 +3417,9 @@ C 2003 года заведует кафедрой теории
 Общий стаж работы – 16 лет
 
 Научно-педагогический стаж работы – 16 лет
-		   </TextBlock>
-	   </StackPanel>
-	   <TextBlock
-		   Padding="20 0 20 0"
-		   HorizontalAlignment="Stretch"
-		   TextWrapping="WrapWithOverflow"
-		   >
 Повышение квалификации:
-ГОУ ВПО ЛНР «Луганский национальный университет имени Тараса Шевченко», ИПР с 23.11. – 21.12.2019
+ГОУ ВПО ЛНР «Луганский национальный университет
+имени Тараса Шевченко», ИПР с 23.11. – 21.12.2019
 
 Основные публикации:
 1. Хвостиков И.П., Кострыкин В.Я., Мартыненко Е.Н. «Использование средств физической культуры 
@@ -3426,6 +3446,7 @@ C 2003 года заведует кафедрой теории
        		<StackPanel>
        	   <StackPanel Orientation="Horizontal">
        		   <Image
+	               VerticalAlignment="Top"
        			   MaxHeight="200"
        			   MaxWidth="200"
        			   Margin="20 20 0 0"
@@ -3433,16 +3454,22 @@ C 2003 года заведует кафедрой теории
        			   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/burlakova.jpg"
        			   HorizontalAlignment="Left"/>
 
-       		   <TextBlock
+       		   <TextBlock  Classes="Caption"
        			   Padding="20 0 20 0"
        			   HorizontalAlignment="Right"
        			   TextWrapping="WrapWithOverflow">
 Должность:
 старший преподаватель
-
 Научная степень, звание, квалификация:
 магистр по педагогике высшей школы
 
+       		   </TextBlock>
+       	   </StackPanel>
+       	   <TextBlock  Classes="Caption"
+       		   Padding="20 0 20 0"
+       		   HorizontalAlignment="Stretch"
+       		   TextWrapping="WrapWithOverflow"
+       		   >
 Преподавательская деятельность
 Преподаваемые дисциплины: «Физическая культура»,
 «Элективные дисциплины по физической культуре и спорту» 
@@ -3454,13 +3481,6 @@ C 2003 года заведует кафедрой теории
 Общий стаж работы – 29 лет
 
 Стаж работы по специальности – 16 лет
-       		   </TextBlock>
-       	   </StackPanel>
-       	   <TextBlock
-       		   Padding="20 0 20 0"
-       		   HorizontalAlignment="Stretch"
-       		   TextWrapping="WrapWithOverflow"
-       		   >
 Повышение квалификации:
 ФБГОУ ВО «Донской государственный технический университет», с 15.09. по 17.09.2022
 
@@ -3497,7 +3517,7 @@ C 2003 года заведует кафедрой теории
 					   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/olefir.jpg"
 					   HorizontalAlignment="Left"/>
 
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Right"
 					   TextWrapping="WrapWithOverflow">
@@ -3506,23 +3526,23 @@ C 2003 года заведует кафедрой теории
 
 Научная степень, звание, квалификация:
 магистр по физическому воспитанию
-
-Преподавательская деятельность
-Преподаваемые дисциплины: «Физическая культура», 
-«Элективные дисциплины по физической культуре и спорту»
-в Институте филологии и социальных коммуникаций
 				   </TextBlock>
 			   </StackPanel>
-			   <TextBlock
+			   <TextBlock  Classes="Caption"
 				   Padding="20 0 20 0"
 				   HorizontalAlignment="Stretch"
 				   TextWrapping="WrapWithOverflow"
 				   >
+Преподавательская деятельность
+Преподаваемые дисциплины: «Физическая культура», 
+«Элективные дисциплины по физической культуре и спорту»
+в Институте филологии и социальных коммуникаций
 Куратор по спортивно-массовой и оздоровительной работе 
 в Институте филологии и социальных коммуникаций
 
 Заместитель председателя комиссии по научной работе 
-в ИФВС и председатель комиссии по научной работе на кафедре физического воспитания.
+в ИФВС и председатель комиссии по научной работе
+на кафедре физического воспитания.
 Член совета молодых ученых.
 Общий стаж работы – 12 лет
 Научно-педагогический стаж работы – 9 лет
@@ -3567,7 +3587,7 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/kolpakov2.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -3579,7 +3599,7 @@ C 2003 года заведует кафедрой теории
 магистр по физическому воспитанию
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
@@ -3632,33 +3652,33 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1602069341/5249026595f7da78dedc524.81875413.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
 Должность:
 старший преподаватель
 
+					   </TextBlock>
+				   </StackPanel>
+				   <TextBlock  Classes="Caption"
+					   Padding="20 0 20 0"
+					   HorizontalAlignment="Stretch"
+					   TextWrapping="WrapWithOverflow"
+					   >
 Преподавательская деятельность:
 Преподаваемые дисциплины:
 «Физическая культура»,
 «Элективные дисциплины 
 по физической культуре и спорту»
 в Институте педагогики и психологии
-					   </TextBlock>
-				   </StackPanel>
-				   <TextBlock
-					   Padding="20 0 20 0"
-					   HorizontalAlignment="Stretch"
-					   TextWrapping="WrapWithOverflow"
-					   >
-Член комиссии по научной работе кафедры физического воспитания
-
+Член комиссии по научной работе
+кафедры физического воспитания
 Общий стаж работы – 34 года
 Научно-педагогический стаж работы – 34 года
-
 Повышение квалификации:
-ФБГОУ ВО «Донской государственный технический университет», с 26.09. по 28.09.2022
+ФБГОУ ВО «Донской государственный 
+технический университет», с 26.09. по 28.09.2022
 
 Основные публикации:
 1. Мартыненко Е.Н. «Влияние лечебной физической культуры на организм студентов»
@@ -3693,6 +3713,7 @@ C 2003 года заведует кафедрой теории
 					<StackPanel>
 				   <StackPanel Orientation="Horizontal">
 					   <Image
+						   VerticalAlignment="Top"
 						   MaxHeight="200"
 						   MaxWidth="200"
 						   Margin="20 20 0 0"
@@ -3700,7 +3721,7 @@ C 2003 года заведует кафедрой теории
 						   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/kostrykin.jpg"
 						   HorizontalAlignment="Left"/>
 
-					   <TextBlock
+					   <TextBlock  Classes="Caption"
 						   Padding="20 0 20 0"
 						   HorizontalAlignment="Right"
 						   TextWrapping="WrapWithOverflow">
@@ -3711,51 +3732,51 @@ C 2003 года заведует кафедрой теории
 магистр по физическому воспитанию,
 магистр по физической реабилитации
 
-Преподавательская деятельность
-Преподаваемые дисциплины:
-«Физическая культура», «Элективные дисциплины
-по физической культуре и спорту» в ИИМОСПН
-
 					   </TextBlock>
 				   </StackPanel>
-				   <TextBlock
+				   <TextBlock  Classes="Caption"
 					   Padding="20 0 20 0"
 					   HorizontalAlignment="Stretch"
 					   TextWrapping="WrapWithOverflow"
 					   >
-	Куратор по спортивно-массовой и 
-	оздоровительной работе в Институте истории, международных
-    отношений и социально-политических наук.
-    Общий стаж работы – 16 лет
-    Научно-педагогический стаж работы – 15 лет
 
-    Повышение квалификации:
-    ФБГОУ ВО «Донской государственный 
-	технический университет», с 29.09. по 01.10.2022
+Преподавательская деятельность
+Преподаваемые дисциплины:
+«Физическая культура», «Элективные дисциплины
+по физической культуре и спорту» в ИИМОСПН
+Куратор по спортивно-массовой и 
+оздоровительной работе в Институте истории, международных
+отношений и социально-политических наук.
+Общий стаж работы – 16 лет
+Научно-педагогический стаж работы – 15 лет
 
-    Основные публикации:
-	1. Кострыкин В.Я., Мартыненко Е.Н. «Экологическое воспитание 
-	как средство формирования физической культуры студентов»
-	Вестник Луганского национального университета имени Тараса Шевченко :
-	сб. науч. тр. / гл. ред. Е.Н. Трегубенко; вып. ред. Н.В. Вострякова; ред. сер.
-	Н.А. Павлова. – Луганск : Книта, 2019. – № 1(27) : Серия 2, Физическое воспитание и спорт. – С. 36-41.
-	2. Кострыкин В.Я., Мартыненко Е.Н., Хвостиков И.П. 
-	«Использование средств физической культуры и спорта 
-	для повышения работоспособности и учебно-трудовой деятельности студента» Научно-методический
-	журнал Донецкого института физической культуры 
-	и спорта «Физическая культура и спорт: теория и практика» № 2 (6) / 2019 – Донецк, 2019. –
-	С. 73-78.
-	3. Кострыкин В.Я. «Физкультурно-спортивная работа со студентами
-	с ограниченными психофизическими возможностями 
-	как ресурс развития и самореализации их личности» Актуальные вопросы физического
-	воспитания учащейся молодежи: теория и практика : 
-	материалы II Республиканской научно-практической конференции
-	с международным участием (г. Луганск, 28 марта 2019 г.) / Под ред. проф.
-	Т.Т. Ротерс. – Луганск, 2019. – С. 34-36.
-	4. Кострыкин В.Я.,. Васецкая Н.В., Николаева Е.А.
-	«Обучение броска мяча в прыжке одной рукой в баскетболе» Образование Луганщины:
-	теория и практика научно-методический журнал. / гл. ред. Е.Н. Трегубенко;
-	вып. Ред. Н.В. Вострякова;  отв. Секр. О.В. Шкуран. – Луганск: Книта, 2019. - №2 (9). – С. 42-46.
+Повышение квалификации:
+ФБГОУ ВО «Донской государственный 
+технический университет», с 29.09. по 01.10.2022
+
+Основные публикации:
+1. Кострыкин В.Я., Мартыненко Е.Н. «Экологическое воспитание 
+как средство формирования физической культуры студентов»
+Вестник Луганского национального университета имени Тараса Шевченко :
+сб. науч. тр. / гл. ред. Е.Н. Трегубенко; вып. ред. Н.В. Вострякова; ред. сер.
+Н.А. Павлова. – Луганск : Книта, 2019. – № 1(27) : Серия 2, Физическое воспитание и спорт. – С. 36-41.
+2. Кострыкин В.Я., Мартыненко Е.Н., Хвостиков И.П. 
+«Использование средств физической культуры и спорта 
+для повышения работоспособности и учебно-трудовой деятельности студента» Научно-методический
+журнал Донецкого института физической культуры 
+и спорта «Физическая культура и спорт: теория и практика» № 2 (6) / 2019 – Донецк, 2019. –
+С. 73-78.
+3. Кострыкин В.Я. «Физкультурно-спортивная работа со студентами
+с ограниченными психофизическими возможностями 
+как ресурс развития и самореализации их личности» Актуальные вопросы физического
+воспитания учащейся молодежи: теория и практика : 
+материалы II Республиканской научно-практической конференции
+с международным участием (г. Луганск, 28 марта 2019 г.) / Под ред. проф.
+Т.Т. Ротерс. – Луганск, 2019. – С. 34-36.
+4. Кострыкин В.Я.,. Васецкая Н.В., Николаева Е.А.
+«Обучение броска мяча в прыжке одной рукой в баскетболе» Образование Луганщины:
+теория и практика научно-методический журнал. / гл. ред. Е.Н. Трегубенко;
+вып. Ред. Н.В. Вострякова;  отв. Секр. О.В. Шкуран. – Луганск: Книта, 2019. - №2 (9). – С. 42-46.
 				   </TextBlock>
 				 </StackPanel>
 				   </Expander>
@@ -3766,6 +3787,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -3773,15 +3795,13 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/chiketova.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
 Должность: старший лаборант
-
 Общий стаж работы:
 29 лет
-
 Научно-педагогический стаж работы:
 2 года
 						           </TextBlock>
@@ -3795,6 +3815,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -3802,15 +3823,15 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1556179546/penkova.jpg"
 							           HorizontalAlignment="Left"/>
 
-   <TextBlock
+   <TextBlock  Classes="Caption"
        Padding="20 0 20 0"
        HorizontalAlignment="Right"
        TextWrapping="WrapWithOverflow">
-       Должность:
-       лаборант
+Должность:
+лаборант
 
-       Общий стаж работы:
-       19 лет
+Общий стаж работы:
+19 лет
    </TextBlock>
 					           </StackPanel>
 				           </StackPanel>
@@ -3822,6 +3843,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -3829,7 +3851,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1602069341/8663849665f7da7765c5f68.67530058.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -3841,7 +3863,7 @@ C 2003 года заведует кафедрой теории
 магистр по спорту
 						           </TextBlock>
 					           </StackPanel>
-					           <TextBlock
+					           <TextBlock  Classes="Caption"
 						           Padding="20 0 20 0"
 						           HorizontalAlignment="Stretch"
 						           TextWrapping="WrapWithOverflow"
@@ -3867,6 +3889,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -3874,7 +3897,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/aa.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -3882,7 +3905,7 @@ C 2003 года заведует кафедрой теории
 							           преподаватель
 						           </TextBlock>
 					           </StackPanel>
-					           <TextBlock
+					           <TextBlock  Classes="Caption"
 						           Padding="20 0 20 0"
 						           HorizontalAlignment="Stretch"
 						           TextWrapping="WrapWithOverflow"
@@ -3904,6 +3927,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -3911,26 +3935,26 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/13-ilinskaya-nadezhda-yurevna.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
 Должность:
 преподаватель
 
+						           </TextBlock>
+					           </StackPanel>
+					           <TextBlock  Classes="Caption"
+						           Padding="20 0 20 0"
+						           HorizontalAlignment="Stretch"
+						           TextWrapping="WrapWithOverflow"
+					           >
 Преподавательская деятельность
 Преподаваемые дисциплины:
 «Физическая культура», 
 «Элективные дисциплины по
 физической культуре и спорту»,
 Ровеньковский факультет
-						           </TextBlock>
-					           </StackPanel>
-					           <TextBlock
-						           Padding="20 0 20 0"
-						           HorizontalAlignment="Stretch"
-						           TextWrapping="WrapWithOverflow"
-					           >
 Общий стаж работы – 11 лет
 
 Научно-педагогический стаж работы – 11 лет
@@ -3948,6 +3972,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -3955,13 +3980,21 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/12-dyubina-elena-vladimirovna.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
 Должность:
 преподаватель
 
+
+						           </TextBlock>
+					           </StackPanel>
+					           <TextBlock  Classes="Caption"
+						           Padding="20 0 20 0"
+						           HorizontalAlignment="Stretch"
+						           TextWrapping="WrapWithOverflow"
+					           >
 Научная степень, 
 звание, квалификация:
 магистр, направление 
@@ -3975,13 +4008,6 @@ C 2003 года заведует кафедрой теории
 по физической культуре и спорту»,
 В Институте филологии и 
 социальных коммуникаций
-						           </TextBlock>
-					           </StackPanel>
-					           <TextBlock
-						           Padding="20 0 20 0"
-						           HorizontalAlignment="Stretch"
-						           TextWrapping="WrapWithOverflow"
-					           >
 Общий стаж работы – 7 лет
 Научно-педагогический стаж работы – 7 лет
 
@@ -4007,6 +4033,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -4014,20 +4041,25 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1491487658/a-i.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
 Должность:
 и.о. заведующего 
 кафедрой спортивных дисциплин
-
 Учёная степень – 
 кандидат педагогических наук
-
 Учёное звание – 
 доцент.
+						           </TextBlock>
 
+					           </StackPanel>
+					           <TextBlock 
+						           Classes="Caption"								           
+						           Padding="20 0 20 0"
+					                      HorizontalAlignment="Stretch"
+					                      TextWrapping="WrapWithOverflow">
 Квалификация и стаж работы – 35 лет,
 мастер спорта СССР по плаванию, 
 чемпион СССР (1986),
@@ -4043,8 +4075,7 @@ C 2003 года заведует кафедрой теории
 
 Сфера научных интересов –
 духовная культура специалиста физической культуры.
-						           </TextBlock>
-					           </StackPanel>
+					           </TextBlock>
 				           </StackPanel>
 			           </Expander>
 			           
@@ -4054,6 +4085,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -4061,12 +4093,21 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1491489488/1.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
-Должность – доцент кафедры спортивных дисциплин
+Должность – доцент 
+кафедры спортивных дисциплин
 
+						           </TextBlock>
+					           </StackPanel>
+					           <TextBlock
+						           Classes="Caption"
+						           Padding="20 0 20 0"
+						           HorizontalAlignment="Stretch"
+						           TextWrapping="WrapWithOverflow"
+					           >
 Мастер спорта Украины по плаванию (1999),
 неоднократный победитель
 и призер Всеукраинских Универсиад 
@@ -4074,12 +4115,11 @@ C 2003 года заведует кафедрой теории
 Магистр физического воспитания,
 преподаватель физического воспитания.
 Стаж работы 16 лет.
-
 Преподаваемые дисциплины: «Плавание 
 с методикой преподавания»,
 «Теория и методика обучения плаванию»,
 «Методика преподавания плавания для лиц с ОВЗ»,
- «Спортивно – педагогическое совершенствование. Плавание»
+«Спортивно – педагогическое совершенствование. Плавание»
 
 В 2010 году закончила аспирантуру 
 Луганского национального университета
@@ -4087,8 +4127,7 @@ C 2003 года заведует кафедрой теории
 и методика профессионального образования»
 Сфера научных интересов: «Формирование мотивации 
 профессионального обучения студентов-спортсменов высокого класса»
-						           </TextBlock>
-					           </StackPanel>
+					           </TextBlock>
 				           </StackPanel>
 			           </Expander>
 			           
@@ -4098,6 +4137,7 @@ C 2003 года заведует кафедрой теории
 			<StackPanel>
 		   <StackPanel Orientation="Horizontal">
 			   <Image
+				   VerticalAlignment="Top"
 				   MaxHeight="200"
 				   MaxWidth="200"
 				   Margin="20 20 0 0"
@@ -4105,25 +4145,28 @@ C 2003 года заведует кафедрой теории
 				   asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/kraynyuk.jpg"
 				   HorizontalAlignment="Left"/>
 
-			   <TextBlock
+			   <TextBlock  Classes="Caption"
 				   Padding="20 0 20 0"
 				   HorizontalAlignment="Right"
 				   TextWrapping="WrapWithOverflow">
 Должность:
 доцент кафедры спортивных дисциплин
-
+			   </TextBlock>
+		   </StackPanel>
+		    <TextBlock  Classes="Caption"
+			   Padding="20 0 20 0"
+			   HorizontalAlignment="Stretch"
+			   TextWrapping="WrapWithOverflow"
+			   >
 Ученая степень и звание:
 кандидат педагогических наук, 2016г.,
 «Формирование морально-волевых качеств
 студентов политехнических колледжей 
 в процессе физического воспитания»
-
 Спортивная специализация и звание:
 мастер спорта СССР по пулевой стрельбе; 
 тренерская практика: огневая подготовка; 
-волейбол; 
-теннис;
-плавание.
+волейбол; теннис; плавание.
 
 Профессиональный путь:
 Родилась в 1954 г. в г. Самарканде, УзССР. В 1967 г.
@@ -4136,14 +4179,8 @@ C 2003 года заведует кафедрой теории
 Луганский национальный педагогический университет, 
 магистратура 2006; Луганский национальный университет 2011г.,
 аспирантура по специальности 13.00.04 – 
-«Теория и методика профессионального образования», специальность – тренер-преподаватель физического воспитания и спорта.
-			   </TextBlock>
-		   </StackPanel>
-		    <TextBlock
-			   Padding="20 0 20 0"
-			   HorizontalAlignment="Stretch"
-			   TextWrapping="WrapWithOverflow"
-			   >
+«Теория и методика профессионального образования», 
+специальность – тренер-преподаватель физического воспитания и спорта.
 Сертификат тренера современных оздоровительных технологий: 
 степ-аэробики, стретчинга,
 пилатеса, калланетики, бодифлексу,
@@ -4206,6 +4243,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -4213,7 +4251,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1491488975/.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -4221,6 +4259,13 @@ C 2003 года заведует кафедрой теории
 старший преподаватель 
 кафедры спортивных дисциплин
 
+						           </TextBlock>
+					           </StackPanel>
+					           <TextBlock  Classes="Caption"
+						           Padding="20 0 20 0"
+						           HorizontalAlignment="Stretch"
+						           TextWrapping="WrapWithOverflow"
+					           >
 Профессиональный путь:
 Дополнительная должность –
 Президент Республиканской федерации баскетбола,
@@ -4231,13 +4276,6 @@ C 2003 года заведует кафедрой теории
 
 Квалификация и стаж работы – 20 лет, кандидат
 в мастера спорта Украины по баскетболу.
-						           </TextBlock>
-					           </StackPanel>
-					           <TextBlock
-						           Padding="20 0 20 0"
-						           HorizontalAlignment="Stretch"
-						           TextWrapping="WrapWithOverflow"
-					           >
 Преподавательская деятельность:
 Преподаваемые дисциплины –
 «Баскетбол с методикой преподавания»,
@@ -4256,6 +4294,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -4263,13 +4302,22 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/kreshchuk2.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
 Должность:
-старший преподаватель кафедры спортивных дисциплин
+старший преподаватель 
+кафедры спортивных дисциплин
 
+						           </TextBlock>
+						           
+					           </StackPanel>
+					           <TextBlock  
+						           Classes="Caption"
+						           Padding="20 0 20 0"
+						           HorizontalAlignment="Stretch"
+						           TextWrapping="WrapWithOverflow">
 Профессиональный путь:
 Квалификация и стаж работы – 
 24 года магистр физического воспитания, 
@@ -4279,8 +4327,7 @@ C 2003 года заведует кафедрой теории
 Преподаваемые дисциплины – «Легкая атлетика с методикой преподавания»,
 «Оздоровительная легкая атлетика с методикой преподавания»,
 «Спортивно-педагогическое совершенствование. Легкая атлетика».
-						           </TextBlock>
-					           </StackPanel>
+					           </TextBlock>
 				           </StackPanel>
 			           </Expander>
 			           
@@ -4290,6 +4337,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -4297,7 +4345,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1486467524/anna-valerievna.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -4305,6 +4353,14 @@ C 2003 года заведует кафедрой теории
 старший преподаватель 
 кафедры спортивных дисциплин
 
+						           </TextBlock>
+						           
+					           </StackPanel>
+					           <TextBlock Classes="Caption"
+					                      Padding="20 0 20 0"
+					                      HorizontalAlignment="Stretch"
+					                      TextWrapping="WrapWithOverflow"
+					           >
 Профессиональный путь:
 Квалификация и стаж работы – 15 лет,
 имеет I взрослый разряд по баскетболу,
@@ -4315,8 +4371,7 @@ C 2003 года заведует кафедрой теории
 Преподаваемые дисциплины – «Баскетбол 
 с методикой преподавания»,
 «Волейбол с методикой преподавания».
-						           </TextBlock>
-					           </StackPanel>
+					           </TextBlock>
 				           </StackPanel>
 			           </Expander>
 			           
@@ -4326,6 +4381,7 @@ C 2003 года заведует кафедрой теории
 				           <StackPanel>
 					           <StackPanel Orientation="Horizontal">
 						           <Image
+							           VerticalAlignment="Top"
 							           MaxHeight="200"
 							           MaxWidth="200"
 							           Margin="20 20 0 0"
@@ -4333,7 +4389,7 @@ C 2003 года заведует кафедрой теории
 							           asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1491489488/shinkarev.jpg"
 							           HorizontalAlignment="Left"/>
 
-						           <TextBlock
+						           <TextBlock  Classes="Caption"
 							           Padding="20 0 20 0"
 							           HorizontalAlignment="Right"
 							           TextWrapping="WrapWithOverflow">
@@ -4341,6 +4397,14 @@ C 2003 года заведует кафедрой теории
 старший преподаватель 
 кафедры спортивных дисциплин
 
+						           </TextBlock>
+						           
+						          
+					           </StackPanel>
+					           <TextBlock Classes="Caption"
+					                      Padding="20 0 20 0"
+					                      HorizontalAlignment="Stretch"
+					                      TextWrapping="WrapWithOverflow">
 Квалификация и педагогический стаж работы 10 лет,
 Мастер спорта СССР по легкой атлетике,
 призер Чемпионата УССР (1988), чемпион Кубка УССР (1984).
@@ -4352,8 +4416,7 @@ C 2003 года заведует кафедрой теории
 «Спортивные сооружения и оборудование»
 «Спортивно – педагогическое совершенствование.
 Легкая атлетика».
-						           </TextBlock>
-					           </StackPanel>
+					           </TextBlock>
 				           </StackPanel>
 			           </Expander>
 			           

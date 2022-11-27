@@ -171,6 +171,9 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
                 case "1":
                     await HostScreen.Router.NavigateAndReset.Execute(new ContactIPRViewModel(HostScreen));
                     break;
+                case "2":
+                    await HostScreen.Router.NavigateAndReset.Execute(new ContactVizViewModel(HostScreen));
+                    break;
             }
         }
        
