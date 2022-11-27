@@ -35,7 +35,7 @@
            <StackPanel>
                <Expander 
                    Margin="20 20 20 0"
-                   Header="Военная кафедра">
+                   Header="ВОЕННАЯ КАФЕДРА">
                    <StackPanel>
                        <TextBlock
                            Classes="Caption"
@@ -139,7 +139,7 @@
                </Expander> -->
                <Expander 
                        Margin="20 20 20 0"
-                       Header="Кафедра адаптивной физической культуры и физической реабилитации">
+                       Header="КАФЕДРА АДАПТИВНОЙ ФИЗИЧЕСКОЙ КУЛЬТУРЫ И ФИЗИЧЕСКОЙ РЕАБИЛИТАЦИИ">
 
                        <TextBlock
                            Classes="Caption"
@@ -182,7 +182,7 @@
                
                <Expander 
                    Margin="20 20 20 0"
-                   Header="Кафедра спортивных дисциплин">
+                   Header="КАФЕДРА СПОРТИВНЫХ ДИСЦИПЛИН">
                    <StackPanel>
                        <TextBlock
                            Classes="Caption"
@@ -253,7 +253,7 @@
                
                <Expander 
                    Margin="20 20 20 0"
-                   Header="Кафедра физического воспитания">
+                   Header="КАФЕДРА ФИЗИЧЕСКОГО ВОСПИТАНИЯ">
                    
                    <TextBlock
                        Classes="Caption"
@@ -276,7 +276,7 @@
                
                <Expander 
                    Margin="20 20 20 0"
-                   Header="Кафедра олимпийского и профессионального спорта">
+                   Header="КАФЕДРА ОЛИМПИЙСКОГО И ПРОФЕССИОНАЛЬНОГО СПОРТА">
                    <StackPanel>
                        <Image
                            MaxHeight="300"
@@ -340,7 +340,7 @@
                
                <Expander 
                    Margin="20 20 20 0"
-                   Header="Кафедра теории и методики физического воспитания">
+                   Header="КАФЕДРА ТЕОРИИ И МЕТОДИКИ ФИЗИЧЕСКОГО ВОСПИТАНИЯ">
                    <StackPanel>
                        <TextBlock
                            Classes="Caption"
