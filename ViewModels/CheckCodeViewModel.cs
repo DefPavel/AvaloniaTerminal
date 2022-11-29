@@ -99,7 +99,7 @@ public sealed class CheckCodeViewModel : ViewModelBase
     
     public CheckCodeViewModel(IChekingService chekingService , TimeSpan timeSpan)
     {
-        TimeSpans = timeSpan - TimeSpan.FromSeconds(5);
+        TimeSpans = timeSpan - TimeSpan.FromSeconds(5.5);
         _chekingService = chekingService;
         // Закрыть окно
         Close = ReactiveCommand.Create<object>(Exit);

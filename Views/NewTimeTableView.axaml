@@ -42,7 +42,7 @@
             Items="{Binding PdfFiles}"
             Grid.Row="1">
             <i:Interaction.Behaviors>
-                <ia:EventTriggerBehavior EventName="DoubleTapped" SourceObject="{Binding #GridFile}">
+                <ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #GridFile}">
                     <!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
                     <ia:InvokeCommandAction Command="{Binding OpenFile}"/>
                 </ia:EventTriggerBehavior>

@@ -9,6 +9,7 @@ using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using Avalonia.Controls;
+using Avalonia.Threading;
 using AvaloniaTerminal.Models;
 using ReactiveUI;
 
@@ -29,6 +30,9 @@ public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
         set =>  this.RaiseAndSetIfChanged(ref _currentAdres, value);
     }
     */
+    
+    private readonly DispatcherTimer _disTimer = new();
+    
     private static readonly string? PathPdf = ConfigurationManager.AppSettings["pathPDF"];
     
     private static readonly string? NumberFaculty = ConfigurationManager.AppSettings["numberFaculty"];
@@ -76,23 +80,37 @@ public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
 
         OpenFile = ReactiveCommand.Create(Opening);
 
-        this.WhenActivated((CompositeDisposable _) =>
+        this.WhenActivated((CompositeDisposable disposables) =>
         {
-            var files = Directory.GetFiles("C:\\data-avalonia\\pdfFiles\\" + NumberFaculty, "*.pdf");
+            var files = Directory.GetFiles("Z:\\data-avalonia\\pdfFiles\\" + NumberFaculty, "*.pdf");
 
-            foreach (var item in files)
+            _disTimer.Interval = TimeSpan.FromMinutes(5);
+            _disTimer.Tick += DispatcherTimer_Tick;
+            _disTimer.Start();
+            
+            Disposable.Create(() => { _disTimer.Stop(); }).DisposeWith(disposables);
+
+            if (files.Length > 0)
             {
-                var splitter = item.Split("\\");
-                PdfFiles?.Add(new ListFiles()
+                foreach (var item in files)
                 {
-                    Name = splitter[^1],
-                    OriginalName = item
-                });
+                    var splitter = item.Split("\\");
+                    PdfFiles?.Add(new ListFiles()
+                    {
+                        Name = splitter[^1],
+                        OriginalName = item
+                    });
+                }     
             }
+           
             
             
             GC.Collect();
         });
     }
 
+    private async void DispatcherTimer_Tick(object? sender, EventArgs e)
+    {
+        await HostScreen.Router.NavigateAndReset.Execute(new CarouselViewModel(HostScreen));
+    }
 }

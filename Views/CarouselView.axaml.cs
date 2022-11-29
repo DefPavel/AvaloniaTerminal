@@ -44,7 +44,7 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
             _disTimer.Tick += DispatcherTimer_Tick;
             _disTimer.Start();
             
-            var files = Directory.GetFiles("C:\\data-avalonia\\afisha", "*.jpg");
+            var files = Directory.GetFiles("Z:\\data-avalonia\\afisha", "*.jpg");
             var images = new ObservableCollection<Image>();
             foreach (var item in files)
             {

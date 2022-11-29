@@ -46,8 +46,9 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
 
     private void GetFiles()
     {
-        var files = Directory.GetFiles("C:\\data-avalonia\\afisha", "*.jpg");
+        var files = Directory.GetFiles("Z:\\data-avalonia\\afisha", "*.jpg");
 
+        if (files.Length <= 0) return;
         foreach (var item in files)
         {
             var splitter = item.Split("\\");
@@ -57,6 +58,7 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
                 OriginalName = item
             });
         }
+
     }
 
     #endregion

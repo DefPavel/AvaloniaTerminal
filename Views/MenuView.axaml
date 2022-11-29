@@ -5,6 +5,7 @@
              xmlns:vm="using:AvaloniaTerminal.ViewModels"
              xmlns:i="using:Avalonia.Xaml.Interactivity"
              xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
+             
              mc:Ignorable="d" d:DesignWidth="3000" d:DesignHeight="4000"
              x:Class="AvaloniaTerminal.Views.MenuView">
     
@@ -61,7 +62,7 @@
             HorizontalAlignment="Center"
             RowDefinitions="Auto, Auto, Auto, *"
             ColumnDefinitions="*, * ">
-
+ 
 		    <!-- ROW 1 -->
             <Border
                 Name="Info"
