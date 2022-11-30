@@ -6,6 +6,7 @@ using ReactiveUI;
 using System.Reactive;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
+using System.Text.Json;
 using AvaloniaTerminal.Models;
 using Splat;
 
@@ -13,6 +14,9 @@ namespace AvaloniaTerminal.ViewModels;
 
 public class CarouselViewModel : ViewModelBase, IRoutableViewModel
 {
+    
+    private static readonly string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+    
     private ObservableCollection<ListFiles>? _pdfFile = new();
     public ObservableCollection<ListFiles>? PdfFiles
     {
@@ -77,8 +81,22 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
         
         //GetFilesAfish.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
         
-        this.WhenActivated((CompositeDisposable disposables) =>
+        this.WhenActivated( async (CompositeDisposable disposables) =>
         {
+            if (!File.Exists(Path.Combine(AppData, "settings.json"))) 
+            {
+                var settings = new Settings { Pincode = string.Empty };
+                await using var createStream = File.Create(Path.Combine(AppData, "settings.json"));
+                JsonSerializer.Serialize(createStream, settings);
+            }
+            else
+            {
+                var settings = new Settings { Pincode = string.Empty};
+                var settingsText = JsonSerializer.Serialize(settings);
+                
+                await File.WriteAllTextAsync(Path.Combine(AppData, "settings.json"), settingsText);
+            }
+            
             // Added here just for testing
             GC.Collect();
         });

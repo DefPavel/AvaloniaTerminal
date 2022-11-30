@@ -80,10 +80,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         if (string.IsNullOrWhiteSpace(SavePin))
         {
             var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
-
             if (check.Status && check.Pin.Length > 0)
             {
-
                 await ChangeDataJson(check.Pin);
                 
                 switch (NumberFaculty)
@@ -115,14 +113,24 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     {
         // Может быть есть и намного лучше способ,
         // но у меня в данной структуре работает только такой
-
-        // TODO: Когда пройдет еще время, найдите способ лучше передавать данные между Window и UseCotrol в (MVVM)
-
         _disTimer.Interval = TimeSpan.FromSeconds(40);
-
-        var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
-
-        if (check.Status && check.Pin.Length > 0)
+        // TODO: Когда пройдет еще время, найдите способ лучше передавать данные между Window и UseCotrol в (MVVM)
+        if (string.IsNullOrWhiteSpace(SavePin))
+        {
+            var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
+            if (check.Status && check.Pin.Length > 0)
+            {
+                await ChangeDataJson(check.Pin);
+                switch (NumberFaculty)
+                {
+                    case "1" : await HostScreen.Router.NavigateAndReset.Execute(new IPRViewModel(HostScreen));
+                        break;
+                    case "2" : await HostScreen.Router.NavigateAndReset.Execute(new FizVospViewModel(HostScreen));
+                        break;
+                }
+            }
+        }
+        else
         {
             switch (NumberFaculty)
             {
@@ -131,17 +139,33 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
                 case "2" : await HostScreen.Router.NavigateAndReset.Execute(new FizVospViewModel(HostScreen));
                     break;
             }
-           // _disTimer.Stop();
         }
+
+      
        
     }
     private async Task GetDirectors()
     {
         _disTimer.Interval = TimeSpan.FromSeconds(40);
-        
-        var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
 
-        if (check.Status && check.Pin.Length > 0)
+        if (string.IsNullOrWhiteSpace(SavePin))
+        {
+            var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
+            if (check.Status && check.Pin.Length > 0)
+            {
+                await ChangeDataJson(check.Pin);
+                switch (NumberFaculty)
+                {
+                    case "1":
+                        await HostScreen.Router.NavigateAndReset.Execute(new DirectorsIPRViewModel(HostScreen));
+                        break;
+                    case "2":
+                        await HostScreen.Router.NavigateAndReset.Execute(new DirectorsFizViewModel(HostScreen));
+                        break;
+                }
+            }
+        }
+        else
         {
             switch (NumberFaculty)
             {
@@ -154,13 +178,30 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
             }
         }
        
+       
     }
     private async Task GetPhones()
     {
         _disTimer.Interval = TimeSpan.FromSeconds(40);
-        var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
 
-        if (check.Status && check.Pin.Length > 0)
+        if (string.IsNullOrWhiteSpace(SavePin))
+        {
+            var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
+            if (check.Status && check.Pin.Length > 0)
+            {
+                await ChangeDataJson(check.Pin);
+                switch (NumberFaculty)
+                {
+                    case "1":
+                        await HostScreen.Router.NavigateAndReset.Execute(new ContactIPRViewModel(HostScreen));
+                        break;
+                    case "2":
+                        await HostScreen.Router.NavigateAndReset.Execute(new ContactVizViewModel(HostScreen));
+                        break;
+                }
+            }     
+        }
+        else
         {
             switch (NumberFaculty)
             {
@@ -172,31 +213,51 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
                     break;
             }
         }
+
+       
        
     }
     private async Task GetTimeTable()
     {
         _disTimer.Interval = TimeSpan.FromSeconds(40);
-        var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
-
-        if (check.Status && check.Pin.Length > 0)
+        if (string.IsNullOrWhiteSpace(SavePin))
         {
-           // _disTimer.Stop();
+            var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
+
+            if (check.Status && check.Pin.Length > 0)
+            {
+                await ChangeDataJson(check.Pin);
+                // _disTimer.Stop();
+                await HostScreen.Router.NavigateAndReset.Execute(new NewTimeTableViewModel(HostScreen));
+            }
+        }
+        else
+        {
             await HostScreen.Router.NavigateAndReset.Execute(new NewTimeTableViewModel(HostScreen));
         }
+
+       
 
     }
     private async Task GetNotice()
     {
         _disTimer.Interval = TimeSpan.FromSeconds(40);
-        
-        var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
-
-        if (check.Status && check.Pin.Length > 0)
+        if (string.IsNullOrWhiteSpace(SavePin))
         {
-            // _disTimer.Stop();
+            var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
+        
+            if (check.Status && check.Pin.Length > 0)
+            {
+                await ChangeDataJson(check.Pin);
+                // _disTimer.Stop();
+                await HostScreen.Router.NavigateAndReset.Execute(new NoticeViewModel(HostScreen));
+            }
+        }
+        else
+        {
             await HostScreen.Router.NavigateAndReset.Execute(new NoticeViewModel(HostScreen));
         }
+       
 
     }   
 
@@ -243,12 +304,13 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
             _saveTimer.Tick += CheckSavePin;
             _saveTimer.Start();
             
-            if (!File.Exists(Path.Combine(AppData, "settings.json"))) 
+           /* if (!File.Exists(Path.Combine(AppData, "settings.json"))) 
             {
                 var settings = new Settings { Pincode = string.Empty };
                 using var createStream = File.Create(Path.Combine(AppData, "settings.json"));
                 JsonSerializer.Serialize(createStream, settings);
             }
+            */
             SavePin = JsonSerializer.Deserialize<Settings>(File.ReadAllText($"{AppData}\\settings.json"))?.Pincode;
 
             Disposable.Create(() =>

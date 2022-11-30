@@ -40,7 +40,7 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
 
         this.WhenActivated(disposables =>
         {
-            _disTimer.Interval = TimeSpan.FromSeconds(5);
+            _disTimer.Interval = TimeSpan.FromSeconds(10);
             _disTimer.Tick += DispatcherTimer_Tick;
             _disTimer.Start();
             
