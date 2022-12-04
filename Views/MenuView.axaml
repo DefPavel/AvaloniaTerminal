@@ -48,8 +48,17 @@
     <Design.DataContext>
         <vm:MenuViewModel/>
     </Design.DataContext>
-    
-    <TabControl>
+    <Grid 
+        RowDefinitions="50, *">
+        <TextBlock
+                Grid.Row="0"
+                VerticalAlignment="Top"
+                Classes="Heading"
+                FontSize="32"
+                Text="{Binding TitleHeader}"
+            />            
+            <TabControl 
+                Grid.Row="1">
         <TabItem >
             <TabItem.Header>
                 <TextBlock 
@@ -232,7 +241,9 @@
                     FontSize="23" />
             </TabItem.Header>
         </TabItem>
-    </TabControl>
+    </TabControl>        
+    </Grid>
+
     
     
     

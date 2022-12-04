@@ -11,7 +11,7 @@ public class TimetableViewModel : ViewModelBase, IRoutableViewModel
     public string? UrlPathSegment => nameof(TimetableViewModel);
     public IScreen HostScreen { get; }
     
-    private string? _currentAdres = "http://jmu.api.lgpu.org/storage/eios/educationalPrograms/15/Учебный план_ПП_ЛОМО 2021-2022_2022-08-11.pdf";
+    private string? _currentAdres = "file:///Z:/data-avalonia/pdfFiles/1/Распис_ПП_СПО_ Тифлопедагогика СУрдопедагогика ноябрь.pdf";
 
    public string? CurrentAddress
    {

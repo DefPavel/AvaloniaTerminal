@@ -18,7 +18,7 @@
         </Style>
     </UserControl.Styles>
     
-    <Grid RowDefinitions="65 ,65 , 3000">
+    <Grid RowDefinitions="65 ,65 , *">
         
         <Button
             Margin="10"
@@ -39,11 +39,11 @@
             FontWeight="Black"
         />
         <ScrollViewer 
-            
-            HorizontalScrollBarVisibility="Auto" Grid.Row="2">
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch"
+            Grid.Row="2">
             <webViewControl:WebView
                 Margin="10"
-                MinHeight="100"
                 x:Name="webview" 
                 Address="{Binding CurrentAddress}" />     
         </ScrollViewer>

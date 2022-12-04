@@ -14,6 +14,7 @@
     </Design.DataContext>
     
     <Carousel 
+        VerticalAlignment="Center"
         Padding="10"
         Name="ItemsCarousel">
         <i:Interaction.Behaviors>

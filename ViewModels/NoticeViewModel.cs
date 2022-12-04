@@ -51,7 +51,7 @@ public class NoticeViewModel :  ViewModelBase, IRoutableViewModel
             
             Disposable.Create(() => { _disTimer.Stop(); }).DisposeWith(disposables);
             
-            var files = Directory.GetFiles("Z:\\data-avalonia\\afisha", "*.jpg");
+            var files = Directory.GetFiles("C:\\data-avalonia\\afisha", "*.jpg");
 
             if (files.Length > 0)
             {

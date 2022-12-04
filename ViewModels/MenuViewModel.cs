@@ -28,11 +28,17 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     public IScreen HostScreen { get; }
 
     private string? _savePin = string.Empty;
-
     public string? SavePin
     {
         get => _savePin;
         set =>  this.RaiseAndSetIfChanged(ref _savePin, value);
+    }
+
+    private string? _titleHeader = string.Empty;
+    public string? TitleHeader
+    {
+        get => _titleHeader;
+        set =>  this.RaiseAndSetIfChanged(ref _titleHeader, value);
     }
 
     #endregion
@@ -233,7 +239,7 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         }
         else
         {
-            await HostScreen.Router.NavigateAndReset.Execute(new NewTimeTableViewModel(HostScreen));
+            await HostScreen.Router.NavigateAndReset.Execute(new  NewTimeTableViewModel(HostScreen));
         }
 
        
@@ -295,6 +301,12 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
         this.WhenActivated(disposables =>
         {
+            TitleHeader = NumberFaculty switch
+            {
+                "1" => "Информационный стенд «ИНСТИТУТ ПРОФЕССИОНАЛЬНОГО РАЗВИТИЯ»",
+                "2" => "Информационный стенд «ИНСТИТУТ ФИЗИЧЕСКОГО ВОСПИТАНИЯ И СПОРТА»",
+                _ => TitleHeader
+            };
             // this.WhenAnyValue(e => e.SpanTimeSpan).Subscribe(span => _disTimer.Interval = span);
             _disTimer.Interval = TimeSpan.FromSeconds(40);
             _disTimer.Tick += DispatcherTimer_Tick;

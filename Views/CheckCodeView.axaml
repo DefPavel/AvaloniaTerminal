@@ -22,9 +22,9 @@
 		<Border
 	    Background="White"
 	    CornerRadius="12"
-	    MaxHeight="480"
-	    MaxWidth="400">
-	 <Grid RowDefinitions="55, 80, 45, Auto">
+	    MaxHeight="580"
+	    MaxWidth="460">
+	 <Grid RowDefinitions="55, 80, 100, Auto">
        <TextBlock 
 		   FontSize="36"
 		   Classes="Heading"
@@ -46,18 +46,40 @@
 		       <custom:FocusOnPropertyChangedBehavior />
 	       </i:Interaction.Behaviors>
        </TextBox>
-       <TextBlock 
-	       FontSize="16"
-	       Margin="10 0 10 0"
-	       Classes="Caption"
-	       TextWrapping="Wrap"
-	       TextAlignment="Center"
+       <StackPanel 
+	       Margin="0 0 0 10"
 	       Grid.Row="2">
-Получить пин-код можно 
-у нашего телеграмм бота - @LGPU_BOT
-       </TextBlock>
+	       <TextBlock 
+		       FontSize="16"
+		       Margin="10 0 10 0"
+		       Classes="Caption"
+		       TextWrapping="Wrap"
+		       TextAlignment="Center"
+	       >
+		       1. Добавить нешего телеграмм бота по данной ссылки "@LGPU_BOT";
+	       </TextBlock>
+	       <TextBlock
+		       FontSize="16"
+		       Margin="10 0 10 0"
+		       Classes="Caption"
+		       TextWrapping="Wrap"
+		       TextAlignment="Center"
+	       >
+		       2. После чего выбрать команду "/getpin" в меню или прописать вручную;
+	       </TextBlock>
+	       <TextBlock
+		       FontSize="16"
+		       Margin="10 0 10 0"
+		       Classes="Caption"
+		       TextWrapping="Wrap"
+		       TextAlignment="Center"
+	       >
+		       3. Бот выдаст пинкод (если вы подписаны на телеграмм канал "@lgpu_lugansk")
+	       </TextBlock>
+       </StackPanel>
+      
        <ProgressBar
-	       Height="20"
+	       Height="30"
 	       Name="ProgressBar"
 	       Grid.Row="2"
 	       IsIndeterminate="True"
@@ -67,9 +89,9 @@
 		
        <Grid 
 	       HorizontalAlignment="Center"
-	       Margin="10 0 10 0"
+	       Margin="10 20 10 10"
 	       RowDefinitions="*,*,*,*,*,*"
-	       ColumnDefinitions="110,110,110"
+	       ColumnDefinitions="130,130,130"
 	       Grid.Row="3">
 	       <Button Classes="Primary" Grid.Row="0" Grid.Column="0" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="7">7</Button>
 	       <Button Classes="Primary" Grid.Row="0" Grid.Column="1" Margin="5" Command="{Binding Path=AddNumberCommand}" CommandParameter="8">8</Button>

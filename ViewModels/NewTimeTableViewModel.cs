@@ -66,7 +66,7 @@ public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
     {
         if (SelectedPdf == null) return;
         
-         _ = Process.Start("\"" + PathPdf + "\"",  "\"" +SelectedPdf.OriginalName + "\"");
+         _ = Process.Start("\"" + PathPdf + "\"",  "\"" + "file:///" + SelectedPdf.OriginalName + "\"");
 
     }
 
@@ -82,7 +82,7 @@ public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
 
         this.WhenActivated((CompositeDisposable disposables) =>
         {
-            var files = Directory.GetFiles("Z:\\data-avalonia\\pdfFiles\\" + NumberFaculty, "*.pdf");
+            var files = Directory.GetFiles("C:\\data-avalonia\\pdfFiles\\" + NumberFaculty, "*.pdf");
 
             _disTimer.Interval = TimeSpan.FromMinutes(5);
             _disTimer.Tick += DispatcherTimer_Tick;
