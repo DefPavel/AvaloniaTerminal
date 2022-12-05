@@ -24,7 +24,7 @@
     </UserControl.Styles>
     <Grid 
         ColumnDefinitions="150 , *"
-        RowDefinitions="150, *">
+        RowDefinitions="150, Auto">
   
         <Image 
             Height="100"
@@ -34,7 +34,8 @@
             Source="/Assets/lgpu.png"
             Grid.Column="0"
             Grid.Row="0" />
-        <TextBlock
+		<TextBlock
+			FontSize="32" 
             Grid.Column="1"
             Grid.Row="0"
             VerticalAlignment="Center"
