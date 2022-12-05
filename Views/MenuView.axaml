@@ -49,15 +49,26 @@
         <vm:MenuViewModel/>
     </Design.DataContext>
     <Grid 
-        RowDefinitions="50, *">
+        ColumnDefinitions="150 , *"
+        RowDefinitions="150, *">
+        <Image 
+            Height="100"
+            Width="100"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+            Source="/Assets/lgpu.png"
+            Grid.Column="0"
+            Grid.Row="0" />
         <TextBlock
+                Grid.Column="1"
                 Grid.Row="0"
-                VerticalAlignment="Top"
+                VerticalAlignment="Center"
                 Classes="Heading"
-                FontSize="32"
                 Text="{Binding TitleHeader}"
             />            
-            <TabControl 
+            <TabControl
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
                 Grid.Row="1">
         <TabItem >
             <TabItem.Header>

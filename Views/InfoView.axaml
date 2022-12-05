@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:AvaloniaTerminal.ViewModels"
-             xmlns:webViewControl="clr-namespace:WebViewControl;assembly=WebViewControl.Avalonia"
+         
              mc:Ignorable="d" d:DesignWidth="2000" d:DesignHeight="3050"
              x:Class="AvaloniaTerminal.Views.InfoView">
 

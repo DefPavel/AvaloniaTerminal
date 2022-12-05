@@ -36,6 +36,7 @@
             Name="GridFile"
             AlternatingRowBackground="White"
             Margin="20"
+            FontSize="32"
             IsReadOnly="True"
             AutoGenerateColumns="False"
             SelectedItem="{Binding SelectedPdf}"

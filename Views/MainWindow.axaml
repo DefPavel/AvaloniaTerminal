@@ -12,7 +12,7 @@
         WindowState="Maximized"
         SystemDecorations="None"
         TabIndex="0"
-        Background="{DynamicResource ThemeBackgroundColor}">
+        >
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>

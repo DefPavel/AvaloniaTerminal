@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Configuration;
 using System.IO;
 using AvaloniaTerminal.Services;
 using ReactiveUI;
@@ -16,6 +17,7 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
 {
     
     private static readonly string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+    private static readonly string? NumberFaculty = ConfigurationManager.AppSettings["numberFaculty"];
     
     private ObservableCollection<ListFiles>? _pdfFile = new();
     public ObservableCollection<ListFiles>? PdfFiles
@@ -30,6 +32,12 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
     {
         get => _selectedPdf;
         set =>  this.RaiseAndSetIfChanged(ref _selectedPdf, value);
+    }
+    private string? _titleHeader = string.Empty;
+    public string? TitleHeader
+    {
+        get => _titleHeader;
+        set =>  this.RaiseAndSetIfChanged(ref _titleHeader, value);
     }
     
     public string? UrlPathSegment => nameof(CarouselViewModel);
@@ -83,6 +91,13 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
         
         this.WhenActivated( async (CompositeDisposable disposables) =>
         {
+            TitleHeader = NumberFaculty switch
+            {
+                "1" => "Информационный стенд «ИНСТИТУТ ПРОФЕССИОНАЛЬНОГО РАЗВИТИЯ»",
+                "2" => "Информационный стенд «ИНСТИТУТ ФИЗИЧЕСКОГО ВОСПИТАНИЯ И СПОРТА»",
+                _ => TitleHeader
+            };
+            
             if (!File.Exists(Path.Combine(AppData, "settings.json"))) 
             {
                 var settings = new Settings { Pincode = string.Empty };

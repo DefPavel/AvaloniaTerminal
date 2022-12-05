@@ -22,7 +22,7 @@ namespace AvaloniaTerminal
             {
                 Locator.CurrentMutable.Register<IViewFor<MenuViewModel>>(() => new MenuView());
                 Locator.CurrentMutable.Register<IViewFor<InfoViewModel>>(() => new InfoView());
-                Locator.CurrentMutable.Register<IViewFor<TimetableViewModel>>(() => new TimetableView());
+               // Locator.CurrentMutable.Register<IViewFor<TimetableViewModel>>(() => new TimetableView());
                 Locator.CurrentMutable.Register<IViewFor<CarouselViewModel>>(() => new CarouselView());
                 Locator.CurrentMutable.Register<IViewFor<DirectorsIPRViewModel>>(() => new DirectorsIPRView());
                 Locator.CurrentMutable.Register<IViewFor<StructuraIPRViewModel>>(() => new StructuraIPRView());

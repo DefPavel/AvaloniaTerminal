@@ -17,7 +17,7 @@ namespace AvaloniaTerminal.ViewModels;
 
 public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
 {
-    public string? UrlPathSegment => nameof(TimetableViewModel);
+    public string? UrlPathSegment => nameof(NewTimeTableViewModel);
     public IScreen HostScreen { get; }
 
     /*private const string PathPdf =

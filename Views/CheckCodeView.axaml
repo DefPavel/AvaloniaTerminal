@@ -23,7 +23,7 @@
 	    Background="White"
 	    CornerRadius="12"
 	    MaxHeight="580"
-	    MaxWidth="460">
+	    MaxWidth="500">
 	 <Grid RowDefinitions="55, 80, 100, Auto">
        <TextBlock 
 		   FontSize="36"

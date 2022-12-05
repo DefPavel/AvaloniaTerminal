@@ -28,10 +28,6 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
         else
             _carousel.SelectedIndex = 0;
     }
-    
-    
-    
-    
     public CarouselView()
     {
         InitializeComponent();
