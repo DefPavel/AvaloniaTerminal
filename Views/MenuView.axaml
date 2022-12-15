@@ -49,27 +49,28 @@
         <vm:MenuViewModel/>
     </Design.DataContext>
     <Grid 
-        ColumnDefinitions="150 , *"
-        RowDefinitions="150, Auto">
-        <Image 
-            Height="100"
-            Width="100"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Right"
-            Source="/Assets/lgpu.png"
-            Grid.Column="0"
-            Grid.Row="0" />
-        <TextBlock
-			    FontSize="32"
-                Grid.Column="1"
-                Grid.Row="0"
-                VerticalAlignment="Center"
-                Classes="Heading"
-                Text="{Binding TitleHeader}"
-            />            
-            <TabControl
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
+        RowDefinitions="130, *">
+		<StackPanel 
+			Orientation="Horizontal"
+			Grid.Row="0">
+			<Image
+			   Margin="20"	
+			   Height="100"
+			   Width="100"
+			   VerticalAlignment="Center"
+			   HorizontalAlignment="Right"
+			   Source="/Assets/lgpu.png"/>
+			<TextBlock
+					FontSize="46"
+					Grid.Column="1"
+					Grid.Row="0"
+					VerticalAlignment="Center"
+					Classes="Heading"
+					Text="{Binding TitleHeader}"
+            />
+		</StackPanel>
+
+		<TabControl
                 Grid.Row="1">
         <TabItem >
             <TabItem.Header>

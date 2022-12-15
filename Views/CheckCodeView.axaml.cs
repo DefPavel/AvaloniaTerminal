@@ -17,8 +17,6 @@ public partial class CheckCodeView : ReactiveWindow<CheckCodeViewModel>
     
     private readonly DispatcherTimer _disTimer = new();
 
-    private readonly TimeSpan _timeSpan;
-    
     private void DispatcherTimer_Tick(object? sender, EventArgs e)
     {
         Close();

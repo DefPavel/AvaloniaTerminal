@@ -49,7 +49,7 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
     
     public ReactiveCommand<Unit, IRoutableViewModel> GetMenuView { get; }
     
-    public ReactiveCommand<Unit, Unit> GetFilesAfish { get; }
+   // public ReactiveCommand<Unit, Unit> GetFilesAfish { get; }
     
     
     #endregion
@@ -93,8 +93,8 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
         {
             TitleHeader = NumberFaculty switch
             {
-                "1" => "Информационный стенд «ИНСТИТУТ ПРОФЕССИОНАЛЬНОГО РАЗВИТИЯ»",
-                "2" => "Информационный стенд «ИНСТИТУТ ФИЗИЧЕСКОГО ВОСПИТАНИЯ И СПОРТА»",
+                "1" => "Информационный стенд ИНСТИТУТА ПРОФЕССИОНАЛЬНОГО РАЗВИТИЯ",
+                "2" => "Информационный стенд ИНСТИТУТА ФИЗИЧЕСКОГО ВОСПИТАНИЯ И СПОРТА",
                 _ => TitleHeader
             };
             

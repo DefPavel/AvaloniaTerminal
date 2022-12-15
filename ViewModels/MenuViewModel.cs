@@ -303,8 +303,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         {
             TitleHeader = NumberFaculty switch
             {
-                "1" => "Информационный стенд «ИНСТИТУТ ПРОФЕССИОНАЛЬНОГО РАЗВИТИЯ»",
-                "2" => "Информационный стенд «ИНСТИТУТ ФИЗИЧЕСКОГО ВОСПИТАНИЯ И СПОРТА»",
+                "1" => "Информационный стенд ИНСТИТУТА ПРОФЕССИОНАЛЬНОГО РАЗВИТИЯ",
+                "2" => "Информационный стенд ИНСТИТУТА ФИЗИЧЕСКОГО ВОСПИТАНИЯ И СПОРТА",
                 _ => TitleHeader
             };
             // this.WhenAnyValue(e => e.SpanTimeSpan).Subscribe(span => _disTimer.Interval = span);
