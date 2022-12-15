@@ -3,9 +3,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             xmlns:i="using:Avalonia.Xaml.Interactivity"
-             xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
+             xmlns:vm="using:AvaloniaTerminal.ViewModels"
              x:Class="AvaloniaTerminal.Views.NewTimeTableView">
+    <Design.DataContext>
+        <vm:NewTimeTableViewModel/>
+    </Design.DataContext>
     <UserControl.Styles>
         <Style Selector="TextBlock">
             <Setter Property="FontSize" Value="25" />
@@ -31,8 +33,42 @@
             Classes="Heading"
             Text="Расписание"
             FontSize="42"/>
-        
-        <DataGrid 
+        <ItemsControl
+            Grid.Row="1"
+            Items="{Binding PdfFiles}" 
+            Margin="20,0,20,0">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button  
+                        Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}},Path=DataContext.NewOpenFile}"
+                        CommandParameter="{Binding Path=OriginalName}"
+                        Background="#0063bb"
+                        Margin="10"
+                        Height="300"
+                        Width="300">
+                        <StackPanel>
+                            <Svg 
+                                Margin="5"
+                                Height="100"
+                                Width="100"
+                                Path="/Assets/document.svg"/> 
+                            <TextBlock 
+                                Foreground="White"
+                                TextWrapping="Wrap"
+                                Text="{Binding Name}"/>
+                        </StackPanel>
+                       
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+       <!-- <DataGrid 
             Name="GridFile"
             AlternatingRowBackground="White"
             Margin="20"
@@ -44,7 +80,6 @@
             Grid.Row="1">
             <i:Interaction.Behaviors>
                 <ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #GridFile}">
-                    <!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
                     <ia:InvokeCommandAction Command="{Binding OpenFile}"/>
                 </ia:EventTriggerBehavior>
             </i:Interaction.Behaviors>
@@ -55,7 +90,7 @@
                     Binding="{Binding Name }"
                     />
             </DataGrid.Columns>
-        </DataGrid>
+        </DataGrid>-->
 
     </Grid>
 </UserControl>

@@ -10,7 +10,7 @@
         <FluentTheme Mode="Light"/>
     </Application.Styles>-->
     <Application.Styles>
-        <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Default.xaml"/>
+        <!--<StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Default.xaml"/>-->
         <StyleInclude Source="avares://Citrus.Avalonia/Citrus.xaml"/>
     </Application.Styles>
 </Application>

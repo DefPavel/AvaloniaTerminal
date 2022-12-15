@@ -57,11 +57,18 @@ public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
     public ReactiveCommand<Unit, IRoutableViewModel> GetBack { get; }
     
     public ReactiveCommand<Unit, Unit> OpenFile { get; }
+    
+    public ReactiveCommand<string, Unit> NewOpenFile { get; }
 
     #endregion
 
     #region Логика
 
+    private void OppeingToButton(string parameter)
+    {
+        if (string.IsNullOrWhiteSpace(parameter)) return;
+        _ = Process.Start("\"" + PathPdf + "\"",  "\"" + "file:///" + parameter + "\"");
+    }
     private void Opening()
     {
         if (SelectedPdf == null) return;
@@ -78,6 +85,8 @@ public class NewTimeTableViewModel : ViewModelBase, IRoutableViewModel
         GetBack = ReactiveCommand.CreateFromTask(async _ =>
             await HostScreen.Router.Navigate.Execute(new MenuViewModel(HostScreen)));
 
+        NewOpenFile = ReactiveCommand.Create<string>(OppeingToButton);
+        
         OpenFile = ReactiveCommand.Create(Opening);
 
         this.WhenActivated((CompositeDisposable disposables) =>
