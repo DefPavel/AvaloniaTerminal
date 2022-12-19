@@ -8,7 +8,9 @@ using System.Reactive;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Text.Json;
+using System.Threading.Tasks;
 using AvaloniaTerminal.Models;
+using AvaloniaTerminal.Services.Api;
 using Splat;
 
 namespace AvaloniaTerminal.ViewModels;
@@ -49,6 +51,8 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
     
     public ReactiveCommand<Unit, IRoutableViewModel> GetMenuView { get; }
     
+    public ReactiveCommand<Unit, Unit> GetIpChecked { get; }
+
    // public ReactiveCommand<Unit, Unit> GetFilesAfish { get; }
     
     
@@ -56,6 +60,17 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
 
     #region Логика
 
+    private static async Task DispatherApi()
+    {
+        try
+        {
+            await QueryService.JsonObjectWithToken(token: "secret", "http://jmu.api.lgpu.org/bot/telegram/ping-terminal", "POST");
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception);
+        }
+    }
     private void GetFiles()
     {
         var files = Directory.GetFiles("C:\\data-avalonia\\afisha", "*.jpg");
@@ -84,20 +99,19 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
         _carouselService = carouselService;
         
         GetMenuView = ReactiveCommand.CreateFromTask( async _ => await HostScreen.Router.NavigateAndReset.Execute(new MenuViewModel(HostScreen)));
+        // GetIpChecked = ReactiveCommand.CreateFromTask(async _ => await DispatherApi());
 
-        //GetFilesAfish = ReactiveCommand.Create(GetFiles);
-        
-        //GetFilesAfish.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
-        
         this.WhenActivated( async (CompositeDisposable disposables) =>
         {
+            //GetIpChecked.Execute();
+            await QueryService.JsonObjectWithToken(token: "secret", "http://jmu.api.lgpu.org/bot/telegram/ping-terminal", "POST");
             TitleHeader = NumberFaculty switch
             {
                 "1" => "Информационный стенд ИНСТИТУТА ПРОФЕССИОНАЛЬНОГО РАЗВИТИЯ",
                 "2" => "Информационный стенд ИНСТИТУТА ФИЗИЧЕСКОГО ВОСПИТАНИЯ И СПОРТА",
                 _ => TitleHeader
             };
-            
+           
             if (!File.Exists(Path.Combine(AppData, "settings.json"))) 
             {
                 var settings = new Settings { Pincode = string.Empty };
