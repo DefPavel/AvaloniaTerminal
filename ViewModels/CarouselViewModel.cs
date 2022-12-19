@@ -104,7 +104,8 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
         this.WhenActivated( async (CompositeDisposable disposables) =>
         {
             //GetIpChecked.Execute();
-            await QueryService.JsonObjectWithToken(token: "secret", "http://jmu.api.lgpu.org/bot/telegram/ping-terminal", "POST");
+            await QueryService.JsonObjectWithToken(token: "secret", 
+                $"http://jmu.api.lgpu.org/bot/telegram/ping-terminal/{NumberFaculty}", "POST");
             TitleHeader = NumberFaculty switch
             {
                 "1" => "Информационный стенд ИНСТИТУТА ПРОФЕССИОНАЛЬНОГО РАЗВИТИЯ",

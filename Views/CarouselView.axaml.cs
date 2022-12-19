@@ -23,7 +23,7 @@ namespace AvaloniaTerminal.Views;
 
 public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
 {
-    // private static readonly string? NumberFaculty = ConfigurationManager.AppSettings["numberFaculty"];
+    private static readonly string? NumberFaculty = ConfigurationManager.AppSettings["numberFaculty"];
     
     private readonly DispatcherTimer _disTimer = new();
 
@@ -42,12 +42,43 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
     {
         try
         {
-            await QueryService.JsonObjectWithToken(token: "secret", "http://jmu.api.lgpu.org/bot/telegram/ping-terminal", "POST");
+            await QueryService.JsonObjectWithToken(token: "secret", 
+                $"http://jmu.api.lgpu.org/bot/telegram/ping-terminal/{NumberFaculty}", "POST");
         }
         catch (Exception exception)
         {
-            Console.WriteLine(exception);
+            var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager
+                .GetMessageBoxStandardWindow("message", exception.Message);
+            await messageBoxStandardWindow.Show();
         }
+    }
+
+    private static IEnumerable<Image> GetFiles()
+    {
+        var images = new ObservableCollection<Image>();
+        try
+        {
+            var files = 
+                Directory.EnumerateFiles("C:\\data-avalonia\\afisha", "*.*", SearchOption.AllDirectories)
+                    .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg"));
+            var enumerable = files as string[] ?? files.ToArray();
+            if (enumerable.Any())
+            {
+                foreach (var item in enumerable)
+                {
+                    images.Add(new Image { Source = new Bitmap(item) });
+                }
+
+                return images;
+            }
+        }
+        catch (Exception exception)
+        {
+            var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager
+                .GetMessageBoxStandardWindow("message", exception.Message);
+             messageBoxStandardWindow.Show();
+        }
+        return images;
     }
     public CarouselView()
     {
@@ -61,28 +92,11 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
             _disTimer.Tick += DispatcherTimer_Tick;
             _disTimer.Start();
 
-            _dispatcherApi.Interval = TimeSpan.FromSeconds(30);
+            _dispatcherApi.Interval = TimeSpan.FromSeconds(60);
             _dispatcherApi.Tick += DispatherApi;
             _dispatcherApi.Start();
 
-
-            var files = 
-                Directory.EnumerateFiles("C:\\data-avalonia\\afisha", "*.*", SearchOption.AllDirectories)
-                    .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg"));
-                //Directory.GetFiles("C:\\data-avalonia\\afisha", "*.jpg");
-            var images = new ObservableCollection<Image>();
-            var enumerable = files as string[] ?? files.ToArray();
-            
-            if (enumerable.Any())
-            {
-                foreach (var item in enumerable)
-                {
-                    images.Add(new Image { Source = new Bitmap(item) });
-                }
-     
-            }
-           
-            _carousel.Items = images;
+            _carousel.Items = GetFiles();
 
             Disposable.Create(() => { _disTimer.Stop(); }).DisposeWith(disposables);
         });

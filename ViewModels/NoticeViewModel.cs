@@ -1,5 +1,6 @@
 ﻿using ReactiveUI;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -10,6 +11,7 @@ using Avalonia.Controls;
 using Avalonia.Media.Imaging;
 using Avalonia.Threading;
 using AvaloniaTerminal.Models;
+using DynamicData;
 
 namespace AvaloniaTerminal.ViewModels;
 
@@ -24,9 +26,9 @@ public class NoticeViewModel :  ViewModelBase, IRoutableViewModel
         get => _pdfFile;
         set =>  this.RaiseAndSetIfChanged(ref _pdfFile, value);
     }
-    
-    private ObservableCollection<Image>? _images = new();
-    public ObservableCollection<Image>? Images
+
+    private IEnumerable<Image>? _images;
+    public IEnumerable<Image>? Images
     {
         get => _images;
         set =>  this.RaiseAndSetIfChanged(ref _images, value);
@@ -37,6 +39,32 @@ public class NoticeViewModel :  ViewModelBase, IRoutableViewModel
     public ReactiveCommand<Unit, IRoutableViewModel> GetBack { get; }
     #endregion
 
+    private static IEnumerable<Image> GetFiles()
+    {
+        var images = new ObservableCollection<Image>();
+        try
+        {
+            var files =  Directory.EnumerateFiles("C:\\data-avalonia\\afisha", "*.*", SearchOption.AllDirectories)
+                .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg"));
+
+            var enumerable = files as string[] ?? files.ToArray();
+            if (enumerable.Any())
+            {
+                foreach (var item in enumerable)
+                {
+                    images.Add(new Image { Source = new Bitmap(item) });
+                }     
+            }
+        }
+        catch (Exception exception)
+        {
+            var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager
+                .GetMessageBoxStandardWindow("message", exception.Message);
+            messageBoxStandardWindow.Show();
+        }
+        return images;
+    }
+    
     public NoticeViewModel(IScreen screen)
     {
         HostScreen = screen;
@@ -49,28 +77,11 @@ public class NoticeViewModel :  ViewModelBase, IRoutableViewModel
             _disTimer.Interval = TimeSpan.FromMinutes(2);
             _disTimer.Tick += DispatcherTimer_Tick;
             _disTimer.Start();
+
+            Images = GetFiles();
             
             Disposable.Create(() => { _disTimer.Stop(); }).DisposeWith(disposables);
             
-            var files =  Directory.EnumerateFiles("C:\\data-avalonia\\afisha", "*.*", SearchOption.AllDirectories)
-                .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg"));
-
-            var enumerable = files as string[] ?? files.ToArray();
-            if (enumerable.Any())
-            {
-                foreach (var item in enumerable)
-                {
-                    Images?.Add(new Image { Source = new Bitmap(item) });
-                    /*var splitter = item.Split("\\");
-                    PdfFiles?.Add(new ListFiles()
-                    {
-                        Name = splitter[^1],
-                        OriginalName = item
-                    });
-                    */
-                }     
-            }
-           
             GC.Collect();
         });
     }
