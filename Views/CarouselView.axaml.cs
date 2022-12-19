@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Configuration;
 using System.IO;
+using System.Linq;
 using System.Reactive.Disposables;
 using System.Threading.Tasks;
 using Avalonia;
@@ -65,13 +66,22 @@ public partial class CarouselView : ReactiveUserControl<CarouselViewModel>
             _dispatcherApi.Start();
 
 
-            var files = Directory.GetFiles("C:\\data-avalonia\\afisha", "*.jpg");
+            var files = 
+                Directory.EnumerateFiles("C:\\data-avalonia\\afisha", "*.*", SearchOption.AllDirectories)
+                    .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg"));
+                //Directory.GetFiles("C:\\data-avalonia\\afisha", "*.jpg");
             var images = new ObservableCollection<Image>();
-            foreach (var item in files)
+            var enumerable = files as string[] ?? files.ToArray();
+            
+            if (enumerable.Any())
             {
-               images.Add(new Image { Source = new Bitmap(item) });
+                foreach (var item in enumerable)
+                {
+                    images.Add(new Image { Source = new Bitmap(item) });
+                }
+     
             }
-
+           
             _carousel.Items = images;
 
             Disposable.Create(() => { _disTimer.Stop(); }).DisposeWith(disposables);

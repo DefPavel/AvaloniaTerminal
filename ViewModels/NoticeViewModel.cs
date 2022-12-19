@@ -2,6 +2,7 @@
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Reactive;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
@@ -51,11 +52,13 @@ public class NoticeViewModel :  ViewModelBase, IRoutableViewModel
             
             Disposable.Create(() => { _disTimer.Stop(); }).DisposeWith(disposables);
             
-            var files = Directory.GetFiles("C:\\data-avalonia\\afisha", "*.jpg");
+            var files =  Directory.EnumerateFiles("C:\\data-avalonia\\afisha", "*.*", SearchOption.AllDirectories)
+                .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg"));
 
-            if (files.Length > 0)
+            var enumerable = files as string[] ?? files.ToArray();
+            if (enumerable.Any())
             {
-                foreach (var item in files)
+                foreach (var item in enumerable)
                 {
                     Images?.Add(new Image { Source = new Bitmap(item) });
                     /*var splitter = item.Split("\\");

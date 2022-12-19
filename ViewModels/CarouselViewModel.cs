@@ -51,7 +51,7 @@ public class CarouselViewModel : ViewModelBase, IRoutableViewModel
     
     public ReactiveCommand<Unit, IRoutableViewModel> GetMenuView { get; }
     
-    public ReactiveCommand<Unit, Unit> GetIpChecked { get; }
+    // public ReactiveCommand<Unit, Unit> GetIpChecked { get; }
 
    // public ReactiveCommand<Unit, Unit> GetFilesAfish { get; }
     
