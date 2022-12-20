@@ -29,15 +29,10 @@
             Grid.Row="0"
             HorizontalAlignment="Center"
             Classes="Heading"
-            Text="Руководство"
+            Text="Руководство института физического воспитания и спорта"
             FontSize="42"/>
         <ScrollViewer Grid.Row="1">
-           <StackPanel>
-	           
-	           <Expander 
-                           Margin="20 20 20 0"
-                           Header="ИНСТИТУТ ФИЗИЧЕСКОГО ВОСПИТАНИЯ И СПОРТА">
-                     <StackPanel Margin="0 0 0 20">
+	        <StackPanel Margin="0 0 0 20">
                          
                          <Expander 
                          Margin="20 20 20 0"
@@ -282,9 +277,8 @@
                          </Expander>
                          
                      </StackPanel>
-               </Expander>
 	           
-	           <Expander
+	       <!-- <Expander
 		           Margin="20 20 20 0"
 		           Header="ВОЕННАЯ КАФЕДРА">
 		           <StackPanel  Margin="0 0 0 20">
@@ -292,6 +286,11 @@
 		           </StackPanel>
 		           
 	           </Expander>
+			   
+			   
+			   
+			   
+			   
 	           
 	           <Expander
 		            Margin="20 20 20 0"
@@ -4432,11 +4431,7 @@ TextWrapping="WrapWithOverflow"
 		           </StackPanel>
 	           </Expander>
 	          
-	           
-	           
-                   
-           </StackPanel>
-            
+	           -->
         </ScrollViewer>
     </Grid>
 </UserControl>
