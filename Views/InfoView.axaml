@@ -20,37 +20,58 @@
 	    </Style>
     </UserControl.Styles>
 	
-	
-
-	<ScrollViewer>
-		<Grid RowDefinitions="65 , Auto">
-			<Button
-				Margin="10"
-				HorizontalAlignment="Left"
-				MinWidth="65"
-				Command="{Binding GetBack}"
-				Classes="Primary"
-				Grid.Row="0">
-				<!--<Svg Path="/Assets/arrow-back.svg"/>-->
-			</Button>
+	<Grid
+		Margin="0 0 0 50"
+		RowDefinitions="65, *">
+		<Button
+			Margin="10"
+			HorizontalAlignment="Left"
+			MinWidth="65"
+			Command="{Binding GetBack}"
+			Classes="Primary"
+			Grid.Row="0">
+			<Svg Path="/Assets/arrow-back.svg"/>
+		</Button>
+		<TextBlock
+			Grid.Row="0"
+			HorizontalAlignment="Center"
+			Classes="Heading"
+			Text="Общие сведения"
+			FontSize="42"/>
+		<ScrollViewer
+				Grid.Row="1">
+		<Grid RowDefinitions="*">
 			<StackPanel 
 				Margin="10"
-				Grid.Row="1">
-				<!--<Image
+				Grid.Row="0">
+				<Image
 					Height="200"
 					Width="200"
-					Source="/Assets/favicon.png"
+					Source="/Assets/lgpu.png"
 					HorizontalAlignment="Center"
-                />-->
-				<TextBlock 
+                />
+				<TextBlock
+					Padding="40 20 20 0"
 					HorizontalAlignment="Center"
 					Classes="Heading"
-					Text="Общие сведения"
-					FontSize="42"
+					FontSize="29"
 					FontWeight="Black"
-					/>
-
-				<!--<TextBlock
+					TextWrapping="WrapWithOverflow"
+				>
+Государственное образовательное учреждение высшего образования Луганской Народной Республики
+				</TextBlock>
+				
+				<TextBlock
+					Padding="40 0 20 0"
+					HorizontalAlignment="Center"
+					Classes="Heading"
+					FontSize="29"
+					FontWeight="Black"
+					TextWrapping="WrapWithOverflow"
+				>«ЛУГАНСКИЙ ГОСУДАРСТВЕННЫЙ ПЕДАГОГИЧЕСКИЙ УНИВЕРСИТЕТ»
+				</TextBlock>
+					
+				<TextBlock
 					Padding="20 20 20 0"
 					HorizontalAlignment="Center"
 					Classes="Caption"
@@ -88,11 +109,20 @@
 
 На основании Приказа Министерства образования и науки Луганской Народной Республики от 13 января 2015 г. № 9 ГУ «Луганский национальный университет имени Тараса Шевченко» был переименован в ГУ «Луганский университет имени Тараса Шевченко».
 
-				</TextBlock>-->
+В период с 22.04.2015 г. по 23.08.2016 г., согласно Распоряжению Совета министров ЛНР от 22 апреля 2015 г. № 02-05/87/15, вышеуказанное учреждение именуется Государственным образовательным учреждением высшего профессионального образования Луганской Народной Республики «Луганский государственный университет имени Тараса Шевченко».
+
+Согласно Распоряжению Совета министров ЛНР от 23 августа 2016 г. № 903-р, Государственное образовательное учреждение высшего профессионального образования Луганской Народной Республики «Луганский государственный университет имени Тараса Шевченко» было переименовано в Государственное образовательное учреждение высшего профессионального образования Луганской Народной Республики «Луганский национальный университет имени Тараса Шевченко».
+
+Распоряжением Правительства ЛНР от 17 июля 2020 года №797-р/20 Государственное образовательное учреждение высшего профессионального образования «Луганский национальный университет имени Тараса Шевченко» было переименовано в Государственное образовательное учреждение высшего образования Луганской Народной Республики «Луганский государственный педагогический университет».
+				</TextBlock>
 				
 
 			</StackPanel>
 		</Grid>	
 	</ScrollViewer>
+		
+	</Grid>
+
+
    
 </UserControl>

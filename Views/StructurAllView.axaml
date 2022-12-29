@@ -1,0 +1,209 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTerminal.Views.StructurAllView">
+    <UserControl.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+        <Style Selector="Svg">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="30"/>
+        </Style>
+    </UserControl.Styles>
+    
+    <Grid RowDefinitions="65,*">
+        <Button
+            Margin="10"
+            HorizontalAlignment="Left"
+            MinWidth="65"
+            Command="{Binding GetBack}"
+            Classes="Primary"
+            Grid.Row="0">
+            <Svg Path="/Assets/arrow-back.svg"/>
+        </Button>
+        <TextBlock
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            Classes="Heading"
+            Text="Структура университета"
+            FontSize="42"/>
+        
+        <ScrollViewer Grid.Row="1">
+            <StackPanel>
+                <Expander Margin="20 20 20 0"
+                          Header="Институты">
+                    <TextBlock
+                        Classes="Caption"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow"
+                        Padding="20 10 20 0"
+                    >
+Институт филологии и социальных коммуникаций
+Институт физического воспитания и спорта
+Институт физико-математического образования, информационных и обслуживающих технологий
+Институт профессионального развития
+Институт педагогики и психологии
+Институт истории, международных отношений и социально-политических наук
+                    </TextBlock>
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="Факультеты">
+                    <TextBlock
+                        Classes="Caption"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow"
+                        Padding="20 10 20 0"
+                    >
+Факультет музыкально-художественного образования имени Джульетты Якубович
+Факультет естественных наук
+Ровеньковский факультет
+Старобельский факультет
+                    </TextBlock>
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="Обособленные подразделения">
+                    <TextBlock
+                        Classes="Caption"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow"
+                        Padding="20 10 20 0"
+                    >
+Многопрофильный педагогический колледж
+Брянковский колледж
+Стахановский педагогический колледж
+Старобельский колледж
+                    </TextBlock>
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="Советы">
+                    <TextBlock
+                        Classes="Caption"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow"
+                        Padding="20 10 20 0"
+                    >
+Ученый совет
+Научная комиссия
+Совет молодых учёных
+Студенческая республика ЛГПУ
+Комиссия по социально-гуманитарной работе
+Экспертно-координационный психолого-педагогический совет
+Студенческое научное общество
+Диссертационный совет
+Объединенный диссертационный совет
+                    </TextBlock>
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="Центры">
+                    <TextBlock
+                        Classes="Caption"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow"
+                        Padding="20 10 20 0"
+                    >
+Центр социально-гуманитарной работы
+Центр содействия трудоустройству студентов и выпускников
+Центр информационных технологий
+Духовно-просветительский центр имени святого преподобного Нестора Летописца
+Санаторий-профилакторий ЛГПУ
+Центр научно-педагогических инноваций и довузовской подготовки
+Военно-исторический центр
+Центр военно-патриотического воспитания молодежи «РЕДУТ»
+                    </TextBlock>
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="Отделы">
+                    <TextBlock
+                        Classes="Caption"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow"
+                        Padding="20 10 20 0"
+                    >
+Редакционно-издательский отдел
+Научный отдел
+Отдел по связям с общественностью
+Учебно-методический отдел
+Международный отдел
+Отдел лицензирования
+Отдел кадров
+Отдел охраны труда и охраны здоровья
+Отдел культуры и досуга
+Отдел студенческой социально-психологической службы
+Архив
+Спортивный клуб «Буревестник»
+Отдел документооборота
+Отдел бухгалтерии
+Юридический отдел
+Отдел маркетинга
+Приёмная комиссия
+                    </TextBlock>
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="Научные центры и лаборатории">
+                    <TextBlock
+                        Classes="Caption"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow"
+                        Padding="20 10 20 0"
+                    >
+Научно-методический центр трудовой социализации молодёжи
+Научно-учебный центр по изучению мировых интеграционных процессов и глобальных конфликтов
+Научно-исследовательский центр имени В.М.Бейлиса «Восток-Запад: теория и история межцивилизационных взаимоотношений»
+Научно-исследовательский центр «Управление качеством образования»
+Научно-образовательный центр «Ключи к миру детства»
+Научно-образовательный центр художественно-эстетического воспитания
+                    </TextBlock>
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="Музеи">
+                    <TextBlock
+                        Classes="Caption"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow"
+                        Padding="20 10 20 0"
+                    >
+Музей университета
+Зоологический музей
+Геологический музей
+Зимний сад
+Археолого-этнографический музейный комплекс
+Анатомический музей
+Обсерватория ЛГПУ
+                    </TextBlock>
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="Библиотека">
+                    <TextBlock
+                        Classes="Caption"
+                        HorizontalAlignment="Stretch"
+                        TextWrapping="WrapWithOverflow"
+                        Padding="20 10 20 0"
+                    >
+Библиотека
+Отдел книгохранения научной библиотеки
+Отдел информационных технологий и компьютерного обеспечения и электронный читальный зал научной библиотеки
+Справочно-библиографический отдел научной библиотеки
+Отдел читального зала периодической литературы научной библиотеки
+Отдел абонемента научной библиотеки
+Отдел общего читального зала научной библиотеки
+Отдел комплектования и научной обработки документов научной библиотеки
+Отдел культурно-просветительской работы научной библиотеки
+                    </TextBlock>
+                </Expander>
+                
+            </StackPanel>
+        </ScrollViewer>
+        
+    </Grid>
+</UserControl>

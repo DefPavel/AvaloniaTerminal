@@ -1,0 +1,132 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTerminal.Views.DirectorsUniversityView">
+    
+    <UserControl.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+        <Style Selector="Svg">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="30"/>
+        </Style>
+    </UserControl.Styles>
+    
+    <Grid RowDefinitions="65,*">
+        <Button
+            Margin="10"
+            HorizontalAlignment="Left"
+            MinWidth="65"
+            Command="{Binding GetBack}"
+            Classes="Primary"
+            Grid.Row="0">
+            <Svg Path="/Assets/arrow-back.svg"/>
+        </Button>
+        <TextBlock
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            Classes="Heading"
+            Text="Руководство университета"
+            FontSize="42"/>
+        
+        <ScrollViewer Grid.Row="1">
+            <StackPanel>
+                <Expander Margin="20 20 20 0"
+                          Header="МАРФИНА ЖАННА ВИКТОРОВНА">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Image
+                                MaxHeight="300"
+                                MaxWidth="300"
+                                Margin="20 20 0 0"
+                                Stretch="Fill"
+                                asyncImageLoader:ImageLoader.Source="https://lgpu.org/data/images/1663591946/416684653.jpg"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"/>
+                           
+                            <TextBlock
+                                Classes="Caption"
+                                Padding="20 0 20 0"
+                                HorizontalAlignment="Right"
+                                TextWrapping="WrapWithOverflow">
+Должность: ректор Луганского государственного педагогического университета,
+депутат Народного Совета Луганской Народной Республики,
+врио заведующего кафедрой журналистики и издательского дела
+Ученая степень и звание: кандидат филологических наук, доцент
+
+Профессиональный путь:
+
+В 1995 г. окончила Луганский государственный педагогический институт им. Т.Г. Шевченко
+(специальность «Украинский язык и литература»).
+С 1995 г. была принята на кафедру украинского языка 
+
+                            </TextBlock>
+                        </StackPanel>
+                        
+                        <TextBlock
+                            Classes="Caption"
+                            Padding="20 0 20 20"
+                            HorizontalAlignment="Stretch"
+                            TextWrapping="WrapWithOverflow">
+Луганского государственного педагогического института имени Т.Г. Шевченко.
+С 2005 г. по 2014 г. занимала должность директора 
+Научной библиотеки Луганского национального университета имени Тараса Шевченко.
+2014 – 2016 гг. – декан филологического факультета ЛНУ им. Тараса Шевченко.
+
+В 2020 г. окончила Луганский государственный аграрный университет (специальность «Менеджмент»).
+В 2020 г. была назначена на должность исполняющего обязанности ректора Луганского государственного педагогического университета.
+С 2021 г. и по сей день является ректором ЛГПУ.
+Научная деятельность:
+В 2003 г. окончила аспирантуру Луганского государственного педагогического университета им. Т.Г. Шевченко.
+В январе 2004 г. защитила диссертацию «Ассоциативно-образное поле названий родства в языке литературы ХХ века» (специальность «Украинский язык»)
+в Институте языкознания им. А.А. Потебни НАН Украины, получила научную степень кандидата филологических наук,
+а в 2005 г. – ученое звание доцента кафедры украинского языка.
+Круг научных интересов: мифопоэтика, лингвостилистика, лингвокультурология.
+
+Преподавательская деятельность:
+
+Преподает учебные дисциплины: «Современный украинский литературный язык: Синтаксис»,
+«Социолингвистика». 
+Руководит написанием выпускных квалификационных работ,магистерских и кандидатских диссертаций.
+
+Общественная деятельность:
+Депутат Народного Совета Луганской Народной Республики III созыва,
+член партии «Единая Россия», 
+член городского совета общественного движения «Мир Луганщине».
+                        </TextBlock>
+                        
+                    </StackPanel>
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="ФИЛИППОВ ЮРИЙ НИКОЛАЕВИЧ">
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="ДЯТЛОВА ЕЛЕНА НИКОЛАЕВНА">
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="РОТЕРС ТАТЬЯНА ТИХОНОВНА">
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="ЖДАНОВА ОЛЬГА СЕРГЕЕВНА">
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="КЛИПАКОВ НИКОЛАЙ ВИКТОРОВИЧ">
+                </Expander>
+                
+                <Expander Margin="20 20 20 0"
+                          Header="ВОРОНЦОВ ГЕННАДИЙ ДМИТРИЕВИЧ">
+                </Expander>
+                
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

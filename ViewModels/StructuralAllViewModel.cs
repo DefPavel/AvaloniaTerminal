@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reactive;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
@@ -7,30 +7,31 @@ using ReactiveUI;
 
 namespace AvaloniaTerminal.ViewModels;
 
-public sealed class InfoViewModel : ViewModelBase, IRoutableViewModel
+public class StructuralAllViewModel :  ViewModelBase, IRoutableViewModel
 {
     private readonly DispatcherTimer _disTimer = new();
-    public string? UrlPathSegment => nameof(InfoViewModel);
+    public string? UrlPathSegment => nameof(StructuralAllViewModel);
+    
     public IScreen HostScreen { get; }
 
     #region Команды
     public ReactiveCommand<Unit, IRoutableViewModel> GetBack { get; }
-
-    #endregion
     
+    #endregion
+
     private async void DispatcherTimer_Tick(object? sender, EventArgs e)
     {
         await HostScreen.Router.NavigateAndReset.Execute(new CarouselViewModel(HostScreen));
     }
     
-    public InfoViewModel(IScreen screen)
+    public StructuralAllViewModel(IScreen screen)
     {
         HostScreen = screen;
 
         GetBack = ReactiveCommand.CreateFromTask(async _ =>
             await HostScreen.Router.Navigate.Execute(new MenuViewModel(HostScreen)));
 
-        this.WhenActivated((disposables) =>
+        this.WhenActivated(disposables =>
         {
             _disTimer.Interval = TimeSpan.FromMinutes(2);
             _disTimer.Tick += DispatcherTimer_Tick;
@@ -40,4 +41,6 @@ public sealed class InfoViewModel : ViewModelBase, IRoutableViewModel
             GC.Collect();
         });
     }
+    
+    
 }

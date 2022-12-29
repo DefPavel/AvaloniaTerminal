@@ -45,9 +45,14 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
     #region Команды
     public ReactiveCommand<Unit, Unit> GetInfoView { get; }
+    public ReactiveCommand<Unit, Unit> GetInfoViewUniversity { get; }
     public ReactiveCommand<Unit, Unit> GetTimeTableView { get; }
     public ReactiveCommand<Unit, Unit> GetDirectorsView { get; }
+    
+    public ReactiveCommand<Unit, Unit> GetDirectorsAllView { get; }
     public ReactiveCommand<Unit, Unit> GetStructuralView { get; }
+    
+    public ReactiveCommand<Unit, Unit> GetStructuralUniversityView { get; }
     
     public ReactiveCommand<Unit, Unit> GetNoticeView { get; }
     public ReactiveCommand<Unit, Unit> GetContactView { get; }
@@ -79,6 +84,26 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
 
     #region Навигация по кнопкам
 
+    private async Task GetStructuralAll()
+    {
+        _disTimer.Interval = TimeSpan.FromSeconds(40);
+
+        if (string.IsNullOrWhiteSpace(SavePin))
+        {
+            var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
+            if (check.Status && check.Pin.Length > 0)
+            {
+                await ChangeDataJson(check.Pin);
+                await HostScreen.Router.NavigateAndReset.Execute(new StructuralAllViewModel(HostScreen));
+            }     
+        }
+        else
+        {
+            await HostScreen.Router.NavigateAndReset.Execute(new StructuralAllViewModel(HostScreen));
+        }
+        
+    }
+    
     private async Task GetStructural()
     {
         _disTimer.Interval = TimeSpan.FromSeconds(40);
@@ -146,10 +171,48 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
                     break;
             }
         }
-
-      
-       
     }
+    private async Task GetInformationUniversityView()
+    {
+        // Может быть есть и намного лучше способ,
+        // но у меня в данной структуре работает только такой
+        _disTimer.Interval = TimeSpan.FromSeconds(40);
+        // TODO: Когда пройдет еще время, найдите способ лучше передавать данные между Window и UseCotrol в (MVVM)
+        if (string.IsNullOrWhiteSpace(SavePin))
+        {
+            var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
+            if (check.Status && check.Pin.Length > 0)
+            {
+                await ChangeDataJson(check.Pin);
+                
+                await HostScreen.Router.NavigateAndReset.Execute(new InfoViewModel(HostScreen));
+            }
+        }
+        else
+        {
+            await HostScreen.Router.NavigateAndReset.Execute(new InfoViewModel(HostScreen));
+        }
+    }
+
+    private async Task GetAllDirectors()
+    {
+        _disTimer.Interval = TimeSpan.FromSeconds(40);
+
+        if (string.IsNullOrWhiteSpace(SavePin))
+        {
+            var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
+            if (check.Status && check.Pin.Length > 0)
+            {
+                await ChangeDataJson(check.Pin);
+                await HostScreen.Router.NavigateAndReset.Execute(new DirectorsAllViewModel(HostScreen));
+            }
+        }
+        else
+        {
+            await HostScreen.Router.NavigateAndReset.Execute(new DirectorsAllViewModel(HostScreen));
+        }
+    }
+    
     private async Task GetDirectors()
     {
         _disTimer.Interval = TimeSpan.FromSeconds(40);
@@ -183,8 +246,6 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
                     break;
             }
         }
-       
-       
     }
     private async Task GetPhones()
     {
@@ -283,15 +344,25 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         
         GetInfoView = ReactiveCommand.CreateFromTask( async _ => await GetInformationView());
         GetInfoView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
+        
+        GetInfoViewUniversity = ReactiveCommand.CreateFromTask( async _ => await GetInformationUniversityView());
+        GetInfoViewUniversity.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
 
         GetTimeTableView = ReactiveCommand.CreateFromTask(async _ => await GetTimeTable());
         GetTimeTableView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
 
         GetDirectorsView = ReactiveCommand.CreateFromTask(async _ => await GetDirectors());
         GetDirectorsView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
+        
+        
+        GetDirectorsAllView = ReactiveCommand.CreateFromTask(async _ => await GetAllDirectors());
+        GetDirectorsAllView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy); 
 
         GetStructuralView = ReactiveCommand.CreateFromTask(async _ => await GetStructural());
         GetStructuralView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
+        
+        GetStructuralUniversityView = ReactiveCommand.CreateFromTask(async _ => await GetStructuralAll());
+        GetStructuralUniversityView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
         
         GetContactView = ReactiveCommand.CreateFromTask(async _ => await GetPhones());
         GetContactView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);

@@ -27,6 +27,10 @@ namespace AvaloniaTerminal
                 Locator.CurrentMutable.Register<IViewFor<DirectorsIPRViewModel>>(() => new DirectorsIPRView());
                 Locator.CurrentMutable.Register<IViewFor<StructuraIPRViewModel>>(() => new StructuraIPRView());
 
+                Locator.CurrentMutable.Register<IViewFor<StructuralAllViewModel>>(() => new StructurAllView());
+                
+                Locator.CurrentMutable.Register<IViewFor<DirectorsAllViewModel>>(() => new DirectorsUniversityView());
+                
                 Locator.CurrentMutable.Register<IViewFor<NoticeViewModel>>(() => new NoticeView());
                 
                 Locator.CurrentMutable.Register<IViewFor<SturcurFizViewModel>>(() => new StructurFizView());

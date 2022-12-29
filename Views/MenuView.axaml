@@ -70,9 +70,8 @@
             />
 		</StackPanel>
 
-		<TabControl
-                Grid.Row="1">
-        <TabItem >
+		<TabControl Grid.Row="1">
+        <TabItem>
             <TabItem.Header>
                 <TextBlock 
                     Text="Институт/Факультет" 
@@ -247,12 +246,157 @@
             </ScrollViewer>
           
         </TabItem>
-        <TabItem IsEnabled="False" >
+        <TabItem >
             <TabItem.Header>
                 <TextBlock 
                     Text="Университет" 
                     FontSize="23" />
             </TabItem.Header>
+               <ScrollViewer>
+              <Grid 
+            HorizontalAlignment="Center"
+            RowDefinitions="Auto, Auto, Auto, *"
+            ColumnDefinitions="*, * ">
+ 
+		    <!-- ROW 1 -->
+            <Border
+                Name="InfoUniversity"
+                Margin=" 15 10 15 15"
+                Grid.Row="0"
+                Grid.Column="0"
+                Classes="Card">
+                <i:Interaction.Behaviors>
+                    <ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #InfoUniversity}">
+                        <!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
+                        <ia:InvokeCommandAction Command="{Binding GetInfoViewUniversity}"/>
+                    </ia:EventTriggerBehavior>
+                </i:Interaction.Behaviors>
+                <StackPanel 
+                    HorizontalAlignment="Center">
+                    <Svg 
+                        Path="/Assets/question.svg"/>
+                    <TextBlock 
+                        Classes="Heading" 
+                        Text="Общие сведения" />
+                    <TextBlock 
+                        Classes="Caption" 
+                        Text="Подробнее..." />
+                </StackPanel>
+            </Border>
+
+            <Border
+                Margin="15 15 15 15"
+                Grid.Row="0"
+				Name="DirectorUniversity"
+                Grid.Column="1"
+                Classes="Card">
+				<i:Interaction.Behaviors>
+					<ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #DirectorUniversity}">
+						<!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
+						<ia:InvokeCommandAction Command="{Binding GetDirectorsAllView}"/>
+					</ia:EventTriggerBehavior>
+				</i:Interaction.Behaviors>
+                <StackPanel HorizontalAlignment="Center">
+                    
+                    <Svg 
+                        Path="/Assets/user-group.svg"/>
+                    <TextBlock Classes="Heading" 
+                               Text="Руководство" />
+                        <TextBlock Classes="Caption" 
+                                   Text="Подробнее..." />
+                </StackPanel>
+            </Border>
+		    <!-- END ROW 1 -->
+
+		    <!-- ROW 2 -->
+            <Border
+				Name="HomeUniversity"
+                Margin="15 0 15 15"
+                Grid.Row="1"
+                Grid.Column="0"
+                Classes="Card">
+				<i:Interaction.Behaviors>
+					<ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #HomeUniversity}">
+						<!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
+						<ia:InvokeCommandAction Command="{Binding GetStructuralUniversityView}"/>
+					</ia:EventTriggerBehavior>
+				</i:Interaction.Behaviors>
+                <StackPanel HorizontalAlignment="Center">
+                    <Svg 
+                        Path="/Assets/home.svg"/>
+                    <TextBlock Classes="Heading" 
+                               Text="Структура" />
+                    <TextBlock Classes="Caption" 
+                               Text="Подробнее..." />
+                </StackPanel>
+            </Border>
+
+            <!--<Border
+                Margin="15 0 15 15"
+                Grid.Row="1"
+                Grid.Column="1"
+                Classes="Card">
+                <StackPanel HorizontalAlignment="Center">
+                    <Svg 
+                        Path="/Assets/table.svg"/>
+                    <TextBlock Classes="Heading" 
+                               Margin="0"
+                               Text="Электронное" />
+                    <TextBlock Classes="Heading" 
+                               Margin="0"
+                               Text="расписание" />
+                    <TextBlock Classes="Caption" 
+                               Text="Подробнее..." />
+                  
+                </StackPanel>
+            </Border>-->
+            
+		    <!-- END ROW 2 -->
+
+		    <!-- ROW 3 -->
+
+
+            <Border
+                Margin="15 0 15 15"
+                Grid.Row="1"
+                Grid.Column="1"
+                Classes="Card">
+                <StackPanel HorizontalAlignment="Center">
+                    <Svg 
+                        Path="/Assets/phone.svg"/>
+                    <TextBlock Classes="Heading" 
+                               Margin="0"
+                               Text="Контактная" />
+                    <TextBlock Classes="Heading" 
+                               Margin="0"
+                               Text="информация" />
+                    <TextBlock 
+                        Classes="Caption" 
+                        Text="Подробнее..." />
+                    
+                </StackPanel>
+            </Border>
+            
+            <!--<Border
+                Margin="15 0 15 15"
+                Grid.Row="2"
+                Grid.Column="1"
+                Classes="Card">
+                <StackPanel HorizontalAlignment="Center">
+                    <Svg 
+                        Path="/Assets/information.svg"/>
+                    <TextBlock Classes="Heading" 
+                               Text="Объявления" />
+                    <TextBlock Classes="Caption" 
+                               Text="Подробнее..." />
+                   
+                </StackPanel>
+            </Border>-->
+
+		    <!-- END ROW 3 -->
+            
+        </Grid>       
+            </ScrollViewer>
         </TabItem>
     </TabControl>        
     </Grid>
