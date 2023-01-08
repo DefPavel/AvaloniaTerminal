@@ -50,6 +50,8 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
     public ReactiveCommand<Unit, Unit> GetDirectorsView { get; }
     
     public ReactiveCommand<Unit, Unit> GetDirectorsAllView { get; }
+    
+    public ReactiveCommand<Unit, Unit> GetAllContactView { get; }
     public ReactiveCommand<Unit, Unit> GetStructuralView { get; }
     
     public ReactiveCommand<Unit, Unit> GetStructuralUniversityView { get; }
@@ -213,6 +215,25 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         }
     }
     
+    private async Task GetAllContacts()
+    {
+        _disTimer.Interval = TimeSpan.FromSeconds(40);
+
+        if (string.IsNullOrWhiteSpace(SavePin))
+        {
+            var check = await _menuService!.GetViewCheckCode(TimeSpan.FromSeconds(40));
+            if (check.Status && check.Pin.Length > 0)
+            {
+                await ChangeDataJson(check.Pin);
+                await HostScreen.Router.NavigateAndReset.Execute(new ContactsUniversityViewModel(HostScreen));
+            }
+        }
+        else
+        {
+            await HostScreen.Router.NavigateAndReset.Execute(new ContactsUniversityViewModel(HostScreen));
+        }
+    }
+    
     private async Task GetDirectors()
     {
         _disTimer.Interval = TimeSpan.FromSeconds(40);
@@ -366,6 +387,10 @@ public sealed class MenuViewModel : ViewModelBase, IRoutableViewModel
         
         GetContactView = ReactiveCommand.CreateFromTask(async _ => await GetPhones());
         GetContactView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
+        
+        GetAllContactView = ReactiveCommand.CreateFromTask(async _ => await GetAllContacts());
+        GetAllContactView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);
+
 
         GetNoticeView = ReactiveCommand.CreateFromTask(async _ => await GetNotice());
         GetNoticeView.IsExecuting.ToProperty(this, x => x.IsBusy, out isBusy);

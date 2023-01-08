@@ -357,10 +357,17 @@
 
 
             <Border
+                Name="ContactsUniversity"
                 Margin="15 0 15 15"
                 Grid.Row="1"
                 Grid.Column="1"
                 Classes="Card">
+                <i:Interaction.Behaviors>
+                    <ia:EventTriggerBehavior EventName="Tapped" SourceObject="{Binding #ContactsUniversity}">
+                        <!--<ia:ChangePropertyAction PropertyName="Background"  Value="{DynamicResource ThemeBackgroundColor}" />-->
+                        <ia:InvokeCommandAction Command="{Binding GetAllContactView}"/>
+                    </ia:EventTriggerBehavior>
+                </i:Interaction.Behaviors>
                 <StackPanel HorizontalAlignment="Center">
                     <Svg 
                         Path="/Assets/phone.svg"/>

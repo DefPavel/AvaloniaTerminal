@@ -40,6 +40,7 @@ namespace AvaloniaTerminal
                 
                 Locator.CurrentMutable.Register<IViewFor<ContactVizViewModel>>(() => new ContactVIzView());
                 Locator.CurrentMutable.Register<IViewFor<ContactIPRViewModel>>(() => new ContactIprView());
+                Locator.CurrentMutable.Register<IViewFor<ContactsUniversityViewModel>>(() => new ContactsUniversityView());
                 
                 Locator.CurrentMutable.Register<IViewFor<IPRViewModel>>(() => new IprView());
                 Locator.CurrentMutable.Register<IViewFor<FizVospViewModel>>(() => new FizVospView());

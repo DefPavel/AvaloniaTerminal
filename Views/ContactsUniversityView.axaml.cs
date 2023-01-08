@@ -1,13 +1,19 @@
-using Avalonia;
-using Avalonia.Controls;
+using System.Reactive.Disposables;
 using Avalonia.Markup.Xaml;
+using Avalonia.ReactiveUI;
+using AvaloniaTerminal.ViewModels;
+using ReactiveUI;
 
 namespace AvaloniaTerminal.Views;
 
-public partial class ContactsUniversityView : UserControl
+public partial class ContactsUniversityView :  ReactiveUserControl<ContactsUniversityViewModel>
 {
     public ContactsUniversityView()
     {
+        this.WhenActivated(disposables =>
+        {
+            Disposable.Create(() => { }).DisposeWith(disposables);
+        });
         InitializeComponent();
     }
 

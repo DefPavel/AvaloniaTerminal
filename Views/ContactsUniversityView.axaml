@@ -4,5 +4,52 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaTerminal.Views.ContactsUniversityView">
-    Welcome to Avalonia!
+    <UserControl.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+        <Style Selector="Svg">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="30"/>
+        </Style>
+    </UserControl.Styles>
+    <Grid RowDefinitions="65,*">
+        <Button
+            Margin="10"
+            HorizontalAlignment="Left"
+            MinWidth="65"
+            Command="{Binding GetBack}"
+            Classes="Primary"
+            Grid.Row="0">
+            <Svg Path="/Assets/arrow-back.svg"/>
+        </Button>
+        <TextBlock
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            Classes="Heading"
+            Text="Контакты"
+            FontSize="42"/>
+        <ScrollViewer Grid.Row="1">
+            <Expander 
+                Margin="20 20 20 0"
+                Header="Основная информация">
+                <TextBlock
+                    Classes="Caption"
+                    Padding="20 20 0 20"
+                    HorizontalAlignment="Stretch"
+                    TextWrapping="WrapWithOverflow"
+                >
+Контакты:
+91011, г.Луганск,ул.Оборонная, 2;
+Почта:
+info_lu@lgpu.org;
+Отдел документооборота:
++38 (0642) 58-61-08;
+Приёмная комиссия:
++38 (0642) 34-35-71;
++38 (072) 104-13-33.
+                </TextBlock>
+            </Expander> 
+        </ScrollViewer>
+    </Grid>
 </UserControl>
